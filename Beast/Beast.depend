@@ -1,0 +1,197 @@
+# depslib dependency file v1.0
+1383705463 source:/home/yba/go4d/Beast/BeastLand.cpp
+	"BeastLand.h"
+	"RTTI.h"
+
+1383739145 /home/yba/go4d/Beast/BeastLand.h
+	"Geom.h"
+	"DNA.h"
+
+1186698662 /home/yba/go4d/Go4D/Tools/Geom.h
+	<math.h>
+	"Common.h"
+
+1186392514 /home/yba/go4d/Go4D/Tools/Common.h
+	<stdlib.h>
+	<stdio.h>
+	"Base.h"
+	"Streams.h"
+	"Fixed.h"
+	"FString.h"
+	"Variant.h"
+	<memory.h>
+
+1186266906 /home/yba/go4d/Go4D/Tools/Base.h
+	<assert.h>
+
+1186487666 /home/yba/go4d/Go4D/Tools/Streams.h
+	<stdio.h>
+	"Platform/BinFile.h"
+	<fstream.h>
+
+1186522244 /home/yba/go4d/Go4D/Platform/BinFile.h
+	<fstream>
+
+980027278 /home/yba/go4d/Go4D/Tools/Fixed.h
+	<math.h>
+	<float.h>
+
+1383740073 /home/yba/go4d/Go4D/Tools/FString.h
+	"Base.h"
+
+1383740491 /home/yba/go4d/Go4D/Tools/Variant.h
+	"FString.h"
+
+980026654 /home/yba/go4d/Beast/DNA.h
+	"List.h"
+
+1383698692 /home/yba/go4d/Go4D/Tools/List.h
+	"Base.h"
+
+1186266944 /home/yba/go4d/Go4D/Tools/RTTI.h
+
+1383705573 source:/home/yba/go4d/Beast/BeastMain.cpp
+	"BeastMain.h"
+	"RandomBeast.h"
+
+1383704317 /home/yba/go4d/Beast/BeastMain.h
+	"Viewer.h"
+	"BeastLand.h"
+	"Drawable.h"
+	"Convert.h"
+	"WriteDrawer.h"
+
+1186488492 /home/yba/go4d/Go4D/Platform/Viewer.h
+	"Device.h"
+	"Graph3D/Camera.h"
+	"Graph2D/Drawer.h"
+	"Graph3D/Pixeler.h"
+
+1186488434 /home/yba/go4d/Go4D/Platform/Device.h
+	"Graph2D/Image.h"
+	"Graph2D/Palette.h"
+
+1186488120 /home/yba/go4d/Go4D/Graph2D/Image.h
+	"Tools/Common.h"
+
+1186488116 /home/yba/go4d/Go4D/Graph2D/Palette.h
+	"Tools/Common.h"
+	"Graph2D/Image.h"
+
+1186488320 /home/yba/go4d/Go4D/Graph3D/Camera.h
+	"Tools/Geom.h"
+	"Plot.h"
+
+1186488316 /home/yba/go4d/Go4D/Graph3D/Plot.h
+	"FaceDrawer.h"
+	"Tools/Geom.h"
+
+1186488290 /home/yba/go4d/Go4D/Graph3D/FaceDrawer.h
+	"Graph2D/PlugDrawer.h"
+	"Graph2D/Clut.h"
+
+980027156 /home/yba/go4d/Go4D/Graph2D/PlugDrawer.h
+	"Image.h"
+
+980027156 /home/yba/go4d/Go4D/Graph2D/Clut.h
+	"Palette.h"
+	"Image.h"
+
+980609246 /home/yba/go4d/Go4D/Graph2D/Drawer.h
+	"PlugDrawer.h"
+
+1186488400 /home/yba/go4d/Go4D/Graph3D/Pixeler.h
+	"Graph2D/Drawer.h"
+
+1383700000 /home/yba/go4d/Beast/Drawable.h
+	"Geom.h"
+	"Image.h"
+	"Camera.h"
+	"TemplateFaceDrawer.h"
+	"Plotter.h"
+	"Shader.h"
+	"Mapper.h"
+	"List.h"
+
+1383698692 /home/yba/go4d/Go4D/Graph3D/TemplateFaceDrawer.h
+	"FaceDrawer.h"
+
+980972074 /home/yba/go4d/Go4D/Graph3D/Plotter.h
+	"TemplateFaceDrawer.h"
+
+980027230 /home/yba/go4d/Go4D/Graph3D/Shader.h
+	"TemplateFaceDrawer.h"
+
+980032406 /home/yba/go4d/Go4D/Graph3D/Mapper.h
+	"TemplateFaceDrawer.h"
+
+1186488134 /home/yba/go4d/Go4D/Graph2D/Convert.h
+	"PlugDrawer.h"
+	"Tools/Random.h"
+
+1186396920 /home/yba/go4d/Go4D/Tools/Random.h
+	"Geom.h"
+
+1186488214 /home/yba/go4d/Go4D/Graph2D/WriteDrawer.h
+	"Drawer.h"
+	"Font.h"
+	"Tools/FString.h"
+	<memory.h>
+
+1383739391 /home/yba/go4d/Go4D/Graph2D/Font.h
+	"Tools/Common.h"
+
+1383739253 /home/yba/go4d/Beast/RandomBeast.h
+	"BeastLand.h"
+	"Drawable.h"
+	"Random.h"
+	"DNA.h"
+	"RTTI.h"
+
+980026570 source:/home/yba/go4d/Beast/DNA.cpp
+	"Common.h"
+	"DNA.h"
+	<string.h>
+
+980953008 source:/home/yba/go4d/Beast/Drawable.cpp
+	"Drawable.h"
+	"Face.h"
+
+1186488266 /home/yba/go4d/Go4D/Graph3D/Face.h
+	"Tools/Geom.h"
+	"FaceDrawer.h"
+	"Plot.h"
+	"Light.h"
+	"Camera.h"
+
+980027230 /home/yba/go4d/Go4D/Graph3D/Light.h
+	"Plot.h"
+
+980949132 source:/home/yba/go4d/Beast/RandomBeast.cpp
+	"RandomBeast.h"
+	"Common.h"
+	<string.h>
+
+1383704612 source:/home/yba/go4d/Beast/WBeasts.cpp
+	<vcl.h>
+	"Device_CE.h"
+	"Device_WING.h"
+	"BeastMain.h"
+
+981142932 /home/yba/go4d/Go4D/Platform/Device_CE.h
+	"Device.h"
+	<windows.h>
+	<commctrl.h>
+	<aygshell.h>
+	<sipapi.h>
+	<stdlib.h>
+	<string.h>
+	"gx.h"
+
+981193508 /home/yba/go4d/Go4D/Platform/Device_WING.h
+	"Device.h"
+	<windows.h>
+	<stdlib.h>
+	<string.h>
+	"Wingdll.h"
+

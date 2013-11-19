@@ -1,0 +1,3876 @@
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.11993
+    hunger=7.6
+    acceleration=0.15529
+    threshold=67.637
+    
+  [RULE:3]
+    weight=0.095356
+    hunger=7.5833
+    fear=0.041084
+    
+  [RULE:5]
+    weight=0.66161
+    collision=0.010994
+    
+  [RULE:8]
+    weight=0.0031628
+    frienddistance=1.4031
+    
+  [RULE:10]
+    weight=0.090272
+    visiondist=0.54833
+    
+  [RULE:11]
+    weight=0.024796
+    visiondist=1.1907
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.74753
+    hunger=5.0683
+    acceleration=0.37792
+    threshold=12.462
+    
+  [RULE:3]
+    weight=0.63081
+    hunger=6.756
+    fear=0.058516
+    
+  [RULE:5]
+    weight=0.49378
+    collision=0.037703
+    
+  [RULE:8]
+    weight=0.4784
+    frienddistance=0.34829
+    
+  [RULE:10]
+    weight=0.10649
+    visiondist=0.96328
+    
+  [RULE:11]
+    weight=0.049974
+    visiondist=0.70354
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.41651
+    hunger=2.2594
+    acceleration=0.68775
+    threshold=69.133
+    
+  [RULE:3]
+    weight=0.66422
+    hunger=3.7859
+    fear=0.43791
+    
+  [RULE:5]
+    weight=0.1237
+    collision=0.041634
+    
+  [RULE:8]
+    weight=0.65708
+    frienddistance=0.74845
+    
+  [RULE:10]
+    weight=0.070477
+    visiondist=2.5808
+    
+  [RULE:11]
+    weight=0.075389
+    visiondist=0.8848
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.42375
+    hunger=3.2391
+    acceleration=0.63075
+    threshold=29.974
+    
+  [RULE:3]
+    weight=0.18569
+    hunger=2.4777
+    fear=0.55431
+    
+  [RULE:5]
+    weight=0.48538
+    collision=0.1497
+    
+  [RULE:8]
+    weight=0.25706
+    frienddistance=1.3643
+    
+  [RULE:10]
+    weight=0.020683
+    visiondist=1.2488
+    
+  [RULE:11]
+    weight=0.0008221
+    visiondist=2.3812
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.25943
+    hunger=5.0718
+    acceleration=0.66805
+    threshold=49.651
+    
+  [RULE:3]
+    weight=0.23805
+    hunger=6.7261
+    fear=0.14156
+    
+  [RULE:5]
+    weight=0.11943
+    collision=0.076526
+    
+  [RULE:8]
+    weight=0.63001
+    frienddistance=1.027
+    
+  [RULE:10]
+    weight=0.13743
+    visiondist=0.58098
+    
+  [RULE:11]
+    weight=0.059967
+    visiondist=2.1464
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.60773
+    hunger=6.1875
+    acceleration=0.45182
+    threshold=49.947
+    
+  [RULE:3]
+    weight=0.75643
+    hunger=7.1125
+    fear=0.24665
+    
+  [RULE:5]
+    weight=0.66448
+    collision=0.089552
+    
+  [RULE:8]
+    weight=0.48471
+    frienddistance=1.1542
+    
+  [RULE:10]
+    weight=0.11786
+    visiondist=2.4165
+    
+  [RULE:11]
+    weight=0.039943
+    visiondist=1.8373
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.43603
+    hunger=6.1784
+    acceleration=0.44284
+    threshold=33.952
+    
+  [RULE:3]
+    weight=0.36279
+    hunger=7.5633
+    fear=0.04463
+    
+  [RULE:5]
+    weight=0.056438
+    collision=0.097396
+    
+  [RULE:8]
+    weight=0.45393
+    frienddistance=0.33836
+    
+  [RULE:10]
+    weight=0.033408
+    visiondist=1.9159
+    
+  [RULE:11]
+    weight=0.14037
+    visiondist=2.2433
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.096269
+    hunger=1.7294
+    acceleration=0.71966
+    threshold=1.0538
+    
+  [RULE:3]
+    weight=0.12223
+    hunger=0.91192
+    fear=0.351
+    
+  [RULE:5]
+    weight=0.49289
+    collision=0.13911
+    
+  [RULE:8]
+    weight=0.076651
+    frienddistance=0.93362
+    
+  [RULE:10]
+    weight=0.010725
+    visiondist=1.197
+    
+  [RULE:11]
+    weight=0.075458
+    visiondist=1.3272
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.67606
+    hunger=7.1858
+    acceleration=0.042577
+    threshold=70.317
+    
+  [RULE:3]
+    weight=0.35648
+    hunger=1.953
+    fear=0.44613
+    
+  [RULE:5]
+    weight=0.12832
+    collision=0.088857
+    
+  [RULE:8]
+    weight=0.36203
+    frienddistance=1.2396
+    
+  [RULE:10]
+    weight=0.14076
+    visiondist=1.6006
+    
+  [RULE:11]
+    weight=0.088502
+    visiondist=2.2174
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.51673
+    hunger=4.903
+    acceleration=0.33694
+    threshold=20.446
+    
+  [RULE:3]
+    weight=0.53442
+    hunger=2.53
+    fear=0.16304
+    
+  [RULE:5]
+    weight=0.577
+    collision=0.039233
+    
+  [RULE:8]
+    weight=0.51952
+    frienddistance=0.02459
+    
+  [RULE:10]
+    weight=0.12846
+    visiondist=2.5913
+    
+  [RULE:11]
+    weight=0.091316
+    visiondist=0.97729
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.59861
+    hunger=7.1929
+    acceleration=0.077125
+    threshold=20.892
+    
+  [RULE:3]
+    weight=0.18188
+    hunger=6.154
+    fear=0.072232
+    
+  [RULE:5]
+    weight=0.56752
+    collision=0.042136
+    
+  [RULE:8]
+    weight=0.13171
+    frienddistance=1.4253
+    
+  [RULE:10]
+    weight=0.11565
+    visiondist=0.29391
+    
+  [RULE:11]
+    weight=0.14913
+    visiondist=2.5696
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.65907
+    hunger=0.47632
+    acceleration=0.035859
+    threshold=40.058
+    
+  [RULE:3]
+    weight=0.13462
+    hunger=7.0518
+    fear=0.083239
+    
+  [RULE:5]
+    weight=0.29488
+    collision=0.090621
+    
+  [RULE:8]
+    weight=0.48519
+    frienddistance=1.0645
+    
+  [RULE:10]
+    weight=0.081991
+    visiondist=1.2361
+    
+  [RULE:11]
+    weight=0.12501
+    visiondist=1.7561
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.14564
+    hunger=5.2696
+    acceleration=0.33751
+    threshold=17.963
+    
+  [RULE:3]
+    weight=0.49635
+    hunger=1.6656
+    fear=0.26549
+    
+  [RULE:5]
+    weight=0.39091
+    collision=0.064815
+    
+  [RULE:8]
+    weight=0.26108
+    frienddistance=0.076709
+    
+  [RULE:10]
+    weight=0.014337
+    visiondist=2.4604
+    
+  [RULE:11]
+    weight=0.13361
+    visiondist=2.9994
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.067282
+    hunger=0.15586
+    acceleration=0.040336
+    threshold=68.239
+    
+  [RULE:3]
+    weight=0.68364
+    hunger=0.30185
+    fear=0.31855
+    
+  [RULE:5]
+    weight=0.13969
+    collision=0.033418
+    
+  [RULE:8]
+    weight=0.59158
+    frienddistance=0.94664
+    
+  [RULE:10]
+    weight=0.011193
+    visiondist=1.4029
+    
+  [RULE:11]
+    weight=0.062165
+    visiondist=1.3982
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.70745
+    hunger=6.9681
+    acceleration=0.078465
+    threshold=68.468
+    
+  [RULE:3]
+    weight=0.66546
+    hunger=1.4575
+    fear=0.70027
+    
+  [RULE:5]
+    weight=0.7058
+    collision=0.013628
+    
+  [RULE:8]
+    weight=0.6239
+    frienddistance=1.472
+    
+  [RULE:10]
+    weight=0.077337
+    visiondist=0.014369
+    
+  [RULE:11]
+    weight=0.028614
+    visiondist=0.87306
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.43812
+    hunger=0.32968
+    acceleration=0.59827
+    threshold=39.347
+    
+  [RULE:3]
+    weight=0.70232
+    hunger=3.2474
+    fear=0.59595
+    
+  [RULE:5]
+    weight=0.10552
+    collision=0.10721
+    
+  [RULE:8]
+    weight=0.17675
+    frienddistance=0.90761
+    
+  [RULE:10]
+    weight=0.0011978
+    visiondist=2.4901
+    
+  [RULE:11]
+    weight=0.071903
+    visiondist=1.5891
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.5524
+    hunger=2.3255
+    acceleration=0.49069
+    threshold=11.715
+    
+  [RULE:3]
+    weight=0.068499
+    hunger=5.9621
+    fear=0.65318
+    
+  [RULE:5]
+    weight=0.24525
+    collision=0.058004
+    
+  [RULE:8]
+    weight=0.65916
+    frienddistance=0.21553
+    
+  [RULE:10]
+    weight=0.12991
+    visiondist=1.1858
+    
+  [RULE:11]
+    weight=0.14177
+    visiondist=2.9836
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.36394
+    hunger=5.4203
+    acceleration=0.44627
+    threshold=20.302
+    
+  [RULE:3]
+    weight=0.3304
+    hunger=2.3867
+    fear=0.43557
+    
+  [RULE:5]
+    weight=0.061092
+    collision=0.071164
+    
+  [RULE:8]
+    weight=0.50407
+    frienddistance=1.3146
+    
+  [RULE:10]
+    weight=0.049799
+    visiondist=2.9973
+    
+  [RULE:11]
+    weight=0.037464
+    visiondist=0.59264
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.062758
+    hunger=1.0814
+    acceleration=0.5845
+    threshold=75.205
+    
+  [RULE:3]
+    weight=0.19493
+    hunger=5.8453
+    fear=0.1098
+    
+  [RULE:5]
+    weight=0.42883
+    collision=0.12172
+    
+  [RULE:8]
+    weight=0.31278
+    frienddistance=0.91092
+    
+  [RULE:10]
+    weight=0.068145
+    visiondist=2.7069
+    
+  [RULE:11]
+    weight=0.047499
+    visiondist=0.10798
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.62899
+    hunger=6.2149
+    acceleration=0.29939
+    threshold=52.629
+    
+  [RULE:3]
+    weight=0.11048
+    hunger=2.887
+    fear=0.71361
+    
+  [RULE:5]
+    weight=0.25864
+    collision=0.077158
+    
+  [RULE:8]
+    weight=0.030466
+    frienddistance=1.4065
+    
+  [RULE:10]
+    weight=0.086348
+    visiondist=0.3729
+    
+  [RULE:11]
+    weight=0.010276
+    visiondist=1.0249
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.70528
+    hunger=3.4912
+    acceleration=0.52573
+    threshold=58.429
+    
+  [RULE:3]
+    weight=0.40039
+    hunger=3.0044
+    fear=0.75201
+    
+  [RULE:5]
+    weight=0.40527
+    collision=0.06676
+    
+  [RULE:8]
+    weight=0.54551
+    frienddistance=0.88124
+    
+  [RULE:10]
+    weight=0.062079
+    visiondist=0.043016
+    
+  [RULE:11]
+    weight=0.11384
+    visiondist=1.3535
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.244
+    hunger=7.3959
+    acceleration=0.39448
+    threshold=46.607
+    
+  [RULE:3]
+    weight=0.54901
+    hunger=7.5476
+    fear=0.36012
+    
+  [RULE:5]
+    weight=0.40053
+    collision=0.076225
+    
+  [RULE:8]
+    weight=0.082906
+    frienddistance=0.18843
+    
+  [RULE:10]
+    weight=0.0070475
+    visiondist=0.86311
+    
+  [RULE:11]
+    weight=0.00764
+    visiondist=0.063426
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.25769
+    hunger=5.3403
+    acceleration=0.41055
+    threshold=47.347
+    
+  [RULE:3]
+    weight=0.57223
+    hunger=4.2641
+    fear=0.077857
+    
+  [RULE:5]
+    weight=0.10885
+    collision=0.018177
+    
+  [RULE:8]
+    weight=0.55187
+    frienddistance=1.1349
+    
+  [RULE:10]
+    weight=0.071542
+    visiondist=0.64328
+    
+  [RULE:11]
+    weight=0.14639
+    visiondist=0.80424
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.71504
+    hunger=6.2768
+    acceleration=0.19628
+    threshold=37.122
+    
+  [RULE:3]
+    weight=0.58726
+    hunger=0.39528
+    fear=0.136
+    
+  [RULE:5]
+    weight=0.037108
+    collision=0.12844
+    
+  [RULE:8]
+    weight=0.47545
+    frienddistance=0.57248
+    
+  [RULE:10]
+    weight=0.095813
+    visiondist=0.91876
+    
+  [RULE:11]
+    weight=0.043037
+    visiondist=2.765
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.19337
+    hunger=0.83096
+    acceleration=0.53028
+    threshold=57.743
+    
+  [RULE:3]
+    weight=0.46311
+    hunger=1.2541
+    fear=0.0089264
+    
+  [RULE:5]
+    weight=0.44084
+    collision=0.12827
+    
+  [RULE:8]
+    weight=0.17238
+    frienddistance=1.2392
+    
+  [RULE:10]
+    weight=0.11987
+    visiondist=0.50965
+    
+  [RULE:11]
+    weight=0.097461
+    visiondist=0.14242
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.29014
+    hunger=5.1555
+    acceleration=0.70404
+    threshold=64.181
+    
+  [RULE:3]
+    weight=0.47288
+    hunger=2.9413
+    fear=0.51971
+    
+  [RULE:5]
+    weight=0.14929
+    collision=0.022782
+    
+  [RULE:8]
+    weight=0.6128
+    frienddistance=1.0339
+    
+  [RULE:10]
+    weight=0.035063
+    visiondist=2.4962
+    
+  [RULE:11]
+    weight=0.13571
+    visiondist=0.81497
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.35745
+    hunger=2.1826
+    acceleration=0.63249
+    threshold=49.432
+    
+  [RULE:3]
+    weight=0.11408
+    hunger=5.9606
+    fear=0.31161
+    
+  [RULE:5]
+    weight=0.079292
+    collision=0.017955
+    
+  [RULE:8]
+    weight=0.64444
+    frienddistance=1.4971
+    
+  [RULE:10]
+    weight=0.045059
+    visiondist=2.7607
+    
+  [RULE:11]
+    weight=0.038385
+    visiondist=0.4821
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.48649
+    hunger=7.0506
+    acceleration=0.63919
+    threshold=75.667
+    
+  [RULE:3]
+    weight=0.69136
+    hunger=6.7338
+    fear=0.19702
+    
+  [RULE:5]
+    weight=0.10959
+    collision=0.013621
+    
+  [RULE:8]
+    weight=0.52253
+    frienddistance=0.074083
+    
+  [RULE:10]
+    weight=0.018277
+    visiondist=0.66059
+    
+  [RULE:11]
+    weight=0.041263
+    visiondist=1.4213
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.2582
+    hunger=4.1899
+    acceleration=0.54435
+    threshold=70.499
+    
+  [RULE:3]
+    weight=0.64342
+    hunger=2.5246
+    fear=0.7316
+    
+  [RULE:5]
+    weight=0.67225
+    collision=0.12073
+    
+  [RULE:8]
+    weight=0.072348
+    frienddistance=1.2391
+    
+  [RULE:10]
+    weight=0.13478
+    visiondist=2.2353
+    
+  [RULE:11]
+    weight=0.11292
+    visiondist=2.2124
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.2213
+    hunger=4.3554
+    acceleration=0.64268
+    threshold=0.19932
+    
+  [RULE:3]
+    weight=0.52234
+    hunger=1.4088
+    fear=0.42098
+    
+  [RULE:5]
+    weight=0.30669
+    collision=0.017174
+    
+  [RULE:8]
+    weight=0.30441
+    frienddistance=1.1183
+    
+  [RULE:10]
+    weight=0.011495
+    visiondist=0.86664
+    
+  [RULE:11]
+    weight=0.080555
+    visiondist=0.51929
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.10981
+    hunger=4.8416
+    acceleration=0.37678
+    threshold=57.63
+    
+  [RULE:3]
+    weight=0.47669
+    hunger=2.2234
+    fear=0.3509
+    
+  [RULE:5]
+    weight=0.23175
+    collision=0.020988
+    
+  [RULE:8]
+    weight=0.21688
+    frienddistance=0.30391
+    
+  [RULE:10]
+    weight=0.038772
+    visiondist=1.7527
+    
+  [RULE:11]
+    weight=0.1175
+    visiondist=0.30616
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.65653
+    hunger=3.0329
+    acceleration=0.40556
+    threshold=45.568
+    
+  [RULE:3]
+    weight=0.36076
+    hunger=6.2222
+    fear=0.098452
+    
+  [RULE:5]
+    weight=0.49058
+    collision=0.13969
+    
+  [RULE:8]
+    weight=0.41515
+    frienddistance=0.83848
+    
+  [RULE:10]
+    weight=0.11585
+    visiondist=2.0998
+    
+  [RULE:11]
+    weight=0.02868
+    visiondist=0.78413
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.52692
+    hunger=3.0501
+    acceleration=0.39401
+    threshold=29.187
+    
+  [RULE:3]
+    weight=0.44841
+    hunger=5.9004
+    fear=0.63313
+    
+  [RULE:5]
+    weight=0.3085
+    collision=0.049684
+    
+  [RULE:8]
+    weight=0.56528
+    frienddistance=0.80066
+    
+  [RULE:10]
+    weight=0.0023475
+    visiondist=2.8572
+    
+  [RULE:11]
+    weight=0.12882
+    visiondist=2.9157
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.37651
+    hunger=2.5376
+    acceleration=0.41744
+    threshold=69.415
+    
+  [RULE:3]
+    weight=0.048179
+    hunger=4.3154
+    fear=0.70746
+    
+  [RULE:5]
+    weight=0.20336
+    collision=0.061573
+    
+  [RULE:8]
+    weight=0.059232
+    frienddistance=0.17825
+    
+  [RULE:10]
+    weight=0.024526
+    visiondist=2.3446
+    
+  [RULE:11]
+    weight=0.078827
+    visiondist=2.0666
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.39104
+    hunger=5.951
+    acceleration=0.55643
+    threshold=3.137
+    
+  [RULE:3]
+    weight=0.60684
+    hunger=5.1073
+    fear=0.67549
+    
+  [RULE:5]
+    weight=0.57575
+    collision=0.05845
+    
+  [RULE:8]
+    weight=0.63088
+    frienddistance=1.1568
+    
+  [RULE:10]
+    weight=0.06823
+    visiondist=0.98958
+    
+  [RULE:11]
+    weight=0.014428
+    visiondist=3.0344
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.32368
+    hunger=7.38
+    acceleration=0.18824
+    threshold=41.281
+    
+  [RULE:3]
+    weight=0.10062
+    hunger=0.14389
+    fear=0.046938
+    
+  [RULE:5]
+    weight=0.61726
+    collision=0.026482
+    
+  [RULE:8]
+    weight=0.12948
+    frienddistance=0.40789
+    
+  [RULE:10]
+    weight=0.024711
+    visiondist=2.0821
+    
+  [RULE:11]
+    weight=0.00781
+    visiondist=2.7199
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.49054
+    hunger=0.82677
+    acceleration=0.69956
+    threshold=18.311
+    
+  [RULE:3]
+    weight=0.13176
+    hunger=3.11
+    fear=0.17838
+    
+  [RULE:5]
+    weight=0.18805
+    collision=0.078985
+    
+  [RULE:8]
+    weight=0.14648
+    frienddistance=0.76107
+    
+  [RULE:10]
+    weight=0.103
+    visiondist=0.2616
+    
+  [RULE:11]
+    weight=0.027495
+    visiondist=1.2963
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.040262
+    hunger=0.3942
+    acceleration=0.6666
+    threshold=44.208
+    
+  [RULE:3]
+    weight=0.59569
+    hunger=0.50046
+    fear=0.59867
+    
+  [RULE:5]
+    weight=0.56976
+    collision=0.046219
+    
+  [RULE:8]
+    weight=0.18076
+    frienddistance=0.85802
+    
+  [RULE:10]
+    weight=0.030278
+    visiondist=2.6852
+    
+  [RULE:11]
+    weight=0.10234
+    visiondist=0.36383
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.42172
+    hunger=7.5168
+    acceleration=0.25963
+    threshold=22.625
+    
+  [RULE:3]
+    weight=0.09061
+    hunger=2.7406
+    fear=0.70208
+    
+  [RULE:5]
+    weight=0.70122
+    collision=0.07589
+    
+  [RULE:8]
+    weight=0.51234
+    frienddistance=0.87056
+    
+  [RULE:10]
+    weight=0.025359
+    visiondist=2.3816
+    
+  [RULE:11]
+    weight=0.048166
+    visiondist=2.6841
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.58551
+    hunger=6.9927
+    acceleration=0.5522
+    threshold=73.535
+    
+  [RULE:3]
+    weight=0.37643
+    hunger=2.1495
+    fear=0.22821
+    
+  [RULE:5]
+    weight=0.078039
+    collision=0.043921
+    
+  [RULE:8]
+    weight=0.26616
+    frienddistance=0.79961
+    
+  [RULE:10]
+    weight=0.12324
+    visiondist=2.7515
+    
+  [RULE:11]
+    weight=0.078298
+    visiondist=0.46334
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.42332
+    hunger=0.09349
+    acceleration=0.60854
+    threshold=9.86
+    
+  [RULE:3]
+    weight=0.13615
+    hunger=4.4393
+    fear=0.33943
+    
+  [RULE:5]
+    weight=0.047171
+    collision=0.0043321
+    
+  [RULE:8]
+    weight=0.07785
+    frienddistance=0.58865
+    
+  [RULE:10]
+    weight=0.11728
+    visiondist=2.6534
+    
+  [RULE:11]
+    weight=0.04672
+    visiondist=1.5144
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.2257
+    hunger=1.4395
+    acceleration=0.50966
+    threshold=15.377
+    
+  [RULE:3]
+    weight=0.1971
+    hunger=1.2274
+    fear=0.48164
+    
+  [RULE:5]
+    weight=0.10646
+    collision=0.084737
+    
+  [RULE:8]
+    weight=0.441
+    frienddistance=0.26331
+    
+  [RULE:10]
+    weight=0.023751
+    visiondist=0.48984
+    
+  [RULE:11]
+    weight=0.10935
+    visiondist=2.6801
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.1594
+    hunger=5.6033
+    acceleration=0.65571
+    threshold=28.186
+    
+  [RULE:3]
+    weight=0.34707
+    hunger=5.6574
+    fear=0.5091
+    
+  [RULE:5]
+    weight=0.55825
+    collision=0.023113
+    
+  [RULE:8]
+    weight=0.17973
+    frienddistance=1.14
+    
+  [RULE:10]
+    weight=0.10183
+    visiondist=1.5727
+    
+  [RULE:11]
+    weight=0.085909
+    visiondist=0.99243
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.048437
+    hunger=6.6004
+    acceleration=0.54631
+    threshold=65.143
+    
+  [RULE:3]
+    weight=0.025149
+    hunger=5.3685
+    fear=0.64819
+    
+  [RULE:5]
+    weight=0.34736
+    collision=0.13002
+    
+  [RULE:8]
+    weight=0.36659
+    frienddistance=0.032063
+    
+  [RULE:10]
+    weight=0.085415
+    visiondist=2.1039
+    
+  [RULE:11]
+    weight=0.11527
+    visiondist=1.2911
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.24134
+    hunger=0.77146
+    acceleration=0.63239
+    threshold=16.021
+    
+  [RULE:3]
+    weight=0.38258
+    hunger=6.8083
+    fear=0.060253
+    
+  [RULE:5]
+    weight=0.16889
+    collision=0.11445
+    
+  [RULE:8]
+    weight=0.085402
+    frienddistance=1.4115
+    
+  [RULE:10]
+    weight=0.092089
+    visiondist=1.731
+    
+  [RULE:11]
+    weight=0.11917
+    visiondist=0.26813
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.41447
+    hunger=1.6195
+    acceleration=0.19156
+    threshold=2.4323
+    
+  [RULE:3]
+    weight=0.36319
+    hunger=4.329
+    fear=0.10147
+    
+  [RULE:5]
+    weight=0.23559
+    collision=0.11862
+    
+  [RULE:8]
+    weight=0.48405
+    frienddistance=0.31283
+    
+  [RULE:10]
+    weight=0.13067
+    visiondist=2.6118
+    
+  [RULE:11]
+    weight=0.14573
+    visiondist=2.9551
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.49615
+    hunger=1.0032
+    acceleration=0.69747
+    threshold=32.917
+    
+  [RULE:3]
+    weight=0.36547
+    hunger=5.2318
+    fear=0.21002
+    
+  [RULE:5]
+    weight=0.034045
+    collision=0.095485
+    
+  [RULE:8]
+    weight=0.64782
+    frienddistance=0.8486
+    
+  [RULE:10]
+    weight=0.13515
+    visiondist=1.2092
+    
+  [RULE:11]
+    weight=0.11725
+    visiondist=0.42927
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.24545
+    hunger=6.4374
+    acceleration=0.21924
+    threshold=65.698
+    
+  [RULE:3]
+    weight=0.31828
+    hunger=7.1539
+    fear=0.7573
+    
+  [RULE:5]
+    weight=0.25574
+    collision=0.056911
+    
+  [RULE:8]
+    weight=0.36277
+    frienddistance=0.037851
+    
+  [RULE:10]
+    weight=0.098915
+    visiondist=1.5872
+    
+  [RULE:11]
+    weight=0.09927
+    visiondist=1.5296
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.27875
+    hunger=7.116
+    acceleration=0.12937
+    threshold=71.866
+    
+  [RULE:3]
+    weight=0.29776
+    hunger=3.2528
+    fear=0.3207
+    
+  [RULE:5]
+    weight=0.47718
+    collision=0.013667
+    
+  [RULE:8]
+    weight=0.24168
+    frienddistance=0.45239
+    
+  [RULE:10]
+    weight=0.10018
+    visiondist=2.1708
+    
+  [RULE:11]
+    weight=0.14338
+    visiondist=0.11093
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.55732
+    hunger=2.8116
+    acceleration=0.44573
+    threshold=73.709
+    
+  [RULE:3]
+    weight=0.027183
+    hunger=7.2449
+    fear=0.68868
+    
+  [RULE:5]
+    weight=0.15655
+    collision=0.13663
+    
+  [RULE:8]
+    weight=0.22645
+    frienddistance=0.96366
+    
+  [RULE:10]
+    weight=0.04877
+    visiondist=2.8145
+    
+  [RULE:11]
+    weight=0.11003
+    visiondist=1.9421
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.57645
+    hunger=4.0283
+    acceleration=0.049448
+    threshold=52.008
+    
+  [RULE:3]
+    weight=0.193
+    hunger=5.3498
+    fear=0.68989
+    
+  [RULE:5]
+    weight=0.48409
+    collision=0.0086441
+    
+  [RULE:8]
+    weight=0.056624
+    frienddistance=0.08582
+    
+  [RULE:10]
+    weight=0.13252
+    visiondist=1.4886
+    
+  [RULE:11]
+    weight=0.0043555
+    visiondist=1.0631
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.7248
+    hunger=0.67536
+    acceleration=0.566
+    threshold=40.904
+    
+  [RULE:3]
+    weight=0.5648
+    hunger=4.8395
+    fear=0.070358
+    
+  [RULE:5]
+    weight=0.32925
+    collision=0.07328
+    
+  [RULE:8]
+    weight=0.42036
+    frienddistance=0.50051
+    
+  [RULE:10]
+    weight=0.0344
+    visiondist=0.94727
+    
+  [RULE:11]
+    weight=0.13062
+    visiondist=0.88579
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.20804
+    hunger=7.4461
+    acceleration=0.71275
+    threshold=5.9463
+    
+  [RULE:3]
+    weight=0.31838
+    hunger=6.7755
+    fear=0.127
+    
+  [RULE:5]
+    weight=0.12438
+    collision=0.065316
+    
+  [RULE:8]
+    weight=0.6918
+    frienddistance=1.2167
+    
+  [RULE:10]
+    weight=0.079388
+    visiondist=1.0442
+    
+  [RULE:11]
+    weight=0.042947
+    visiondist=0.22922
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.60818
+    hunger=2.9102
+    acceleration=0.49049
+    threshold=60.461
+    
+  [RULE:3]
+    weight=0.2178
+    hunger=3.0067
+    fear=0.64426
+    
+  [RULE:5]
+    weight=0.20121
+    collision=0.030751
+    
+  [RULE:8]
+    weight=0.58651
+    frienddistance=1.1135
+    
+  [RULE:10]
+    weight=0.005724
+    visiondist=0.13818
+    
+  [RULE:11]
+    weight=0.10827
+    visiondist=2.9655
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.67974
+    hunger=1.6518
+    acceleration=0.67393
+    threshold=21.386
+    
+  [RULE:3]
+    weight=0.56959
+    hunger=5.2211
+    fear=0.50488
+    
+  [RULE:5]
+    weight=0.30008
+    collision=0.073344
+    
+  [RULE:8]
+    weight=0.72268
+    frienddistance=1.2015
+    
+  [RULE:10]
+    weight=0.050195
+    visiondist=0.65554
+    
+  [RULE:11]
+    weight=0.1509
+    visiondist=0.30994
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.0044918
+    hunger=2.0604
+    acceleration=0.60175
+    threshold=66.341
+    
+  [RULE:3]
+    weight=0.42705
+    hunger=0.6587
+    fear=0.1289
+    
+  [RULE:5]
+    weight=0.57986
+    collision=0.027666
+    
+  [RULE:8]
+    weight=0.75134
+    frienddistance=0.46745
+    
+  [RULE:10]
+    weight=0.085105
+    visiondist=2.6843
+    
+  [RULE:11]
+    weight=0.079782
+    visiondist=1.3578
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.30077
+    hunger=2.7485
+    acceleration=0.021855
+    threshold=36.664
+    
+  [RULE:3]
+    weight=0.40375
+    hunger=6.0171
+    fear=0.50497
+    
+  [RULE:5]
+    weight=0.39509
+    collision=0.015087
+    
+  [RULE:8]
+    weight=0.1705
+    frienddistance=0.61235
+    
+  [RULE:10]
+    weight=0.094869
+    visiondist=2.0398
+    
+  [RULE:11]
+    weight=0.086225
+    visiondist=2.7314
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.13346
+    hunger=0.20736
+    acceleration=0.27906
+    threshold=12.985
+    
+  [RULE:3]
+    weight=0.36456
+    hunger=3.158
+    fear=0.08688
+    
+  [RULE:5]
+    weight=0.73151
+    collision=0.092914
+    
+  [RULE:8]
+    weight=0.54591
+    frienddistance=0.68591
+    
+  [RULE:10]
+    weight=0.011876
+    visiondist=0.34673
+    
+  [RULE:11]
+    weight=0.12356
+    visiondist=0.32495
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.56912
+    hunger=4.3822
+    acceleration=0.45228
+    threshold=12.492
+    
+  [RULE:3]
+    weight=0.5251
+    hunger=4.2379
+    fear=0.58949
+    
+  [RULE:5]
+    weight=0.311
+    collision=0.0013493
+    
+  [RULE:8]
+    weight=0.64887
+    frienddistance=0.79537
+    
+  [RULE:10]
+    weight=0.12491
+    visiondist=2.9204
+    
+  [RULE:11]
+    weight=0.018202
+    visiondist=0.50444
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.6581
+    hunger=2.2559
+    acceleration=0.36417
+    threshold=1.685
+    
+  [RULE:3]
+    weight=0.099544
+    hunger=7.5974
+    fear=0.74711
+    
+  [RULE:5]
+    weight=0.27445
+    collision=0.013343
+    
+  [RULE:8]
+    weight=0.27717
+    frienddistance=1.1656
+    
+  [RULE:10]
+    weight=0.030886
+    visiondist=0.34513
+    
+  [RULE:11]
+    weight=0.052206
+    visiondist=2.4268
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.33713
+    hunger=2.7724
+    acceleration=0.68956
+    threshold=73.482
+    
+  [RULE:3]
+    weight=0.14179
+    hunger=6.5966
+    fear=0.065831
+    
+  [RULE:5]
+    weight=0.2679
+    collision=0.11054
+    
+  [RULE:8]
+    weight=0.35514
+    frienddistance=0.58133
+    
+  [RULE:10]
+    weight=0.088832
+    visiondist=1.013
+    
+  [RULE:11]
+    weight=0.10325
+    visiondist=0.19332
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.65902
+    hunger=6.2872
+    acceleration=0.5135
+    threshold=1.493
+    
+  [RULE:3]
+    weight=0.70058
+    hunger=7.5373
+    fear=0.40134
+    
+  [RULE:5]
+    weight=0.053115
+    collision=0.11422
+    
+  [RULE:8]
+    weight=0.30499
+    frienddistance=0.19042
+    
+  [RULE:10]
+    weight=0.072655
+    visiondist=1.4018
+    
+  [RULE:11]
+    weight=0.0073931
+    visiondist=0.88516
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.71008
+    hunger=1.4085
+    acceleration=0.10809
+    threshold=17.704
+    
+  [RULE:3]
+    weight=0.11734
+    hunger=3.2417
+    fear=0.45207
+    
+  [RULE:5]
+    weight=0.35104
+    collision=0.1341
+    
+  [RULE:8]
+    weight=0.081881
+    frienddistance=0.71821
+    
+  [RULE:10]
+    weight=0.041981
+    visiondist=2.9636
+    
+  [RULE:11]
+    weight=0.045566
+    visiondist=2.8936
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.3528
+    hunger=1.9639
+    acceleration=0.12514
+    threshold=2.7244
+    
+  [RULE:3]
+    weight=0.70421
+    hunger=0.75214
+    fear=0.16809
+    
+  [RULE:5]
+    weight=0.052298
+    collision=0.050451
+    
+  [RULE:8]
+    weight=0.28543
+    frienddistance=0.75294
+    
+  [RULE:10]
+    weight=0.14087
+    visiondist=2.5459
+    
+  [RULE:11]
+    weight=0.057395
+    visiondist=0.10484
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.46028
+    hunger=0.029351
+    acceleration=0.63181
+    threshold=41.742
+    
+  [RULE:3]
+    weight=0.4001
+    hunger=0.93327
+    fear=0.18565
+    
+  [RULE:5]
+    weight=0.34226
+    collision=0.082011
+    
+  [RULE:8]
+    weight=0.31716
+    frienddistance=1.2697
+    
+  [RULE:10]
+    weight=0.00075057
+    visiondist=2.6798
+    
+  [RULE:11]
+    weight=0.014251
+    visiondist=0.51556
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.077959
+    hunger=5.8579
+    acceleration=0.077046
+    threshold=17.129
+    
+  [RULE:3]
+    weight=0.011439
+    hunger=4.1931
+    fear=0.58134
+    
+  [RULE:5]
+    weight=0.3286
+    collision=0.058834
+    
+  [RULE:8]
+    weight=0.58509
+    frienddistance=0.4771
+    
+  [RULE:10]
+    weight=0.073086
+    visiondist=2.8559
+    
+  [RULE:11]
+    weight=0.035151
+    visiondist=1.5236
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.57217
+    hunger=3.5605
+    acceleration=0.12785
+    threshold=74.054
+    
+  [RULE:3]
+    weight=0.032995
+    hunger=2.0581
+    fear=0.56633
+    
+  [RULE:5]
+    weight=0.11004
+    collision=0.075419
+    
+  [RULE:8]
+    weight=0.57777
+    frienddistance=1.0587
+    
+  [RULE:10]
+    weight=0.039687
+    visiondist=0.58546
+    
+  [RULE:11]
+    weight=0.012704
+    visiondist=0.094129
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.2452
+    hunger=1.7242
+    acceleration=0.73547
+    threshold=16.724
+    
+  [RULE:3]
+    weight=0.094117
+    hunger=5.4765
+    fear=0.52329
+    
+  [RULE:5]
+    weight=0.22197
+    collision=0.10564
+    
+  [RULE:8]
+    weight=0.55629
+    frienddistance=0.85556
+    
+  [RULE:10]
+    weight=0.066904
+    visiondist=2.6653
+    
+  [RULE:11]
+    weight=0.0089746
+    visiondist=0.60915
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.26684
+    hunger=6.8357
+    acceleration=0.16815
+    threshold=24.436
+    
+  [RULE:3]
+    weight=0.48424
+    hunger=2.1799
+    fear=0.37997
+    
+  [RULE:5]
+    weight=0.56596
+    collision=0.1433
+    
+  [RULE:8]
+    weight=0.37002
+    frienddistance=1.1189
+    
+  [RULE:10]
+    weight=0.11757
+    visiondist=2.4609
+    
+  [RULE:11]
+    weight=0.14637
+    visiondist=2.2533
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.28793
+    hunger=1.1917
+    acceleration=0.34204
+    threshold=71.571
+    
+  [RULE:3]
+    weight=0.45369
+    hunger=2.4837
+    fear=0.00058345
+    
+  [RULE:5]
+    weight=0.60598
+    collision=0.13681
+    
+  [RULE:8]
+    weight=0.24389
+    frienddistance=0.28926
+    
+  [RULE:10]
+    weight=0.08465
+    visiondist=2.0429
+    
+  [RULE:11]
+    weight=0.01364
+    visiondist=2.3656
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.75057
+    hunger=4.3928
+    acceleration=0.5609
+    threshold=23.894
+    
+  [RULE:3]
+    weight=0.43987
+    hunger=4.0687
+    fear=0.16299
+    
+  [RULE:5]
+    weight=0.68376
+    collision=0.1103
+    
+  [RULE:8]
+    weight=0.58624
+    frienddistance=0.869
+    
+  [RULE:10]
+    weight=0.12394
+    visiondist=1.6705
+    
+  [RULE:11]
+    weight=0.085919
+    visiondist=1.6486
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.68729
+    hunger=1.8526
+    acceleration=0.21532
+    threshold=3.8735
+    
+  [RULE:3]
+    weight=0.077319
+    hunger=4.4867
+    fear=0.60972
+    
+  [RULE:5]
+    weight=0.44056
+    collision=0.093047
+    
+  [RULE:8]
+    weight=0.48033
+    frienddistance=0.8993
+    
+  [RULE:10]
+    weight=0.032585
+    visiondist=1.7132
+    
+  [RULE:11]
+    weight=0.093777
+    visiondist=2.4471
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.68326
+    hunger=6.5378
+    acceleration=0.18187
+    threshold=10.581
+    
+  [RULE:3]
+    weight=0.0029323
+    hunger=6.2745
+    fear=0.73639
+    
+  [RULE:5]
+    weight=0.7006
+    collision=0.024897
+    
+  [RULE:8]
+    weight=0.47792
+    frienddistance=0.88955
+    
+  [RULE:10]
+    weight=0.1223
+    visiondist=1.6208
+    
+  [RULE:11]
+    weight=0.12601
+    visiondist=0.26727
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.24077
+    hunger=4.961
+    acceleration=0.4392
+    threshold=47.62
+    
+  [RULE:3]
+    weight=0.35675
+    hunger=3.7284
+    fear=0.56403
+    
+  [RULE:5]
+    weight=0.14555
+    collision=0.045948
+    
+  [RULE:8]
+    weight=0.54564
+    frienddistance=0.23243
+    
+  [RULE:10]
+    weight=0.038489
+    visiondist=2.1208
+    
+  [RULE:11]
+    weight=0.14287
+    visiondist=0.52619
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.20856
+    hunger=0.29054
+    acceleration=0.10314
+    threshold=38.068
+    
+  [RULE:3]
+    weight=0.074268
+    hunger=0.17824
+    fear=0.323
+    
+  [RULE:5]
+    weight=0.073821
+    collision=0.012812
+    
+  [RULE:8]
+    weight=0.72064
+    frienddistance=1.5006
+    
+  [RULE:10]
+    weight=0.13177
+    visiondist=1.6941
+    
+  [RULE:11]
+    weight=0.079573
+    visiondist=1.3778
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.27318
+    hunger=0.20356
+    acceleration=0.30238
+    threshold=69.671
+    
+  [RULE:3]
+    weight=0.41822
+    hunger=6.4684
+    fear=0.36833
+    
+  [RULE:5]
+    weight=0.075592
+    collision=0.054766
+    
+  [RULE:8]
+    weight=0.54053
+    frienddistance=1.0417
+    
+  [RULE:10]
+    weight=0.06803
+    visiondist=0.0040302
+    
+  [RULE:11]
+    weight=0.019888
+    visiondist=2.1455
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.086156
+    hunger=7.2375
+    acceleration=0.056588
+    threshold=6.6549
+    
+  [RULE:3]
+    weight=0.7128
+    hunger=0.80937
+    fear=0.31132
+    
+  [RULE:5]
+    weight=0.48681
+    collision=0.062999
+    
+  [RULE:8]
+    weight=0.42088
+    frienddistance=1.2525
+    
+  [RULE:10]
+    weight=0.025136
+    visiondist=0.41306
+    
+  [RULE:11]
+    weight=0.095398
+    visiondist=2.0563
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.12235
+    hunger=7.3766
+    acceleration=0.56329
+    threshold=69.665
+    
+  [RULE:3]
+    weight=0.68302
+    hunger=3.7187
+    fear=0.065232
+    
+  [RULE:5]
+    weight=0.65423
+    collision=0.0056767
+    
+  [RULE:8]
+    weight=0.58902
+    frienddistance=0.40526
+    
+  [RULE:10]
+    weight=0.0039297
+    visiondist=1.212
+    
+  [RULE:11]
+    weight=0.10182
+    visiondist=0.84773
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.56956
+    hunger=3.0787
+    acceleration=0.054446
+    threshold=51.294
+    
+  [RULE:3]
+    weight=0.30172
+    hunger=3.9892
+    fear=0.59472
+    
+  [RULE:5]
+    weight=0.50482
+    collision=0.12869
+    
+  [RULE:8]
+    weight=0.30564
+    frienddistance=0.41459
+    
+  [RULE:10]
+    weight=0.043301
+    visiondist=0.79761
+    
+  [RULE:11]
+    weight=0.14566
+    visiondist=1.1142
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.61337
+    hunger=6.4754
+    acceleration=0.58625
+    threshold=34.343
+    
+  [RULE:3]
+    weight=0.69109
+    hunger=2.7375
+    fear=0.43085
+    
+  [RULE:5]
+    weight=0.57118
+    collision=0.13376
+    
+  [RULE:8]
+    weight=0.69132
+    frienddistance=0.65542
+    
+  [RULE:10]
+    weight=0.066913
+    visiondist=0.82143
+    
+  [RULE:11]
+    weight=0.14628
+    visiondist=0.65904
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.39886
+    hunger=2.5628
+    acceleration=0.29338
+    threshold=64.057
+    
+  [RULE:3]
+    weight=0.75184
+    hunger=5.998
+    fear=0.48979
+    
+  [RULE:5]
+    weight=0.11896
+    collision=0.11759
+    
+  [RULE:8]
+    weight=0.12273
+    frienddistance=0.73322
+    
+  [RULE:10]
+    weight=0.11013
+    visiondist=2.9444
+    
+  [RULE:11]
+    weight=0.050831
+    visiondist=1.5077
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.75643
+    hunger=5.5948
+    acceleration=0.6817
+    threshold=32.414
+    
+  [RULE:3]
+    weight=0.13405
+    hunger=1.2706
+    fear=0.29552
+    
+  [RULE:5]
+    weight=0.29881
+    collision=0.13611
+    
+  [RULE:8]
+    weight=0.75328
+    frienddistance=0.35501
+    
+  [RULE:10]
+    weight=0.01121
+    visiondist=1.5686
+    
+  [RULE:11]
+    weight=0.086756
+    visiondist=1.3977
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.56399
+    hunger=1.6487
+    acceleration=0.22641
+    threshold=18.036
+    
+  [RULE:3]
+    weight=0.16667
+    hunger=7.4445
+    fear=0.3814
+    
+  [RULE:5]
+    weight=0.38368
+    collision=0.017954
+    
+  [RULE:8]
+    weight=0.19169
+    frienddistance=0.14616
+    
+  [RULE:10]
+    weight=0.13352
+    visiondist=2.0896
+    
+  [RULE:11]
+    weight=0.11254
+    visiondist=1.197
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.44142
+    hunger=7.5592
+    acceleration=0.052234
+    threshold=20.383
+    
+  [RULE:3]
+    weight=0.55862
+    hunger=3.5148
+    fear=0.46273
+    
+  [RULE:5]
+    weight=0.31593
+    collision=0.10341
+    
+  [RULE:8]
+    weight=0.4545
+    frienddistance=0.65651
+    
+  [RULE:10]
+    weight=0.086967
+    visiondist=0.01013
+    
+  [RULE:11]
+    weight=0.0021853
+    visiondist=1.2945
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.26917
+    hunger=6.5767
+    acceleration=0.48975
+    threshold=73.433
+    
+  [RULE:3]
+    weight=0.68226
+    hunger=7.4328
+    fear=0.19592
+    
+  [RULE:5]
+    weight=0.056711
+    collision=0.090715
+    
+  [RULE:8]
+    weight=0.27092
+    frienddistance=1.1619
+    
+  [RULE:10]
+    weight=0.14086
+    visiondist=0.0069089
+    
+  [RULE:11]
+    weight=0.014667
+    visiondist=2.8527
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.24026
+    hunger=3.3641
+    acceleration=0.36353
+    threshold=15.786
+    
+  [RULE:3]
+    weight=0.46982
+    hunger=1.3533
+    fear=0.27431
+    
+  [RULE:5]
+    weight=0.0007271
+    collision=0.13481
+    
+  [RULE:8]
+    weight=0.75479
+    frienddistance=0.94352
+    
+  [RULE:10]
+    weight=0.11245
+    visiondist=1.0559
+    
+  [RULE:11]
+    weight=0.073886
+    visiondist=1.168
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.3484
+    hunger=7.2885
+    acceleration=0.70513
+    threshold=16.934
+    
+  [RULE:3]
+    weight=0.67315
+    hunger=7.0685
+    fear=0.24267
+    
+  [RULE:5]
+    weight=0.62633
+    collision=0.046513
+    
+  [RULE:8]
+    weight=0.26526
+    frienddistance=0.63807
+    
+  [RULE:10]
+    weight=0.068903
+    visiondist=2.0221
+    
+  [RULE:11]
+    weight=0.13109
+    visiondist=2.8322
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.36599
+    hunger=7.5741
+    acceleration=0.17247
+    threshold=7.7752
+    
+  [RULE:3]
+    weight=0.55965
+    hunger=4.3644
+    fear=0.44718
+    
+  [RULE:5]
+    weight=0.091641
+    collision=0.13495
+    
+  [RULE:8]
+    weight=0.73888
+    frienddistance=0.73383
+    
+  [RULE:10]
+    weight=0.069788
+    visiondist=1.3091
+    
+  [RULE:11]
+    weight=0.067154
+    visiondist=1.1763
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.044808
+    hunger=3.4505
+    acceleration=0.18371
+    threshold=37.209
+    
+  [RULE:3]
+    weight=0.68082
+    hunger=4.7778
+    fear=0.10871
+    
+  [RULE:5]
+    weight=0.16974
+    collision=0.14374
+    
+  [RULE:8]
+    weight=0.087999
+    frienddistance=0.56998
+    
+  [RULE:10]
+    weight=0.086437
+    visiondist=1.3302
+    
+  [RULE:11]
+    weight=0.14386
+    visiondist=1.9607
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.22401
+    hunger=5.8566
+    acceleration=0.28721
+    threshold=52.5
+    
+  [RULE:3]
+    weight=0.67251
+    hunger=5.3082
+    fear=0.14375
+    
+  [RULE:5]
+    weight=0.559
+    collision=0.090172
+    
+  [RULE:8]
+    weight=0.20968
+    frienddistance=1.0743
+    
+  [RULE:10]
+    weight=0.057127
+    visiondist=1.018
+    
+  [RULE:11]
+    weight=0.024436
+    visiondist=1.8774
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.2212
+    hunger=4.1628
+    acceleration=0.11464
+    threshold=54.965
+    
+  [RULE:3]
+    weight=0.53501
+    hunger=3.237
+    fear=0.3726
+    
+  [RULE:5]
+    weight=0.015919
+    collision=0.048422
+    
+  [RULE:8]
+    weight=0.062118
+    frienddistance=0.59965
+    
+  [RULE:10]
+    weight=0.069528
+    visiondist=1.9477
+    
+  [RULE:11]
+    weight=0.0072932
+    visiondist=2.396
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.18277
+    hunger=3.6024
+    acceleration=0.50594
+    threshold=50.647
+    
+  [RULE:3]
+    weight=0.73283
+    hunger=5.2186
+    fear=0.74858
+    
+  [RULE:5]
+    weight=0.034952
+    collision=0.012337
+    
+  [RULE:8]
+    weight=0.33622
+    frienddistance=1.0438
+    
+  [RULE:10]
+    weight=0.019631
+    visiondist=0.70085
+    
+  [RULE:11]
+    weight=0.14738
+    visiondist=1.4759
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.73714
+    hunger=6.9075
+    acceleration=0.31736
+    threshold=65.538
+    
+  [RULE:3]
+    weight=0.17772
+    hunger=5.5734
+    fear=0.53229
+    
+  [RULE:5]
+    weight=0.52712
+    collision=0.022398
+    
+  [RULE:8]
+    weight=0.60041
+    frienddistance=0.6754
+    
+  [RULE:10]
+    weight=0.016585
+    visiondist=0.092735
+    
+  [RULE:11]
+    weight=0.13959
+    visiondist=2.3555
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.53479
+    hunger=7.1953
+    acceleration=0.067603
+    threshold=20.819
+    
+  [RULE:3]
+    weight=0.54616
+    hunger=2.4308
+    fear=0.49649
+    
+  [RULE:5]
+    weight=0.53355
+    collision=0.10182
+    
+  [RULE:8]
+    weight=0.75926
+    frienddistance=0.54988
+    
+  [RULE:10]
+    weight=0.021202
+    visiondist=0.66894
+    
+  [RULE:11]
+    weight=0.098606
+    visiondist=2.1249
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.5198
+    hunger=2.9147
+    acceleration=0.56401
+    threshold=54.377
+    
+  [RULE:3]
+    weight=0.58966
+    hunger=3.388
+    fear=0.5033
+    
+  [RULE:5]
+    weight=0.65726
+    collision=0.1094
+    
+  [RULE:8]
+    weight=0.28947
+    frienddistance=0.28068
+    
+  [RULE:10]
+    weight=0.056696
+    visiondist=0.25208
+    
+  [RULE:11]
+    weight=0.12989
+    visiondist=1.131
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.52669
+    hunger=5.5187
+    acceleration=0.0189
+    threshold=66.43
+    
+  [RULE:3]
+    weight=0.39432
+    hunger=2.5589
+    fear=0.75456
+    
+  [RULE:5]
+    weight=0.34953
+    collision=0.05711
+    
+  [RULE:8]
+    weight=0.62932
+    frienddistance=0.34754
+    
+  [RULE:10]
+    weight=0.12877
+    visiondist=1.5565
+    
+  [RULE:11]
+    weight=0.093048
+    visiondist=1.7914
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.58976
+    hunger=3.8864
+    acceleration=0.72404
+    threshold=29.881
+    
+  [RULE:3]
+    weight=0.59624
+    hunger=2.6244
+    fear=0.70439
+    
+  [RULE:5]
+    weight=0.69224
+    collision=0.011375
+    
+  [RULE:8]
+    weight=0.54237
+    frienddistance=1.3424
+    
+  [RULE:10]
+    weight=0.091375
+    visiondist=0.39321
+    
+  [RULE:11]
+    weight=0.080493
+    visiondist=0.4648
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.34862
+    hunger=5.2484
+    acceleration=0.20436
+    threshold=5.0671
+    
+  [RULE:3]
+    weight=0.1883
+    hunger=2.3132
+    fear=0.17013
+    
+  [RULE:5]
+    weight=0.22675
+    collision=0.038357
+    
+  [RULE:8]
+    weight=0.38313
+    frienddistance=0.84859
+    
+  [RULE:10]
+    weight=0.014547
+    visiondist=2.5379
+    
+  [RULE:11]
+    weight=0.0054001
+    visiondist=0.96414
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.47147
+    hunger=4.1939
+    acceleration=0.14073
+    threshold=40.646
+    
+  [RULE:3]
+    weight=0.033964
+    hunger=3.9189
+    fear=0.18982
+    
+  [RULE:5]
+    weight=0.61994
+    collision=0.15067
+    
+  [RULE:8]
+    weight=0.086271
+    frienddistance=0.23664
+    
+  [RULE:10]
+    weight=0.010758
+    visiondist=2.4826
+    
+  [RULE:11]
+    weight=0.050691
+    visiondist=2.4953
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.070785
+    hunger=1.9396
+    acceleration=0.24503
+    threshold=1.6842
+    
+  [RULE:3]
+    weight=0.17846
+    hunger=2.6961
+    fear=0.44539
+    
+  [RULE:5]
+    weight=0.0082927
+    collision=0.019625
+    
+  [RULE:8]
+    weight=0.74229
+    frienddistance=0.96478
+    
+  [RULE:10]
+    weight=0.082856
+    visiondist=2.7412
+    
+  [RULE:11]
+    weight=0.061898
+    visiondist=0.96683
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.54434
+    hunger=7.5573
+    acceleration=0.3369
+    threshold=20.667
+    
+  [RULE:3]
+    weight=0.13039
+    hunger=4.0769
+    fear=0.40063
+    
+  [RULE:5]
+    weight=0.37542
+    collision=0.084906
+    
+  [RULE:8]
+    weight=0.57909
+    frienddistance=1.2901
+    
+  [RULE:10]
+    weight=0.021983
+    visiondist=2.3495
+    
+  [RULE:11]
+    weight=0.14863
+    visiondist=0.36881
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.1219
+    hunger=2.8598
+    acceleration=0.62574
+    threshold=52.959
+    
+  [RULE:3]
+    weight=0.68661
+    hunger=2.4117
+    fear=0.19412
+    
+  [RULE:5]
+    weight=0.5057
+    collision=0.025239
+    
+  [RULE:8]
+    weight=0.30404
+    frienddistance=0.66616
+    
+  [RULE:10]
+    weight=0.02187
+    visiondist=1.585
+    
+  [RULE:11]
+    weight=0.12857
+    visiondist=2.0271
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.73124
+    hunger=1.0985
+    acceleration=0.48479
+    threshold=13.721
+    
+  [RULE:3]
+    weight=0.61729
+    hunger=4.3246
+    fear=0.63048
+    
+  [RULE:5]
+    weight=0.29793
+    collision=0.11844
+    
+  [RULE:8]
+    weight=0.41391
+    frienddistance=0.54706
+    
+  [RULE:10]
+    weight=0.098308
+    visiondist=2.9694
+    
+  [RULE:11]
+    weight=0.065688
+    visiondist=0.50498
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.63883
+    hunger=0.022235
+    acceleration=0.15695
+    threshold=33.079
+    
+  [RULE:3]
+    weight=0.62815
+    hunger=0.90305
+    fear=0.36429
+    
+  [RULE:5]
+    weight=0.02728
+    collision=0.090477
+    
+  [RULE:8]
+    weight=0.22269
+    frienddistance=0.63709
+    
+  [RULE:10]
+    weight=0.037235
+    visiondist=2.005
+    
+  [RULE:11]
+    weight=0.13896
+    visiondist=0.71602
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.32933
+    hunger=0.16107
+    acceleration=0.70748
+    threshold=63.933
+    
+  [RULE:3]
+    weight=0.3155
+    hunger=3.9974
+    fear=0.51268
+    
+  [RULE:5]
+    weight=0.50198
+    collision=0.11395
+    
+  [RULE:8]
+    weight=0.66478
+    frienddistance=0.61848
+    
+  [RULE:10]
+    weight=0.11323
+    visiondist=2.1745
+    
+  [RULE:11]
+    weight=0.062293
+    visiondist=2.8923
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.29093
+    hunger=5.1104
+    acceleration=0.63669
+    threshold=19.047
+    
+  [RULE:3]
+    weight=0.0053304
+    hunger=6.7543
+    fear=0.63363
+    
+  [RULE:5]
+    weight=0.57108
+    collision=0.13545
+    
+  [RULE:8]
+    weight=0.43119
+    frienddistance=1.1129
+    
+  [RULE:10]
+    weight=0.1465
+    visiondist=2.8298
+    
+  [RULE:11]
+    weight=0.14974
+    visiondist=2.1339
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.74864
+    hunger=5.3869
+    acceleration=0.36166
+    threshold=69.754
+    
+  [RULE:3]
+    weight=0.24232
+    hunger=1.8497
+    fear=0.075056
+    
+  [RULE:5]
+    weight=0.59296
+    collision=0.082841
+    
+  [RULE:8]
+    weight=0.20719
+    frienddistance=0.94938
+    
+  [RULE:10]
+    weight=0.11606
+    visiondist=0.33988
+    
+  [RULE:11]
+    weight=0.10484
+    visiondist=0.45476
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.062093
+    hunger=5.7161
+    acceleration=0.28591
+    threshold=9.2153
+    
+  [RULE:3]
+    weight=0.18617
+    hunger=0.19838
+    fear=0.22834
+    
+  [RULE:5]
+    weight=0.14685
+    collision=0.13807
+    
+  [RULE:8]
+    weight=0.21709
+    frienddistance=0.47665
+    
+  [RULE:10]
+    weight=0.014199
+    visiondist=0.28512
+    
+  [RULE:11]
+    weight=0.062136
+    visiondist=0.39898
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.083919
+    hunger=5.1842
+    acceleration=0.26719
+    threshold=33.9
+    
+  [RULE:3]
+    weight=0.06396
+    hunger=5.7711
+    fear=0.52041
+    
+  [RULE:5]
+    weight=0.59909
+    collision=0.037928
+    
+  [RULE:8]
+    weight=0.34284
+    frienddistance=0.84819
+    
+  [RULE:10]
+    weight=0.14195
+    visiondist=1.3219
+    
+  [RULE:11]
+    weight=0.082532
+    visiondist=1.3248
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.48588
+    hunger=2.2269
+    acceleration=0.32367
+    threshold=42.393
+    
+  [RULE:3]
+    weight=0.51171
+    hunger=1.261
+    fear=0.1791
+    
+  [RULE:5]
+    weight=0.56114
+    collision=0.10552
+    
+  [RULE:8]
+    weight=0.1239
+    frienddistance=0.38682
+    
+  [RULE:10]
+    weight=0.11865
+    visiondist=0.073847
+    
+  [RULE:11]
+    weight=0.031228
+    visiondist=1.246
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.48216
+    hunger=3.1716
+    acceleration=0.33315
+    threshold=75.483
+    
+  [RULE:3]
+    weight=0.14236
+    hunger=0.59026
+    fear=0.21753
+    
+  [RULE:5]
+    weight=0.46603
+    collision=0.096592
+    
+  [RULE:8]
+    weight=0.72924
+    frienddistance=1.1843
+    
+  [RULE:10]
+    weight=0.13241
+    visiondist=2.1215
+    
+  [RULE:11]
+    weight=0.071951
+    visiondist=0.10381
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.5045
+    hunger=2.8865
+    acceleration=0.61898
+    threshold=74.712
+    
+  [RULE:3]
+    weight=0.23721
+    hunger=4.6302
+    fear=0.36003
+    
+  [RULE:5]
+    weight=0.05586
+    collision=0.10886
+    
+  [RULE:8]
+    weight=0.43561
+    frienddistance=1.0557
+    
+  [RULE:10]
+    weight=0.012491
+    visiondist=0.63109
+    
+  [RULE:11]
+    weight=0.017006
+    visiondist=1.5824
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.72222
+    hunger=2.5743
+    acceleration=0.64397
+    threshold=1.4671
+    
+  [RULE:3]
+    weight=0.30735
+    hunger=5.5984
+    fear=0.53015
+    
+  [RULE:5]
+    weight=0.7173
+    collision=0.10631
+    
+  [RULE:8]
+    weight=0.069942
+    frienddistance=0.085717
+    
+  [RULE:10]
+    weight=0.054234
+    visiondist=1.7288
+    
+  [RULE:11]
+    weight=0.057239
+    visiondist=0.38318
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.68821
+    hunger=1.3326
+    acceleration=0.75259
+    threshold=27.366
+    
+  [RULE:3]
+    weight=0.64426
+    hunger=7.0231
+    fear=0.72887
+    
+  [RULE:5]
+    weight=0.52058
+    collision=0.15152
+    
+  [RULE:8]
+    weight=0.49761
+    frienddistance=1.4304
+    
+  [RULE:10]
+    weight=0.040586
+    visiondist=1.8393
+    
+  [RULE:11]
+    weight=0.042526
+    visiondist=0.34761
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.47727
+    hunger=4.1831
+    acceleration=0.31459
+    threshold=52.013
+    
+  [RULE:3]
+    weight=0.68948
+    hunger=7.4678
+    fear=0.046326
+    
+  [RULE:5]
+    weight=0.025277
+    collision=0.083364
+    
+  [RULE:8]
+    weight=0.72846
+    frienddistance=0.34618
+    
+  [RULE:10]
+    weight=0.10787
+    visiondist=2.6267
+    
+  [RULE:11]
+    weight=0.06127
+    visiondist=2.1278
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.0016899
+    hunger=0.51143
+    acceleration=0.63901
+    threshold=64.843
+    
+  [RULE:3]
+    weight=0.29579
+    hunger=3.5629
+    fear=0.30675
+    
+  [RULE:5]
+    weight=0.61037
+    collision=0.023284
+    
+  [RULE:8]
+    weight=0.23623
+    frienddistance=1.1943
+    
+  [RULE:10]
+    weight=0.032549
+    visiondist=1.046
+    
+  [RULE:11]
+    weight=0.050795
+    visiondist=0.52484
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.33926
+    hunger=5.8536
+    acceleration=0.66267
+    threshold=60.076
+    
+  [RULE:3]
+    weight=0.079335
+    hunger=0.33882
+    fear=0.27536
+    
+  [RULE:5]
+    weight=0.11266
+    collision=0.012354
+    
+  [RULE:8]
+    weight=0.25631
+    frienddistance=1.3558
+    
+  [RULE:10]
+    weight=0.052001
+    visiondist=1.7115
+    
+  [RULE:11]
+    weight=0.039486
+    visiondist=2.3898
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.13221
+    hunger=2.6614
+    acceleration=0.65215
+    threshold=22.717
+    
+  [RULE:3]
+    weight=0.10875
+    hunger=6.2017
+    fear=0.22998
+    
+  [RULE:5]
+    weight=0.55341
+    collision=0.12308
+    
+  [RULE:8]
+    weight=0.029067
+    frienddistance=0.7518
+    
+  [RULE:10]
+    weight=0.04683
+    visiondist=2.7648
+    
+  [RULE:11]
+    weight=0.037321
+    visiondist=1.4113
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.7122
+    hunger=1.7487
+    acceleration=0.75272
+    threshold=57.237
+    
+  [RULE:3]
+    weight=0.40484
+    hunger=5.4613
+    fear=0.42777
+    
+  [RULE:5]
+    weight=0.43391
+    collision=0.032407
+    
+  [RULE:8]
+    weight=0.66193
+    frienddistance=0.73019
+    
+  [RULE:10]
+    weight=0.069727
+    visiondist=1.019
+    
+  [RULE:11]
+    weight=0.10753
+    visiondist=0.68521
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.10316
+    hunger=4.6197
+    acceleration=0.38258
+    threshold=60.576
+    
+  [RULE:3]
+    weight=0.62492
+    hunger=4.3305
+    fear=0.1345
+    
+  [RULE:5]
+    weight=0.45564
+    collision=0.031486
+    
+  [RULE:8]
+    weight=0.58527
+    frienddistance=0.37658
+    
+  [RULE:10]
+    weight=0.049381
+    visiondist=2.4987
+    
+  [RULE:11]
+    weight=0.035137
+    visiondist=0.45616
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.17524
+    hunger=2.8482
+    acceleration=0.35077
+    threshold=36.185
+    
+  [RULE:3]
+    weight=0.082449
+    hunger=1.0178
+    fear=0.027757
+    
+  [RULE:5]
+    weight=0.01477
+    collision=0.01518
+    
+  [RULE:8]
+    weight=0.18105
+    frienddistance=0.84021
+    
+  [RULE:10]
+    weight=0.11124
+    visiondist=2.7505
+    
+  [RULE:11]
+    weight=0.035368
+    visiondist=1.0139
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.47917
+    hunger=0.86238
+    acceleration=0.062869
+    threshold=25.844
+    
+  [RULE:3]
+    weight=0.75657
+    hunger=4.7814
+    fear=0.22601
+    
+  [RULE:5]
+    weight=0.15381
+    collision=0.15162
+    
+  [RULE:8]
+    weight=0.36925
+    frienddistance=0.85018
+    
+  [RULE:10]
+    weight=0.070681
+    visiondist=2.178
+    
+  [RULE:11]
+    weight=0.14198
+    visiondist=2.8167
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.3444
+    hunger=0.62571
+    acceleration=0.73902
+    threshold=74.316
+    
+  [RULE:3]
+    weight=0.33161
+    hunger=2.0262
+    fear=0.077478
+    
+  [RULE:5]
+    weight=0.676
+    collision=0.090703
+    
+  [RULE:8]
+    weight=0.03892
+    frienddistance=0.79177
+    
+  [RULE:10]
+    weight=0.050269
+    visiondist=1.4895
+    
+  [RULE:11]
+    weight=0.10885
+    visiondist=1.4196
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.14708
+    hunger=2.3783
+    acceleration=0.3129
+    threshold=34.969
+    
+  [RULE:3]
+    weight=0.3153
+    hunger=2.2891
+    fear=0.043212
+    
+  [RULE:5]
+    weight=0.35422
+    collision=0.12496
+    
+  [RULE:8]
+    weight=0.29456
+    frienddistance=1.4532
+    
+  [RULE:10]
+    weight=0.081809
+    visiondist=2.5978
+    
+  [RULE:11]
+    weight=0.023118
+    visiondist=1.4641
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.65601
+    hunger=0.37645
+    acceleration=0.6489
+    threshold=12.492
+    
+  [RULE:3]
+    weight=0.080857
+    hunger=2.4312
+    fear=0.74971
+    
+  [RULE:5]
+    weight=0.37542
+    collision=0.041945
+    
+  [RULE:8]
+    weight=0.39876
+    frienddistance=0.52974
+    
+  [RULE:10]
+    weight=0.065062
+    visiondist=0.019132
+    
+  [RULE:11]
+    weight=0.083146
+    visiondist=1.5894
+    
+  }
+Quit requested, quitting.

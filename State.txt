@@ -1,0 +1,19 @@
+09/01/01
+- convertir le format des fichiers 3D/Physic en XML
+- importer le 3DS
+- finir l'IHM avec treeview ==> OK
+- réograniser en répertoires ==> OK
+- réimplémenter BEAST ==> OK
+- générer la doc doxygen ==> OK
+- finir le modeleur avec gestion des facettes => OK
+- debugger pour WCE (stl) ==> OK
+- possibilité de scriptting
+- rajouter les namespaces OK
+
+18/01/01
+Produits finaux :
+- simuler le systeme non-linéaire (l'eau dans les baquets)
+- faire remarcher beast, et éventuellement améliorer ==> marche
+- simuler des sims creatures
+- finir le modéleur avec physique : en cours, la 
+    simulation dans une petite fenetre fonctionne => OK

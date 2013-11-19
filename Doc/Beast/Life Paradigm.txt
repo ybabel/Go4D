@@ -1,0 +1,61 @@
+Le but du paradigme est de decrire de maniere unifié, aussi bien les plantes, la planette, que
+les herbivores, les carnivores, et les hommes.
+
+1. L'energie.
+-------------
+  l'NRJ n'est pas une quantité unidimensinelle mais au moins bi-dimentionnelle.
+  C'est a dire qu'on a des 'niveaux' d'NRJ, sachant qu'on peut convertir d'un niveau
+  a l'autre suivant certaines regles (a determiner, mais NRJ[i]=coef>1*NRJ[i-1] peut être suffisant)
+
+2. les creatures peuvent echanger de l'NRJ
+------------------------------------------
+  - Cela se fait a une vitesse donnée.
+  - Au niveau d'NRJ 1 c'est la nouriture physique, 2 c'est l'amour, 3 c'est les idées
+  - la vitesse de l'echange depend de la diferrence de potentiel
+
+3. les creatures percoivent l'NRJ
+---------------------------------
+  - la distance de la perception est limité
+  - la perception consome de l'NRJ du niveau percu, plus on percoit loin, plus on consome
+
+4. les creatures peuvent se deplacer
+------------------------------------
+  - ca consome de l'NRJ
+
+5. Il y a des cycles
+--------------------
+  - j'ai faim, je suis repus
+  - j'ai sommeil, je suis reposé
+  - j'ai envie de faire l'amour, je suis satisfait
+
+6. les creatures peuvent se dissocier
+------------------------------------
+  - ca crée un creature avec le meme bagage genetique, mais avec une NRJ nulle
+  - l'nrj initiale de la nouvelle creature doit etre donnée par la "mere"
+  - un corps ne niveau i d'un race j (ne niveau j) necessite d'abord la presence de tous
+    les corps de niveau i+1 a j.
+
+8. le but d'un creature est SEULEMENT d'accroitre son NRJ
+---------------------------------------------------------
+
+10. une cerature fonctionne a 1 niveau a la fois
+------------------------------------------------
+  - une creature se deplacant dans le niveau physique ne peut se deplacer dans l'astral
+  -
+
+9. les comportements que doit decrire le paradigme :
+----------------------------------------------------
+  - se nourrir
+  - se reposer
+  - se repoduire
+  - la reproduction sexuée, asexuée
+  - l'evolution (on accede/manipule des niveaux d'NRJ superieurs)  
+  - le viellisement (le cout d'une action augmente)
+  - le combat
+  - la construction d'habitat, et en general la modification de l'environement
+  - la sympathie, l'antipathie (ca doit decouler des niveaux d'NRJ differents)
+  - doit pouvoir simuler l'incarnation/mort (qui est le passage a 0 dans un niveau d'NRJ)
+  - la naissance (2 coprs physique+1 nouveau astral-> un troiseme physique)
+  - la materialisation (pour une creature evolue, elle peut modifier les niveaux d'NRJ)
+
+  - on voit apparaitre sur la planette d'abord des plantes, puis les herbivores, ...

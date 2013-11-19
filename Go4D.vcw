@@ -1,0 +1,149 @@
+Microsoft eMbedded Visual Tools Workspace File, Format Version 3.00
+# WARNING: DO NOT EDIT OR DELETE THIS WORKSPACE FILE!
+
+###############################################################################
+
+Project: "Cube"=".\Cube\Cube.vcp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name Go4D
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Fire"=".\Fire\Fire.vcp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name Go4D
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "GIFViewer"=".\GIFViewer\GIFViewer.vcp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name Go4D
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "GUI"=".\GUI\Gui.vcp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name Go4D
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Go4D"=".\Go4D\Go4D.vcp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "Modeler"=".\Modeler\Modeler.vcp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name Go4D
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "OFFViewer"=".\OFFViewer\OFFViewer.vcp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name Go4D
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Physic"=".\Physic\Physic.vcp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name Go4D
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Voxel"=".\Voxel\Voxel.vcp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name Go4D
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Global:
+
+Package=<5>
+{{{
+}}}
+
+Package=<3>
+{{{
+}}}
+
+###############################################################################
+

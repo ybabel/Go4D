@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Go4D" />
+		<Option pch_mode="0" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="default">
+				<Option output="libGo4D.a" prefix_auto="0" extension_auto="0" />
+				<Option working_dir="" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Option projectResourceIncludeDirsRelation="0" />
+			</Target>
+		</Build>
+		<VirtualTargets>
+			<Add alias="All" targets="default;" />
+		</VirtualTargets>
+		<Compiler>
+			<Add option="-g" />
+			<Add option="-Dusefixed" />
+			<Add option="-DSDL" />
+			<Add directory="." />
+		</Compiler>
+		<Linker>
+			<Add library="X11" />
+		</Linker>
+		<Unit filename="Collision/RayCPhdron.c">
+			<Option compilerVar="CC" />
+			<Option compile="0" />
+			<Option link="0" />
+		</Unit>
+		<Unit filename="Collision/SWIFT.h" />
+		<Unit filename="Collision/SWIFT_array.h" />
+		<Unit filename="Collision/SWIFT_boxnode.h" />
+		<Unit filename="Collision/SWIFT_common.h" />
+		<Unit filename="Collision/SWIFT_config.h" />
+		<Unit filename="Collision/SWIFT_fileio.h" />
+		<Unit filename="Collision/SWIFT_linalg.h" />
+		<Unit filename="Collision/SWIFT_lut.h" />
+		<Unit filename="Collision/SWIFT_mesh.h" />
+		<Unit filename="Collision/SWIFT_mesh_utils.h" />
+		<Unit filename="Collision/SWIFT_object.h" />
+		<Unit filename="Collision/SWIFT_pair.h" />
+		<Unit filename="Collision/fileio.cpp">
+			<Option compile="0" />
+			<Option link="0" />
+		</Unit>
+		<Unit filename="Collision/fromtorot.c">
+			<Option compilerVar="CC" />
+			<Option compile="0" />
+			<Option link="0" />
+		</Unit>
+		<Unit filename="Collision/intersect_triangle.c">
+			<Option compilerVar="CC" />
+			<Option compile="0" />
+			<Option link="0" />
+		</Unit>
+		<Unit filename="Collision/lut.cpp">
+			<Option compile="0" />
+			<Option link="0" />
+		</Unit>
+		<Unit filename="Collision/mesh.cpp">
+			<Option compile="0" />
+			<Option link="0" />
+		</Unit>
+		<Unit filename="Collision/mesh_hier.cpp">
+			<Option compile="0" />
+			<Option link="0" />
+		</Unit>
+		<Unit filename="Collision/mesh_utils.cpp">
+			<Option compile="0" />
+			<Option link="0" />
+		</Unit>
+		<Unit filename="Collision/object.cpp">
+			<Option compile="0" />
+			<Option link="0" />
+		</Unit>
+		<Unit filename="Collision/opttritri.c">
+			<Option compilerVar="CC" />
+			<Option compile="0" />
+			<Option link="0" />
+		</Unit>
+		<Unit filename="Collision/pair.cpp">
+			<Option compile="0" />
+			<Option link="0" />
+		</Unit>
+		<Unit filename="Collision/raytri.c">
+			<Option compilerVar="CC" />
+			<Option compile="0" />
+			<Option link="0" />
+		</Unit>
+		<Unit filename="Collision/scene.cpp">
+			<Option compile="0" />
+			<Option link="0" />
+		</Unit>
+		<Unit filename="Collision/tritri.c">
+			<Option compilerVar="CC" />
+			<Option compile="0" />
+			<Option link="0" />
+		</Unit>
+		<Unit filename="Go4D.h" />
+		<Unit filename="Graph2D/Clut.cpp" />
+		<Unit filename="Graph2D/Clut.h" />
+		<Unit filename="Graph2D/Convert.cpp" />
+		<Unit filename="Graph2D/Convert.h" />
+		<Unit filename="Graph2D/Drawer.cpp" />
+		<Unit filename="Graph2D/Drawer.h" />
+		<Unit filename="Graph2D/Drawer2D.cpp" />
+		<Unit filename="Graph2D/Drawer2D.h" />
+		<Unit filename="Graph2D/FileImage.cpp" />
+		<Unit filename="Graph2D/FileImage.h" />
+		<Unit filename="Graph2D/Filter.cpp" />
+		<Unit filename="Graph2D/Filter.h" />
+		<Unit filename="Graph2D/Font.cpp" />
+		<Unit filename="Graph2D/Font.h" />
+		<Unit filename="Graph2D/Image.cpp" />
+		<Unit filename="Graph2D/Image.h" />
+		<Unit filename="Graph2D/ImageFormat.cpp" />
+		<Unit filename="Graph2D/ImageFormat.h" />
+		<Unit filename="Graph2D/Palette.cpp" />
+		<Unit filename="Graph2D/Palette.h" />
+		<Unit filename="Graph2D/PlugDrawer.cpp" />
+		<Unit filename="Graph2D/PlugDrawer.h" />
+		<Unit filename="Graph2D/WriteDrawer.cpp" />
+		<Unit filename="Graph2D/WriteDrawer.h" />
+		<Unit filename="Graph3D/Bump.cpp" />
+		<Unit filename="Graph3D/Bump.h" />
+		<Unit filename="Graph3D/Camera.cpp" />
+		<Unit filename="Graph3D/Camera.h" />
+		<Unit filename="Graph3D/Cube.cpp" />
+		<Unit filename="Graph3D/Cube.h" />
+		<Unit filename="Graph3D/Face.cpp" />
+		<Unit filename="Graph3D/Face.h" />
+		<Unit filename="Graph3D/FaceDrawer.cpp" />
+		<Unit filename="Graph3D/FaceDrawer.h" />
+		<Unit filename="Graph3D/Fill.cpp">
+			<Option compile="0" />
+			<Option link="0" />
+		</Unit>
+		<Unit filename="Graph3D/Filler.cpp" />
+		<Unit filename="Graph3D/Filler.h" />
+		<Unit filename="Graph3D/Horiz.cpp">
+			<Option compile="0" />
+			<Option link="0" />
+		</Unit>
+		<Unit filename="Graph3D/Light.cpp" />
+		<Unit filename="Graph3D/Light.h" />
+		<Unit filename="Graph3D/Mapper.cpp" />
+		<Unit filename="Graph3D/Mapper.h" />
+		<Unit filename="Graph3D/Object.cpp" />
+		<Unit filename="Graph3D/Object.h" />
+		<Unit filename="Graph3D/Pixeler.cpp" />
+		<Unit filename="Graph3D/Pixeler.h" />
+		<Unit filename="Graph3D/Plot.cpp" />
+		<Unit filename="Graph3D/Plot.h" />
+		<Unit filename="Graph3D/Plotter.cpp" />
+		<Unit filename="Graph3D/Plotter.h" />
+		<Unit filename="Graph3D/Scene.cpp" />
+		<Unit filename="Graph3D/Scene.h" />
+		<Unit filename="Graph3D/Shader.cpp" />
+		<Unit filename="Graph3D/Shader.h" />
+		<Unit filename="Graph3D/TemplateFaceDrawer.cpp" />
+		<Unit filename="Graph3D/TemplateFaceDrawer.h" />
+		<Unit filename="Physic/Actions.cpp" />
+		<Unit filename="Physic/Actions.h" />
+		<Unit filename="Physic/Particle.cpp" />
+		<Unit filename="Physic/Particle.h" />
+		<Unit filename="Platform/BinFile.cpp" />
+		<Unit filename="Platform/BinFile.h" />
+		<Unit filename="Platform/Device.cpp" />
+		<Unit filename="Platform/Device.h" />
+		<Unit filename="Platform/DeviceX.cpp">
+			<Option compile="0" />
+			<Option link="0" />
+		</Unit>
+		<Unit filename="Platform/DeviceX.h" />
+		<Unit filename="Platform/Device_CE.cpp">
+			<Option compile="0" />
+			<Option link="0" />
+		</Unit>
+		<Unit filename="Platform/Device_CE.h" />
+		<Unit filename="Platform/Device_WING.cpp">
+			<Option compile="0" />
+			<Option link="0" />
+		</Unit>
+		<Unit filename="Platform/Device_WING.h" />
+		<Unit filename="Platform/EasyCE.cpp">
+			<Option compile="0" />
+			<Option link="0" />
+		</Unit>
+		<Unit filename="Platform/EasyCE.h" />
+		<Unit filename="Platform/Files.cpp" />
+		<Unit filename="Platform/Files.h" />
+		<Unit filename="Platform/Gx.h" />
+		<Unit filename="Platform/Viewer.cpp" />
+		<Unit filename="Platform/Viewer.h" />
+		<Unit filename="Platform/Wing.h" />
+		<Unit filename="Platform/WingDll.h" />
+		<Unit filename="Platform/Wingdll.cpp">
+			<Option compile="0" />
+			<Option link="0" />
+		</Unit>
+		<Unit filename="Special/NN.cpp">
+			<Option compile="0" />
+			<Option link="0" />
+		</Unit>
+		<Unit filename="Special/NN.h" />
+		<Unit filename="Special/Special.cpp">
+			<Option compile="0" />
+			<Option link="0" />
+		</Unit>
+		<Unit filename="Special/Special.h" />
+		<Unit filename="Tools/Base.cpp" />
+		<Unit filename="Tools/Base.h" />
+		<Unit filename="Tools/Common.cpp" />
+		<Unit filename="Tools/Common.h" />
+		<Unit filename="Tools/FString.cpp" />
+		<Unit filename="Tools/FString.h" />
+		<Unit filename="Tools/Fixed.cpp" />
+		<Unit filename="Tools/Fixed.h" />
+		<Unit filename="Tools/Geom.cpp" />
+		<Unit filename="Tools/Geom.h" />
+		<Unit filename="Tools/List.cpp" />
+		<Unit filename="Tools/List.h" />
+		<Unit filename="Tools/RTTI.h" />
+		<Unit filename="Tools/Random.cpp" />
+		<Unit filename="Tools/Random.h" />
+		<Unit filename="Tools/Streams.cpp" />
+		<Unit filename="Tools/Streams.h" />
+		<Unit filename="Tools/TCUEXC.CPP">
+			<Option compile="0" />
+			<Option link="0" />
+		</Unit>
+		<Unit filename="Tools/TCUEXC.H" />
+		<Unit filename="Tools/TCURTTI.CPP">
+			<Option compile="0" />
+			<Option link="0" />
+		</Unit>
+		<Unit filename="Tools/TCURTTI.H" />
+		<Unit filename="Tools/TCUWARN.H" />
+		<Unit filename="Tools/TCUXHAPI.CPP">
+			<Option compile="0" />
+			<Option link="0" />
+		</Unit>
+		<Unit filename="Tools/TCUXHAPI.H" />
+		<Unit filename="Tools/Variant.cpp" />
+		<Unit filename="Tools/Variant.h" />
+		<Unit filename="Tools/apstring.cpp" />
+		<Unit filename="Tools/apstring.h" />
+		<Unit filename="Tools/em_ios.cpp">
+			<Option compile="0" />
+			<Option link="0" />
+		</Unit>
+		<Unit filename="Tools/em_ios.h" />
+		<Unit filename="Tools/emistrm.cpp">
+			<Option compile="0" />
+			<Option link="0" />
+		</Unit>
+		<Unit filename="Tools/emistrm.h" />
+		<Unit filename="Tools/emostrm.cpp">
+			<Option compile="0" />
+			<Option link="0" />
+		</Unit>
+		<Unit filename="Tools/emostrm.h" />
+		<Unit filename="Xml/XMLParser.cpp" />
+		<Unit filename="Xml/XMLParser.h" />
+		<Unit filename="Xml/ascii.h" />
+		<Unit filename="Xml/asciitab.h" />
+		<Unit filename="Xml/expat.h" />
+		<Unit filename="Xml/iasciitab.h" />
+		<Unit filename="Xml/latin1tab.h" />
+		<Unit filename="Xml/mbstring.h" />
+		<Unit filename="Xml/nametab.h" />
+		<Unit filename="Xml/utf8tab.h" />
+		<Unit filename="Xml/winconfig.h" />
+		<Unit filename="Xml/xmlparse.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Xml/xmlrole.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Xml/xmlrole.h" />
+		<Unit filename="Xml/xmltok.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Xml/xmltok.h" />
+		<Unit filename="Xml/xmltok_impl.c">
+			<Option compilerVar="CC" />
+			<Option compile="0" />
+			<Option link="0" />
+		</Unit>
+		<Unit filename="Xml/xmltok_impl.h" />
+		<Unit filename="Xml/xmltok_ns.c">
+			<Option compilerVar="CC" />
+			<Option compile="0" />
+			<Option link="0" />
+		</Unit>
+		<Unit filename="GUI/Editable3D.cpp" />
+		<Unit filename="GUI/Editable3D.h" />
+		<Unit filename="GUI/EditablePhysic.cpp" />
+		<Unit filename="GUI/EditablePhysic.h" />
+		<Unit filename="GUI/Editor.cpp" />
+		<Unit filename="GUI/Editor.h" />
+		<Unit filename="GUI/GUIInput.cpp" />
+		<Unit filename="GUI/GUIInput.h" />
+		<Unit filename="GUI/GUILoader.cpp" />
+		<Unit filename="GUI/GUILoader.h" />
+		<Unit filename="GUI/GUIOutput.cpp" />
+		<Unit filename="GUI/GUIOutput.h" />
+		<Unit filename="GUI/Gui.cpp" />
+		<Unit filename="GUI/Gui.h" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

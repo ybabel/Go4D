@@ -1,0 +1,118 @@
+/** @name	ChangeLog
+\begin{verbatim}
+Fri Jun 31 1998
+      * Sume minor bug fixes, new release 3.2
+      * the const - keyword was ignored in function signatures
+
+      * the filenames on recursively included files were not correct.
+        See option -f and the new option -F.
+
+      * core dump in some cases, especially when only one class
+        was documented.
+
+      * Incorrect HTML-syntax for default header/and footer.
+
+      New features in V 3.2:
+
+      * New option -F to show whole path of files in man-pages.
+
+      * Lines starting with //// will now be ignored.
+
+      * New tags @type and @args. Usefull as workaround
+        for typedef and function pointer limitations.
+	
+Tue Feb 3  1997
+      * A lot has changed. New release 3.0.
+
+Mon Dec 23  1996
+      * Ups, we forgot keeping this file up to date :-(
+      * Lots of changes: JavaDoc / Java Parser
+
+Mon Aug 12  1996
+      * Include now matches all patterns containing '*' and '?' correctly.
+
+Mon Jun 24  1996      
+      * Entries that are grouped by //@{ ... //@} get its
+        own html page nevertheless -> Structured documentation. 
+Thu May 30  1996
+      * Added automatic creation of html directory
+      * Added //@Include: directive
+      * Possible titlepage with //@Name: at global scope
+      * Possibility to override copyright string in LaTeX output by
+        saying something like \newcommand{\cxxCopyright}{I did it!} in
+	the preamble.
+
+Fri May 24  1996
+      * Added options -g and -G for creating gifs from complicated TeX
+        stuff such as equations
+	NOTE: This requires gs and ppmtools to be installed to your system!!!
+      * Added macro \TEX{...}
+      * Added option -B for including own banner in html pages
+      * New animated DOC++ gif
+
+Mon May 20  1996 :
+      * minor ;-) bug fix in docify leading to errornous removal of keywords
+        class and struct
+      * Added an optional parameter to the \URL -command, allowing 
+        to give links user specified names like 
+	\URL[click here]{http://www.zib-berlin.de/}
+      * allow # in \ begin{verbatim} ... \ end{verbatim}
+      
+Fri May 10  1996 :
+      * Fixed bug with C-Style comments in function definitions
+      * Classes grouped in explicit entries now appear in the hierarchy in html
+
+Fri Mar 25  1996 :
+      * Fixed small bug in docify if not writing to stdout
+
+Thu Mar 19  1996 ( release 1.05 (beta) ):
+      * Fixed bug with C comments /*@{ * / and /*@}  * /
+
+Thu Feb 29  1996 :
+      *	Added JAVA scripts for generating class graphs in HTML output
+      *	Added docify programm
+      *	Bug fix for classgraphs with private base classes
+
+Fri Feb 15  1996 ( release 1.04 (beta) ):
+      * redesigned class graph generation.
+      * New structure of HTML contents page.
+      * bug fix for #s in memo strings.
+
+Thu Feb 15  1996 :
+      * fixed bug that made some entries disappear in some occations
+        for the TeX backend
+
+Wed Feb 14  1996 :
+      * fixed bug with character '%' in TeX-documentation
+      * changed documentation accordingly
+
+Wed Jan 31  1996 ( release 1.03 (beta) ):
+      * fixed a bug with the new shortcuts /**   and //*
+
+Tue Jan 30  1996 ( release 1.02 (beta) ):
+      * added options -eo -ef -ep for controlling the LaTeX environment
+      * fixed internal bug causing assertation failiour on DOS machines
+      * constructors and destructors of baseclasses do no longer show
+        up in the HTML-list of inherited members.
+      * started a FAQ
+      * structs are now treated in the same way as classes 
+      
+Mon Jan 29  1996 ( release 1.01 (beta) ):
+      * renamed doc++.sty -> docxx.sty
+      * renamed html-table of contents from classesHIER.html -> HIER.html
+      * introduced shortcuts:
+        "/// " or "/* / " for @ManMemo:
+        and
+        "//* " or "/** " for @Doc:
+      * new command line option for short filenames (required for DOS).
+      * bugfixes:
+        * The & should no longer disapear in HTML.
+        * Declarations like 
+          array<foo,bar> dummy; should work now.
+        * German umlauts like \"a are now converted to HTML.
+
+Wed Jan 25  1996  release 1.0 (beta)
+
+\end{verbatim}
+
+*/

@@ -1,0 +1,339 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type"
+content="text/html; charset=iso-8859-1">
+<meta name="GENERATOR" content="Microsoft FrontPage Express 2.0">
+<title></title>
+</head>
+
+<body>
+
+<h1>BeastLand Programming Informations</h1>
+
+<h2>Project Goal</h2>
+
+<h3>Main goal</h3>
+
+<p>The main goal of this project is to study artificial life form,
+and maybe to reproduce a 'earth like ecosystem'. Eventually the
+system can be used to study various 'life-like' system. For
+example we could study egoism/altruism impact on a society, or
+study the progation of a virus in a community.</p>
+
+<h3>Intermediate goals</h3>
+
+<p>The first goal to be reached is to create a simple land,
+called 'beastland' were leave beasts. The beasts are divied in 2
+species that fights to keep alive by eating food that appears
+radomly in a 'square' area.</p>
+
+<h2>Directory Structure</h2>
+
+<ul>
+    <li>Dll : contains a copy of all the DLLs that are necessary
+        to launch the executable</li>
+    <li>Exe : contains the exe, the required dlls, and the datas</li>
+    <li>Lib : contains the compiled source</li>
+    <li>Src : contains all the data that is necessary to rebuild
+        the exe and make it work<ul>
+            <li>Data : contains the ressources (fonts, ...)</li>
+            <li>Doc : all the documentation files, programmers
+                guides, users guides, ...</li>
+            <li>Graph2D : sources of graphical algorithms in 2D (line,
+                circles, ...)</li>
+            <li>Graph3D : sources of graphical algo in 3D (face
+                drawing, camera, ...)</li>
+            <li>Main : the main source</li>
+            <li>Beast : the beasts are defined here</li>
+            <li>Math : all sources that deals with math and
+                geometry</li>
+            <li>Platform : all sources that are dependent of the
+                platform<ul>
+                    <li>Win32 : the windows implemented for the
+                        Win32 platform (uses WinG)</li>
+                    <li>XWin : the windows implemented for X
+                        Windows (uses X/Xshm/shm)</li>
+                </ul>
+            </li>
+            <li>Tools : some useful classes (chained list, ...)</li>
+        </ul>
+    </li>
+</ul>
+
+<p>SRC is the only very important directory. It must be
+synchronized through all the developpers.</p>
+
+<h2>Ideas of evolutions</h2>
+
+<h4>YOB Ideas</h4>
+
+<ol>
+    <li>Use a neural network to make the beast decide what is
+        their goal</li>
+    <li>Rule : the more a beast is older, the more it consume NRJ
+        to moves</li>
+    <li>Rule : reproduction (sexual or not)</li>
+    <li>Rule : in voxelized world, a creature can change the
+        terrain to make more plants grow.</li>
+    <li>Rule : a died creature can restitute to the land a kind
+        of NRJ that will make plants grow</li>
+    <li>The land it self can be considered as a creature that can
+        only eat died beasts...</li>
+    <li>Genetic idea : the goal of this rule is to ensure a great
+        genetic change if the population is low, and to stabilize
+        genetic changes when the population is high. To achieve
+        this goal, we must have sexual reproduction, and to have
+        an &quot;instinct&quot; that make more reproduction when
+        the population is low.</li>
+    <li>Rules can use the result of other rules (for example :
+        find friend rule is applyed if the fear rule return true
+        ...)</li>
+    <li>Add irregular gnoky distribution </li>
+    <li>Neural network : a beast must have several NN, with one
+        that represent the conciousness that choose the processed
+        NN (which correspond to the fact that we are concentred
+        only on one perception at a time). To make this NNs
+        evolve, we must begin with 1 simple NN, when this have
+        evolved, we can add other NN that represents others
+        perceptions and progressively complexify the intelligence
+        of the creature.</li>
+    <li>To make evolve the intelligent creature, we can use ruled
+        creature, and make them fight with simply ruled creature,
+        and progressively adapt the rules to make the
+        intellignece progress.</li>
+</ol>
+
+<h4>JYB Ideas</h4>
+
+<ol>
+    <li>Rule : (Food Cooperation) if a Beast finds a gnoky and it
+        does not *need* it, the beast should bring it to the
+        &quot;others&quot; </li>
+    <li>Rule : (Grouping) Barycentre system where a beast is
+        attracted by the the barycentre of its own species (or of
+        the near friends) and repulsed by the barycentre of the
+        other race. </li>
+    <li>Prog : Add a more explicite &quot;Coef&quot; support.
+        Values are not enough! We need for clarity and future
+        evolution 'name' and 'value'. </li>
+    <li>Prog : the 'SPACE' key should generate beasts from the
+        loosing team! </li>
+    <li>Prog : enable (network-based) beast confrontation :
+        &quot;Your Beasts against my Beasts!&quot; </li>
+    <li>Genetic : (Language) Add a common inter-beast group-evoluting
+        language. </li>
+    <li>New Basic Rules Definition: RFC!<br>
+        Each beast is caracterised by : (real)Energy, (v3)Pos, (bool)Carring,
+        (real)LifeTime<br>
+        At birth, beasts have a minimum of Energy, a given Pos
+        and Carring set to false; <table border="0"
+        cellpadding="0" cellspacing="10" width="90%">
+            <tr>
+                <th align="left">Name</th>
+                <th align="left">Conditions</th>
+                <th align="left">Consequences</th>
+            </tr>
+            <tr>
+                <td valign="top">LifeRule</td>
+                <td valign="top">true</td>
+                <td valign="top">LifeTime++</td>
+            </tr>
+            <tr>
+                <td valign="top">DieRule</td>
+                <td valign="top">if Energy==0</td>
+                <td valign="top">delete this;</td>
+            </tr>
+            <tr>
+                <td valign="top">EnergyRule</td>
+                <td valign="top">if Energy&gt;MaxEnergy</td>
+                <td valign="top">no EatRule;</td>
+            </tr>
+            <tr>
+                <td valign="top">MovementRule</td>
+                <td valign="top">if Energy&gt;Area.Movement.ForceNeeded<br>
+                <br>
+                if Carring</td>
+                <td valign="top">move (v3+k);<br>
+                Energy -= Area.Movement.ForceNeeded;<br>
+                Energy -= Carring.Force</td>
+            </tr>
+            <tr>
+                <td valign="top">EatRule</td>
+                <td valign="top">if Pos==Eatable.Pos</td>
+                <td valign="top">Energy += Eatable.Energy</td>
+            </tr>
+            <tr>
+                <td valign="top">CarryRule</td>
+                <td valign="top">if Energy&gt;EnoughEnergy<br>
+                &amp; Carring==Nothing</td>
+                <td valign="top">Take Eatable</td>
+            </tr>
+            <tr>
+                <td valign="top">HelpRule</td>
+                <td valign="top">if NearFriend.Energy&lt;LowEnergy<br>
+                &amp; Carring==Something</td>
+                <td valign="top">Give Energy to NearFriend</td>
+            </tr>
+        </table>
+    </li>
+    <li>Goal : Maximize LifeTime </li>
+    <li>Study : epidemie study by inoculating a virus on a
+        particular beast. </li>
+    <li>Each Rule should have a predefined precentage value which
+        would be applied by the genetic algorithm on the
+        coefficients of the Rule itself. . </li>
+</ol>
+
+<h4>TNT Ideas</h4>
+
+<h2>ToDo</h2>
+
+<p>The following list is not imperative, these are just general
+ideas : </p>
+
+<ul>
+    <li>[___] Add Grahical Widgets such as &quot;Buttons&quot;
+        and &quot;Ruler&quot;. These Widgets will be Win32/XWin
+        Compatible since they will be drawn directly on top of an
+        &quot;Image&quot; Class. This (set of) class(es) is be
+        called GUIFactory. </li>
+    <li>[___] Development of a Rule Generation Language (RGL).
+        This language has to be generic enough to allow the
+        developper to write interesting to semi-complex rules *AND*
+        light enough to allow a fast computation. RGL Files
+        should be reparsed (and precompiled ?) after a 'R'
+        keystroke. </li>
+    <li>[___] Finish Keyboard Support for Windows *AND* Linux </li>
+    <li>[___] Enhancement of the Device.h Interface and #includes
+        : there should be a common interface with common Key+Mouse
+        definition </li>
+    <li>[___] Add Coefficient support for non real value! </li>
+    <li>[___] Add non uniform gnoky generation.</li>
+    <li>[___] Add genetic algorithm to make the beasts evolve</li>
+    <li>[___] Add neurel networks to the creatures.</li>
+    <li>[___] Add &quot;Under-Mouse-click&quot; statistic support
+    </li>
+    <li>[___] Add visual statistics of a &quot;fight&quot;, in
+        order to see the evolution of a combat, and study the
+        impact of the rules or other modification in the beaviour
+        of the beasts. The statistic could also be useful to make
+        evolve the intelligent (with neural network) beasts.</li>
+</ul>
+
+<h2>Interface</h2>
+
+<p>The Graphical Interface and the behaviour of the beats world
+can be controlled as follows : </p>
+
+<ul>
+    <li>Keyboard <ul>
+            <li><b>Key 'ESC' : </b>Quit the application. </li>
+            <li><b>Key 'TAB' : </b>Generate Food. </li>
+            <li><b>Key 'SPACE' : </b>Generate Beasts (Ramdom
+                Species). </li>
+            <li><b>Key 'q' : </b>Stop/Restart refreshing the
+                display. This is usefull in case of a heavy
+                computation. </li>
+            <li><b>Key 'i' : </b>Restart refreshing the display
+                and reinitialize the board. </li>
+        </ul>
+        <p>Mouse </p>
+        <ul>
+            <li><b>(Ctrl/Shift +) LeftButton + Motion : </b>3D
+                Translation </li>
+            <li><b>(Ctrl/Shift +) RightButton + Motion : </b>3D
+                Rotation </li>
+        </ul>
+    </li>
+</ul>
+
+<h2>Journal</h2>
+
+<ul>
+    <li>25/05/1999 : Project start, first reflexions by mail, see
+        <a href="Mail%2025-05-99.txt">Mail 25-05-99.txt</a></li>
+    <li>26/05/1999 : Creation of the directory structure, and
+        this document. First release : a sample program that
+        displays beast with radom movements. Work only under Win32
+        platform, have still some bugs (call of pure virtual
+        method !!!)</li>
+    <li>27/05/1999 : Add of the gnokies and the first rules : the
+        beast must find gnokies to eat them and keep alive.</li>
+    <li>28/05/1999 : Add of other rules : the beast fear the
+        other race, try to find friends, ...</li>
+    <li>29/05/1999 : Port under Linux (./Main/Makefile, ./Platform/XWin/Device.*)</li>
+    <li>30/05/1999 : Add of some rules, the distance between
+        beasts are precalculated (so that the rules processing
+        can be optimized). The beasts have some reals coefs that
+        are used by the rules to have a various behaviour for
+        each creature. Rules can be applied on a particular race.
+        Bug correction on color display. Add the possibility to
+        unconnect the display (in order to process generations
+        faster).</li>
+    <li>31/05/1999 : Add support for named coefficient (class
+        Coef) </li>
+    <li>01/06/1999 : Implement font file loading error management;
+        Add some Rules (Barycentered!) </li>
+    <li>02/06/1999 : Add non uniform random vector generation.
+        Now the gnokies can be generated in zones. The generation
+        height field is not displayed (it must be displayed as a
+        mapped face).</li>
+    <li>03/06/1999 : Integrate non uniform random vector
+        generation to the main exe. An image is displayed and
+        represent the probability of a gnoky to appear in a zone.</li>
+    <li>07/06/1999 : Correction of a regression in hypperbolic
+        mapping. Integration of JYB work (incomplete genetic algo).</li>
+    <li>25/06/1999 : port of doc++ under CppBuilder, comments
+        modification in order to be doc++ compliant.
+        Documentation generation. + Implementation of a very
+        primitive genetic algorithm.</li>
+    <li>28/06/1999 : merge of YOB source and JYB source (doc++
+        compliant comments + simple genetic algo)</li>
+</ul>
+
+<h2>Bugs</h2>
+
+<ul>
+    <li>[X] 28/05/1999 : Files that have been TGZ on a Linux-box
+        and Win-Unzipped on a Win-box are later on no more
+        useable under Linux. <br>
+        <i>The reason was that WinZip did convert all LF into
+        LFCR when a TGZ was uncompressed. This option has to be
+        disabled</i> </li>
+    <li>[X] 31/05/1999 : Text strings are not visible on a
+        XWindow environment. <br>
+        <i>The file Font6x10.fon was missing in ./Src/Main. This
+        file has to be in the same directory as the executable.</i>
+    </li>
+    <li>[_] 31/05/1999 : XWindow Support does *NOT* work for a
+        Screen Depth not equal to 8 bits </li>
+    <li>[X] 01/06/1999 : SegFault/Linux on RandomBeast::GetBeastDistance
+        (this=0x80809e8, i=12) at ../Beast/RandomBeast.cpp:270 ==&gt;
+        This bug is a consequence of the Distance computing
+        optimization (distance are precomputed). When a new beast
+        is inserted by a rule, it's distance with other beasts is
+        not added to the precomputed distances array. The
+        correction consist in adding the Clone rule as the last
+        rule. (A better solution would be to add the beast
+        distance to the precomputed list)</li>
+    <li>[X] 03/06/1999 : Face cutting access violation. Corrected
+        : now face clipping is supported by MappedFaceDrawer.</li>
+    <li>[X] 03/06/1999 : Hypperbolic mapper don't work correctly
+        in the template face drawer. A regression have been
+        corected.</li>
+    <li>[_] 07/06/1999 : But there's still a bug (for hypperbolic
+        mapping) due to close looking with high focal. For the
+        moment linear mapping is used. This bug appear when the
+        image is pixelated. Mip Mapping could be a good solution.</li>
+    <li>[_] 25/06/1999 : Doc++ has a bug since it canot read doc
+        of classes when &quot;public :&quot; is used instead of
+        &quot;public:&quot;. For the moment, only &quot;public:&quot;
+        is used...</li>
+    <li>[X] 25/06/1999 : Doc++ has a bug, if i include beast
+        headers it won't generate the doc for the others headers
+        ? It was not a BUG, but a comment in beast was not well
+        terminated. In fact the project didn't even compile.</li>
+</ul>
+</body>
+</html>

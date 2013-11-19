@@ -1,0 +1,288 @@
+# depslib dependency file v1.0
+981212414 source:/home/yba/go4d/Physic/PhysicDemo.cpp
+	"PhysicDemo.h"
+
+980971920 /home/yba/go4d/Physic/PhysicDemo.h
+	"Go4D.h"
+
+1383697032 /home/yba/go4d/Go4D/Go4D.h
+	"Tools/Base.h"
+	"Tools/Variant.h"
+	"Tools/Fixed.h"
+	"Tools/apstring.h"
+	"Tools/FString.h"
+	"Tools/Geom.h"
+	"Tools/List.h"
+	"Tools/Random.h"
+	"Tools/Streams.h"
+	"Tools/Common.h"
+	"Tools/RTTI.h"
+	"Platform/Files.h"
+	"Platform/Device.h"
+	"Platform/Viewer.h"
+	"Graph2D/Image.h"
+	"Graph2D/FileImage.h"
+	"Graph2D/ImageFormat.h"
+	"Graph2D/Clut.h"
+	"Graph2D/Palette.h"
+	"Graph2D/Drawer.h"
+	"Graph2D/WriteDrawer.h"
+	"Graph2D/PlugDrawer.h"
+	"Graph2D/Font.h"
+	"Graph2D/Filter.h"
+	"Graph2D/Drawer2D.h"
+	"Xml/XMLParser.h"
+	"GUI/Gui.h"
+	"GUI/GUIOutput.h"
+	"GUI/GUIInput.h"
+	"GUI/GUILoader.h"
+	"GUI/Editor.h"
+	"GUI/Editable3D.h"
+	"GUI/EditablePhysic.h"
+	"Graph3D/Camera.h"
+	"Graph3D/Light.h"
+	"Graph3D/Face.h"
+	"Graph3D/Plot.h"
+	"Graph3D/Bump.h"
+	"Graph3D/Mapper.h"
+	"Graph3D/Object.h"
+	"Graph3D/Scene.h"
+	"Graph3D/Pixeler.h"
+	"Graph3D/Plotter.h"
+	"Graph3D/Shader.h"
+	"Graph3D/TemplateFaceDrawer.h"
+	"Graph3D/Cube.h"
+	"Physic/Actions.h"
+	"Physic/Particle.h"
+
+1186266906 /home/yba/go4d/Go4D/Tools/Base.h
+	<assert.h>
+
+980027280 /home/yba/go4d/Go4D/Tools/Variant.h
+	"FString.h"
+
+980077128 /home/yba/go4d/Go4D/Tools/FString.h
+	"Base.h"
+
+980027278 /home/yba/go4d/Go4D/Tools/Fixed.h
+	<math.h>
+	<float.h>
+
+1186392514 /home/yba/go4d/Go4D/Tools/apstring.h
+	"Streams.h"
+
+1186487666 /home/yba/go4d/Go4D/Tools/Streams.h
+	<stdio.h>
+	"Platform/BinFile.h"
+	<fstream.h>
+
+1186522244 /home/yba/go4d/Go4D/Platform/BinFile.h
+	<fstream>
+
+1186698662 /home/yba/go4d/Go4D/Tools/Geom.h
+	<math.h>
+	"Common.h"
+
+1186392514 /home/yba/go4d/Go4D/Tools/Common.h
+	<stdlib.h>
+	<stdio.h>
+	"Base.h"
+	"Streams.h"
+	"Fixed.h"
+	"FString.h"
+	"Variant.h"
+	<memory.h>
+
+1383698692 /home/yba/go4d/Go4D/Tools/List.h
+	"Base.h"
+
+1186396920 /home/yba/go4d/Go4D/Tools/Random.h
+	"Geom.h"
+
+1186266944 /home/yba/go4d/Go4D/Tools/RTTI.h
+
+1186605358 /home/yba/go4d/Go4D/Platform/Files.h
+	"Tools/apstring.h"
+	"Tools/List.h"
+
+1186488434 /home/yba/go4d/Go4D/Platform/Device.h
+	"Graph2D/Image.h"
+	"Graph2D/Palette.h"
+
+1186488120 /home/yba/go4d/Go4D/Graph2D/Image.h
+	"Tools/Common.h"
+
+1186488116 /home/yba/go4d/Go4D/Graph2D/Palette.h
+	"Tools/Common.h"
+	"Graph2D/Image.h"
+
+1186488492 /home/yba/go4d/Go4D/Platform/Viewer.h
+	"Device.h"
+	"Graph3D/Camera.h"
+	"Graph2D/Drawer.h"
+	"Graph3D/Pixeler.h"
+
+1186488320 /home/yba/go4d/Go4D/Graph3D/Camera.h
+	"Tools/Geom.h"
+	"Plot.h"
+
+1186488316 /home/yba/go4d/Go4D/Graph3D/Plot.h
+	"FaceDrawer.h"
+	"Tools/Geom.h"
+
+1186488290 /home/yba/go4d/Go4D/Graph3D/FaceDrawer.h
+	"Graph2D/PlugDrawer.h"
+	"Graph2D/Clut.h"
+
+980027156 /home/yba/go4d/Go4D/Graph2D/PlugDrawer.h
+	"Image.h"
+
+980027156 /home/yba/go4d/Go4D/Graph2D/Clut.h
+	"Palette.h"
+	"Image.h"
+
+980609246 /home/yba/go4d/Go4D/Graph2D/Drawer.h
+	"PlugDrawer.h"
+
+1186488400 /home/yba/go4d/Go4D/Graph3D/Pixeler.h
+	"Graph2D/Drawer.h"
+
+1186488156 /home/yba/go4d/Go4D/Graph2D/FileImage.h
+	"Tools/Common.h"
+	"Image.h"
+	"Palette.h"
+	"Tools/Streams.h"
+
+1186389004 /home/yba/go4d/Go4D/Graph2D/ImageFormat.h
+
+1186488214 /home/yba/go4d/Go4D/Graph2D/WriteDrawer.h
+	"Drawer.h"
+	"Font.h"
+	"Tools/FString.h"
+	<memory.h>
+
+1186488172 /home/yba/go4d/Go4D/Graph2D/Font.h
+	"Tools/Common.h"
+
+1186488168 /home/yba/go4d/Go4D/Graph2D/Filter.h
+	"PlugDrawer.h"
+	"Tools/Geom.h"
+
+980027156 /home/yba/go4d/Go4D/Graph2D/Drawer2D.h
+	"PlugDrawer.h"
+
+1186488554 /home/yba/go4d/Go4D/Xml/XMLParser.h
+	"Tools/apstring.h"
+	"Tools/List.h"
+
+1186488708 /home/yba/go4d/Go4D/GUI/Gui.h
+	"Tools/Common.h"
+	"Tools/List.h"
+	"Tools/apstring.h"
+	"Graph2D/Font.h"
+	"Graph2D/Drawer2D.h"
+	"Graph2D/WriteDrawer.h"
+	"Graph2D/Palette.h"
+
+1383697061 /home/yba/go4d/Go4D/GUI/GUIOutput.h
+	"Gui.h"
+
+1383697067 /home/yba/go4d/Go4D/GUI/GUIInput.h
+	"Gui.h"
+
+1383697075 /home/yba/go4d/Go4D/GUI/GUILoader.h
+	"Gui.h"
+	"GUIOutput.h"
+	"GUIInput.h"
+	"Xml/XMLParser.h"
+	"Platform/Files.h"
+	"Editor.h"
+	"Tools/apstring.h"
+
+1186488578 /home/yba/go4d/Go4D/GUI/Editor.h
+	"Tools/Common.h"
+	"Tools/List.h"
+	"Tools/RTTI.h"
+
+1186488592 /home/yba/go4d/Go4D/GUI/Editable3D.h
+	"Editor.h"
+	"Graph3D/Plot.h"
+	"Graph3D/Camera.h"
+
+1186488602 /home/yba/go4d/Go4D/GUI/EditablePhysic.h
+	"Editable3D.h"
+	"Physic/Particle.h"
+	"Physic/Actions.h"
+
+1186841648 /home/yba/go4d/Go4D/Physic/Particle.h
+	"Graph3D/Plot.h"
+	"Tools/List.h"
+	"Tools/RTTI.h"
+
+1187501792 /home/yba/go4d/Go4D/Physic/Actions.h
+	"Particle.h"
+
+980027230 /home/yba/go4d/Go4D/Graph3D/Light.h
+	"Plot.h"
+
+1186488266 /home/yba/go4d/Go4D/Graph3D/Face.h
+	"Tools/Geom.h"
+	"FaceDrawer.h"
+	"Plot.h"
+	"Light.h"
+	"Camera.h"
+
+1186488330 /home/yba/go4d/Go4D/Graph3D/Bump.h
+	"Face.h"
+	"FaceDrawer.h"
+	"Graph2D/Filter.h"
+
+980032406 /home/yba/go4d/Go4D/Graph3D/Mapper.h
+	"TemplateFaceDrawer.h"
+
+1383698692 /home/yba/go4d/Go4D/Graph3D/TemplateFaceDrawer.h
+	"FaceDrawer.h"
+
+980027230 /home/yba/go4d/Go4D/Graph3D/Object.h
+	"Camera.h"
+	"Face.h"
+
+980027230 /home/yba/go4d/Go4D/Graph3D/Scene.h
+	"Face.h"
+	"Object.h"
+	"Light.h"
+	"FaceDrawer.h"
+
+980972074 /home/yba/go4d/Go4D/Graph3D/Plotter.h
+	"TemplateFaceDrawer.h"
+
+980027230 /home/yba/go4d/Go4D/Graph3D/Shader.h
+	"TemplateFaceDrawer.h"
+
+980027228 /home/yba/go4d/Go4D/Graph3D/Cube.h
+	"Object.h"
+	"Bump.h"
+
+1383701813 source:/home/yba/go4d/Physic/PhysicTest.cpp
+	<vcl.h>
+	"Device_CE.h"
+	"Device_WING.h"
+	"PhysicDemo.h"
+
+981142932 /home/yba/go4d/Go4D/Platform/Device_CE.h
+	"Device.h"
+	<windows.h>
+	<commctrl.h>
+	<aygshell.h>
+	<sipapi.h>
+	<stdlib.h>
+	<string.h>
+	"gx.h"
+
+981193508 /home/yba/go4d/Go4D/Platform/Device_WING.h
+	"Device.h"
+	<windows.h>
+	<stdlib.h>
+	<string.h>
+	"Wingdll.h"
+

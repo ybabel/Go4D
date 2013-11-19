@@ -1,0 +1,1314 @@
+# Microsoft eMbedded Visual Tools Project File - Name="Go4D" - Package Owner=<4>
+# Microsoft eMbedded Visual Tools Generated Build File, Format Version 6.02
+# ** DO NOT EDIT **
+
+# TARGTYPE "Win32 (WCE SH3) Static Library" 0x8104
+
+CFG=Go4D - Win32 (WCE SH3) Release
+!MESSAGE This is not a valid makefile. To build this project using NMAKE,
+!MESSAGE use the Export Makefile command and run
+!MESSAGE 
+!MESSAGE NMAKE /f "Go4D.vcn".
+!MESSAGE 
+!MESSAGE You can specify a configuration when running NMAKE
+!MESSAGE by defining the macro CFG on the command line. For example:
+!MESSAGE 
+!MESSAGE NMAKE /f "Go4D.vcn" CFG="Go4D - Win32 (WCE SH3) Release"
+!MESSAGE 
+!MESSAGE Possible choices for configuration are:
+!MESSAGE 
+!MESSAGE "Go4D - Win32 (WCE SH3) Release" (based on "Win32 (WCE SH3) Static Library")
+!MESSAGE "Go4D - Win32 (WCE SH3) Debug" (based on "Win32 (WCE SH3) Static Library")
+!MESSAGE 
+
+# Begin Project
+# PROP AllowPerConfigDependencies 0
+# PROP Scc_ProjName ""
+# PROP Scc_LocalPath ""
+# PROP ATL_Project 2
+CPP=shcl.exe
+
+!IF  "$(CFG)" == "Go4D - Win32 (WCE SH3) Release"
+
+# PROP BASE Use_MFC 0
+# PROP BASE Use_Debug_Libraries 0
+# PROP BASE Output_Dir "SH3Rel"
+# PROP BASE Intermediate_Dir "SH3Rel"
+# PROP BASE CPU_ID "{D6519020-710F-11D3-99F2-00105A0DF099}"
+# PROP BASE Platform_ID "{8A9A2F80-6887-11D3-842E-005004848CBA}"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 0
+# PROP Use_Debug_Libraries 0
+# PROP Output_Dir "SH3Rel"
+# PROP Intermediate_Dir "SH3Rel"
+# PROP CPU_ID "{D6519020-710F-11D3-99F2-00105A0DF099}"
+# PROP Platform_ID "{8A9A2F80-6887-11D3-842E-005004848CBA}"
+# PROP Target_Dir ""
+# ADD BASE CPP /nologo /W3 /D _WIN32_WCE=$(CEVersion) /D "$(CePlatform)" /D "SHx" /D "SH3" /D "_SH3_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_UNICODE" /D "NDEBUG" /D "_LIB" /YX /Oxs /M$(CECrtMT) /c
+# ADD CPP /nologo /W3 /I "Graph2D" /I "Graph3D" /I "Tools" /I "Platform" /I "Collision" /I "XML" /I "GUI" /I "Physic" /D "SHx" /D "SH3" /D "_SH3_" /D "NDEBUG" /D _WIN32_WCE=$(CEVersion) /D "$(CePlatform)" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_UNICODE" /D "_LIB" /D "usefixed" /Oxs /M$(CECrtMT) /c
+# SUBTRACT CPP /YX
+LIB32=link.exe -lib
+# ADD BASE LIB32 /nologo
+# ADD LIB32 /nologo
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+
+!ELSEIF  "$(CFG)" == "Go4D - Win32 (WCE SH3) Debug"
+
+# PROP BASE Use_MFC 0
+# PROP BASE Use_Debug_Libraries 1
+# PROP BASE Output_Dir "SH3Dbg"
+# PROP BASE Intermediate_Dir "SH3Dbg"
+# PROP BASE CPU_ID "{D6519020-710F-11D3-99F2-00105A0DF099}"
+# PROP BASE Platform_ID "{8A9A2F80-6887-11D3-842E-005004848CBA}"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 0
+# PROP Use_Debug_Libraries 1
+# PROP Output_Dir "SH3Dbg"
+# PROP Intermediate_Dir "SH3Dbg"
+# PROP CPU_ID "{D6519020-710F-11D3-99F2-00105A0DF099}"
+# PROP Platform_ID "{8A9A2F80-6887-11D3-842E-005004848CBA}"
+# PROP Target_Dir ""
+# ADD BASE CPP /nologo /W3 /Zi /Od /D "DEBUG" /D _WIN32_WCE=$(CEVersion) /D "$(CePlatform)" /D "SHx" /D "SH3" /D "_SH3_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_UNICODE" /D "_LIB" /YX /M$(CECrtMTDebug) /c
+# ADD CPP /nologo /W3 /Zi /Od /I "Graph2D" /I "Graph3D" /I "Tools" /I "Platform" /I "Collision" /I "XML" /I "GUI" /I "Physic" /D "_LIB" /D "DEBUGOUT" /D "DEBUG" /D "SHx" /D "SH3" /D "_SH3_" /D UNDER_CE=$(CEVersion) /D _WIN32_WCE=$(CEVersion) /D "$(CePlatform)" /D "UNICODE" /D "_UNICODE" /D "usefixed" /M$(CECrtMTDebug) /c
+# SUBTRACT CPP /YX
+LIB32=link.exe -lib
+# ADD BASE LIB32 /nologo
+# ADD LIB32 /nologo
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+
+!ENDIF 
+
+# Begin Target
+
+# Name "Go4D - Win32 (WCE SH3) Release"
+# Name "Go4D - Win32 (WCE SH3) Debug"
+# Begin Group "Source Files"
+
+# PROP Default_Filter "cpp;c;cxx;rc;def;r;odl;idl;hpj;bat"
+# Begin Group "Graph2D"
+
+# PROP Default_Filter ""
+# Begin Source File
+
+SOURCE=.\Graph2D\Clut.cpp
+DEP_CPP_CLUT_=\
+	".\Graph2D\Clut.h"\
+	".\Graph2D\Image.h"\
+	".\Graph2D\Palette.h"\
+	".\Platform\BinFile.h"\
+	".\Tools\Base.h"\
+	".\Tools\Common.h"\
+	".\Tools\Fixed.h"\
+	".\Tools\FString.h"\
+	".\Tools\Streams.h"\
+	
+# End Source File
+# Begin Source File
+
+SOURCE=.\Graph2D\Convert.cpp
+DEP_CPP_CONVE=\
+	".\Graph2D\Convert.h"\
+	".\Graph2D\Image.h"\
+	".\Graph2D\PlugDrawer.h"\
+	".\Platform\BinFile.h"\
+	".\Tools\Base.h"\
+	".\Tools\Common.h"\
+	".\Tools\Fixed.h"\
+	".\Tools\FString.h"\
+	".\Tools\Geom.h"\
+	".\Tools\Random.h"\
+	".\Tools\Streams.h"\
+	
+# End Source File
+# Begin Source File
+
+SOURCE=.\Graph2D\Drawer.cpp
+DEP_CPP_DRAWE=\
+	".\Graph2D\Drawer.h"\
+	".\Graph2D\Image.h"\
+	".\Graph2D\PlugDrawer.h"\
+	".\Platform\BinFile.h"\
+	".\Tools\Base.h"\
+	".\Tools\Common.h"\
+	".\Tools\Fixed.h"\
+	".\Tools\FString.h"\
+	".\Tools\Streams.h"\
+	
+# End Source File
+# Begin Source File
+
+SOURCE=.\Graph2D\Drawer2D.cpp
+DEP_CPP_DRAWER=\
+	".\Graph2D\Drawer2D.h"\
+	".\Graph2D\Image.h"\
+	".\Graph2D\PlugDrawer.h"\
+	".\Platform\BinFile.h"\
+	".\Tools\Base.h"\
+	".\Tools\Common.h"\
+	".\Tools\Fixed.h"\
+	".\Tools\FString.h"\
+	".\Tools\Streams.h"\
+	
+# End Source File
+# Begin Source File
+
+SOURCE=.\Graph2D\FileImage.cpp
+DEP_CPP_FILEI=\
+	".\Graph2D\FileImage.h"\
+	".\Graph2D\Image.h"\
+	".\Graph2D\ImageFormat.h"\
+	".\Graph2D\Palette.h"\
+	".\Platform\BinFile.h"\
+	".\Tools\Base.h"\
+	".\Tools\Common.h"\
+	".\Tools\Fixed.h"\
+	".\Tools\FString.h"\
+	".\Tools\Streams.h"\
+	
+# End Source File
+# Begin Source File
+
+SOURCE=.\Graph2D\Filter.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\Graph2D\Font.cpp
+DEP_CPP_FONT_=\
+	".\Graph2D\Font.h"\
+	".\Platform\BinFile.h"\
+	".\Tools\Base.h"\
+	".\Tools\Common.h"\
+	".\Tools\Fixed.h"\
+	".\Tools\FString.h"\
+	".\Tools\Streams.h"\
+	
+# End Source File
+# Begin Source File
+
+SOURCE=.\Graph2D\Image.cpp
+DEP_CPP_IMAGE=\
+	".\Graph2D\Image.h"\
+	".\Platform\BinFile.h"\
+	".\Tools\Base.h"\
+	".\Tools\Common.h"\
+	".\Tools\Fixed.h"\
+	".\Tools\FString.h"\
+	".\Tools\Streams.h"\
+	
+# End Source File
+# Begin Source File
+
+SOURCE=.\Graph2D\ImageFormat.cpp
+DEP_CPP_IMAGEF=\
+	".\Graph2D\ImageFormat.h"\
+	".\Platform\BinFile.h"\
+	".\Tools\Base.h"\
+	".\Tools\Streams.h"\
+	
+# End Source File
+# Begin Source File
+
+SOURCE=.\Graph2D\Palette.cpp
+DEP_CPP_PALET=\
+	".\Graph2D\Image.h"\
+	".\Graph2D\Palette.h"\
+	".\Platform\BinFile.h"\
+	".\Tools\Base.h"\
+	".\Tools\Common.h"\
+	".\Tools\Fixed.h"\
+	".\Tools\FString.h"\
+	".\Tools\Streams.h"\
+	
+# End Source File
+# Begin Source File
+
+SOURCE=.\Graph2D\PlugDrawer.cpp
+DEP_CPP_PLUGD=\
+	".\Graph2D\Image.h"\
+	".\Graph2D\PlugDrawer.h"\
+	".\Platform\BinFile.h"\
+	".\Tools\Base.h"\
+	".\Tools\Common.h"\
+	".\Tools\Fixed.h"\
+	".\Tools\FString.h"\
+	".\Tools\Streams.h"\
+	
+# End Source File
+# Begin Source File
+
+SOURCE=.\Graph2D\WriteDrawer.cpp
+DEP_CPP_WRITE=\
+	".\Graph2D\Drawer.h"\
+	".\Graph2D\Font.h"\
+	".\Graph2D\Image.h"\
+	".\Graph2D\PlugDrawer.h"\
+	".\Graph2D\WriteDrawer.h"\
+	".\Platform\BinFile.h"\
+	".\Tools\Base.h"\
+	".\Tools\Common.h"\
+	".\Tools\Fixed.h"\
+	".\Tools\FString.h"\
+	".\Tools\Streams.h"\
+	
+# End Source File
+# End Group
+# Begin Group "Graph3D"
+
+# PROP Default_Filter ""
+# Begin Source File
+
+SOURCE=.\Graph3D\Bump.cpp
+DEP_CPP_BUMP_=\
+	".\Graph2D\Clut.h"\
+	".\Graph2D\Image.h"\
+	".\Graph2D\Palette.h"\
+	".\Graph2D\PlugDrawer.h"\
+	".\Graph3D\Bump.h"\
+	".\Graph3D\Camera.h"\
+	".\Graph3D\Face.h"\
+	".\Graph3D\FaceDrawer.h"\
+	".\Graph3D\Fill.cpp"\
+	".\Graph3D\Horiz.cpp"\
+	".\Graph3D\Light.h"\
+	".\Graph3D\Plot.h"\
+	".\Platform\BinFile.h"\
+	".\Tools\Base.h"\
+	".\Tools\Common.h"\
+	".\Tools\Fixed.h"\
+	".\Tools\FString.h"\
+	".\Tools\Geom.h"\
+	".\Tools\Streams.h"\
+	
+# End Source File
+# Begin Source File
+
+SOURCE=.\Graph3D\Camera.cpp
+DEP_CPP_CAMER=\
+	".\Graph2D\Clut.h"\
+	".\Graph2D\Image.h"\
+	".\Graph2D\Palette.h"\
+	".\Graph2D\PlugDrawer.h"\
+	".\Graph3D\Camera.h"\
+	".\Graph3D\FaceDrawer.h"\
+	".\Graph3D\Plot.h"\
+	".\Platform\BinFile.h"\
+	".\Tools\Base.h"\
+	".\Tools\Common.h"\
+	".\Tools\Fixed.h"\
+	".\Tools\FString.h"\
+	".\Tools\Geom.h"\
+	".\Tools\Streams.h"\
+	
+# End Source File
+# Begin Source File
+
+SOURCE=.\Graph3D\Cube.cpp
+DEP_CPP_CUBE_=\
+	".\Graph2D\Clut.h"\
+	".\Graph2D\Image.h"\
+	".\Graph2D\Palette.h"\
+	".\Graph2D\PlugDrawer.h"\
+	".\Graph3D\Bump.h"\
+	".\Graph3D\Camera.h"\
+	".\Graph3D\Cube.h"\
+	".\Graph3D\Face.h"\
+	".\Graph3D\FaceDrawer.h"\
+	".\Graph3D\Light.h"\
+	".\Graph3D\Mapper.h"\
+	".\Graph3D\Object.h"\
+	".\Graph3D\Plot.h"\
+	".\Graph3D\Plotter.h"\
+	".\Graph3D\Shader.h"\
+	".\Graph3D\TemplateFaceDrawer.h"\
+	".\Platform\BinFile.h"\
+	".\Tools\Base.h"\
+	".\Tools\Common.h"\
+	".\Tools\Fixed.h"\
+	".\Tools\FString.h"\
+	".\Tools\Geom.h"\
+	".\Tools\Streams.h"\
+	
+# End Source File
+# Begin Source File
+
+SOURCE=.\Graph3D\Face.cpp
+DEP_CPP_FACE_=\
+	".\Graph2D\Clut.h"\
+	".\Graph2D\Image.h"\
+	".\Graph2D\Palette.h"\
+	".\Graph2D\PlugDrawer.h"\
+	".\Graph3D\Camera.h"\
+	".\Graph3D\Face.h"\
+	".\Graph3D\FaceDrawer.h"\
+	".\Graph3D\Light.h"\
+	".\Graph3D\Plot.h"\
+	".\Platform\BinFile.h"\
+	".\Tools\Base.h"\
+	".\Tools\Common.h"\
+	".\Tools\Fixed.h"\
+	".\Tools\FString.h"\
+	".\Tools\Geom.h"\
+	".\Tools\Streams.h"\
+	
+# End Source File
+# Begin Source File
+
+SOURCE=.\Graph3D\FaceDrawer.cpp
+DEP_CPP_FACED=\
+	".\Graph2D\Clut.h"\
+	".\Graph2D\Image.h"\
+	".\Graph2D\Palette.h"\
+	".\Graph2D\PlugDrawer.h"\
+	".\Graph3D\FaceDrawer.h"\
+	".\Graph3D\Fill.cpp"\
+	".\Graph3D\Horiz.cpp"\
+	".\Platform\BinFile.h"\
+	".\Tools\Base.h"\
+	".\Tools\Common.h"\
+	".\Tools\Fixed.h"\
+	".\Tools\FString.h"\
+	".\Tools\Streams.h"\
+	
+# End Source File
+# Begin Source File
+
+SOURCE=.\Graph3D\Filler.cpp
+DEP_CPP_FILLE=\
+	".\Graph2D\Clut.h"\
+	".\Graph2D\Image.h"\
+	".\Graph2D\Palette.h"\
+	".\Graph2D\PlugDrawer.h"\
+	".\Graph3D\FaceDrawer.h"\
+	".\Graph3D\Filler.h"\
+	".\Platform\BinFile.h"\
+	".\Tools\Base.h"\
+	".\Tools\Common.h"\
+	".\Tools\Fixed.h"\
+	".\Tools\FString.h"\
+	".\Tools\Streams.h"\
+	
+# End Source File
+# Begin Source File
+
+SOURCE=.\Graph3D\Light.cpp
+DEP_CPP_LIGHT=\
+	".\Graph2D\Clut.h"\
+	".\Graph2D\Image.h"\
+	".\Graph2D\Palette.h"\
+	".\Graph2D\PlugDrawer.h"\
+	".\Graph3D\FaceDrawer.h"\
+	".\Graph3D\Light.h"\
+	".\Graph3D\Plot.h"\
+	".\Platform\BinFile.h"\
+	".\Tools\Base.h"\
+	".\Tools\Common.h"\
+	".\Tools\Fixed.h"\
+	".\Tools\FString.h"\
+	".\Tools\Geom.h"\
+	".\Tools\Streams.h"\
+	
+# End Source File
+# Begin Source File
+
+SOURCE=.\Graph3D\Mapper.cpp
+DEP_CPP_MAPPE=\
+	".\Graph2D\Clut.h"\
+	".\Graph2D\Image.h"\
+	".\Graph2D\Palette.h"\
+	".\Graph2D\PlugDrawer.h"\
+	".\Graph3D\FaceDrawer.h"\
+	".\Graph3D\Mapper.h"\
+	".\Graph3D\TemplateFaceDrawer.h"\
+	".\Platform\BinFile.h"\
+	".\Tools\Base.h"\
+	".\Tools\Common.h"\
+	".\Tools\Fixed.h"\
+	".\Tools\FString.h"\
+	".\Tools\Streams.h"\
+	
+# End Source File
+# Begin Source File
+
+SOURCE=.\Graph3D\Object.cpp
+DEP_CPP_OBJEC=\
+	".\Graph2D\Clut.h"\
+	".\Graph2D\Image.h"\
+	".\Graph2D\Palette.h"\
+	".\Graph2D\PlugDrawer.h"\
+	".\Graph3D\Camera.h"\
+	".\Graph3D\Face.h"\
+	".\Graph3D\FaceDrawer.h"\
+	".\Graph3D\Light.h"\
+	".\Graph3D\Mapper.h"\
+	".\Graph3D\Object.h"\
+	".\Graph3D\Plot.h"\
+	".\Graph3D\Plotter.h"\
+	".\Graph3D\Shader.h"\
+	".\Graph3D\TemplateFaceDrawer.h"\
+	".\Platform\BinFile.h"\
+	".\Tools\Base.h"\
+	".\Tools\Common.h"\
+	".\Tools\Fixed.h"\
+	".\Tools\FString.h"\
+	".\Tools\Geom.h"\
+	".\Tools\Streams.h"\
+	
+# End Source File
+# Begin Source File
+
+SOURCE=.\Graph3D\Pixeler.cpp
+DEP_CPP_PIXEL=\
+	".\Graph2D\Drawer.h"\
+	".\Graph2D\Image.h"\
+	".\Graph2D\PlugDrawer.h"\
+	".\Graph3D\Pixeler.h"\
+	".\Platform\BinFile.h"\
+	".\Tools\Base.h"\
+	".\Tools\Common.h"\
+	".\Tools\Fixed.h"\
+	".\Tools\FString.h"\
+	".\Tools\Streams.h"\
+	
+# End Source File
+# Begin Source File
+
+SOURCE=.\Graph3D\Plot.cpp
+DEP_CPP_PLOT_=\
+	".\Graph2D\Clut.h"\
+	".\Graph2D\Image.h"\
+	".\Graph2D\Palette.h"\
+	".\Graph2D\PlugDrawer.h"\
+	".\Graph3D\FaceDrawer.h"\
+	".\Graph3D\Plot.h"\
+	".\Platform\BinFile.h"\
+	".\Tools\Base.h"\
+	".\Tools\Common.h"\
+	".\Tools\Fixed.h"\
+	".\Tools\FString.h"\
+	".\Tools\Geom.h"\
+	".\Tools\Streams.h"\
+	
+# End Source File
+# Begin Source File
+
+SOURCE=.\Graph3D\Plotter.cpp
+DEP_CPP_PLOTT=\
+	".\Graph2D\Clut.h"\
+	".\Graph2D\Image.h"\
+	".\Graph2D\Palette.h"\
+	".\Graph2D\PlugDrawer.h"\
+	".\Graph3D\FaceDrawer.h"\
+	".\Graph3D\Plotter.h"\
+	".\Graph3D\TemplateFaceDrawer.h"\
+	".\Platform\BinFile.h"\
+	".\Tools\Base.h"\
+	".\Tools\Common.h"\
+	".\Tools\Fixed.h"\
+	".\Tools\FString.h"\
+	".\Tools\Streams.h"\
+	
+# End Source File
+# Begin Source File
+
+SOURCE=.\Graph3D\Scene.cpp
+DEP_CPP_SCENE=\
+	".\Graph2D\Clut.h"\
+	".\Graph2D\Image.h"\
+	".\Graph2D\Palette.h"\
+	".\Graph2D\PlugDrawer.h"\
+	".\Graph3D\Camera.h"\
+	".\Graph3D\Face.h"\
+	".\Graph3D\FaceDrawer.h"\
+	".\Graph3D\Light.h"\
+	".\Graph3D\Object.h"\
+	".\Graph3D\Plot.h"\
+	".\Graph3D\Scene.h"\
+	".\Platform\BinFile.h"\
+	".\Tools\Base.h"\
+	".\Tools\Common.h"\
+	".\Tools\Fixed.h"\
+	".\Tools\FString.h"\
+	".\Tools\Geom.h"\
+	".\Tools\Streams.h"\
+	
+# End Source File
+# Begin Source File
+
+SOURCE=.\Graph3D\Shader.cpp
+DEP_CPP_SHADE=\
+	".\Graph2D\Clut.h"\
+	".\Graph2D\Image.h"\
+	".\Graph2D\Palette.h"\
+	".\Graph2D\PlugDrawer.h"\
+	".\Graph3D\FaceDrawer.h"\
+	".\Graph3D\Shader.h"\
+	".\Graph3D\TemplateFaceDrawer.h"\
+	".\Platform\BinFile.h"\
+	".\Tools\Base.h"\
+	".\Tools\Common.h"\
+	".\Tools\Fixed.h"\
+	".\Tools\FString.h"\
+	".\Tools\Streams.h"\
+	
+# End Source File
+# Begin Source File
+
+SOURCE=.\Graph3D\TemplateFaceDrawer.cpp
+DEP_CPP_TEMPL=\
+	".\Graph2D\Clut.h"\
+	".\Graph2D\Image.h"\
+	".\Graph2D\Palette.h"\
+	".\Graph2D\PlugDrawer.h"\
+	".\Graph3D\FaceDrawer.h"\
+	".\Graph3D\TemplateFaceDrawer.h"\
+	".\Platform\BinFile.h"\
+	".\Tools\Base.h"\
+	".\Tools\Common.h"\
+	".\Tools\Fixed.h"\
+	".\Tools\FString.h"\
+	".\Tools\Streams.h"\
+	
+# End Source File
+# End Group
+# Begin Group "Tools"
+
+# PROP Default_Filter ""
+# Begin Source File
+
+SOURCE=.\Tools\apstring.cpp
+DEP_CPP_APSTR=\
+	".\Platform\BinFile.h"\
+	".\Tools\apstring.h"\
+	".\Tools\Base.h"\
+	".\Tools\FString.h"\
+	".\Tools\Streams.h"\
+	
+# End Source File
+# Begin Source File
+
+SOURCE=.\Tools\Base.cpp
+DEP_CPP_BASE_=\
+	".\Platform\BinFile.h"\
+	".\Tools\Base.h"\
+	".\Tools\Streams.h"\
+	
+# End Source File
+# Begin Source File
+
+SOURCE=.\Tools\Common.cpp
+DEP_CPP_COMMO=\
+	".\Platform\BinFile.h"\
+	".\Tools\Base.h"\
+	".\Tools\Common.h"\
+	".\Tools\Fixed.h"\
+	".\Tools\FString.h"\
+	".\Tools\Streams.h"\
+	
+# End Source File
+# Begin Source File
+
+SOURCE=.\Tools\Fixed.cpp
+DEP_CPP_FIXED=\
+	".\Tools\Fixed.h"\
+	
+# End Source File
+# Begin Source File
+
+SOURCE=.\Tools\FString.cpp
+DEP_CPP_FSTRI=\
+	".\Platform\BinFile.h"\
+	".\Tools\Base.h"\
+	".\Tools\Common.h"\
+	".\Tools\Fixed.h"\
+	".\Tools\FString.h"\
+	".\Tools\Streams.h"\
+	
+# End Source File
+# Begin Source File
+
+SOURCE=.\Tools\Geom.cpp
+DEP_CPP_GEOM_=\
+	".\Platform\BinFile.h"\
+	".\Tools\Base.h"\
+	".\Tools\Common.h"\
+	".\Tools\Fixed.h"\
+	".\Tools\FString.h"\
+	".\Tools\Geom.h"\
+	".\Tools\Streams.h"\
+	
+# End Source File
+# Begin Source File
+
+SOURCE=.\Tools\List.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\Tools\Random.cpp
+DEP_CPP_RANDO=\
+	".\Platform\BinFile.h"\
+	".\Tools\Base.h"\
+	".\Tools\Common.h"\
+	".\Tools\Fixed.h"\
+	".\Tools\FString.h"\
+	".\Tools\Geom.h"\
+	".\Tools\Random.h"\
+	".\Tools\Streams.h"\
+	
+# End Source File
+# Begin Source File
+
+SOURCE=.\Tools\Streams.cpp
+DEP_CPP_STREA=\
+	".\Platform\BinFile.h"\
+	".\Tools\Streams.h"\
+	
+# End Source File
+# Begin Source File
+
+SOURCE=.\Tools\Tcuexc.cpp
+DEP_CPP_TCUEX=\
+	".\Tools\tcuexc.h"\
+	".\Tools\tcurtti.h"\
+	".\Tools\tcuwarn.h"\
+	".\Tools\tcuxhapi.h"\
+	
+# End Source File
+# Begin Source File
+
+SOURCE=.\Tools\Tcurtti.cpp
+DEP_CPP_TCURT=\
+	".\Tools\tcurtti.h"\
+	".\Tools\tcuwarn.h"\
+	
+# End Source File
+# Begin Source File
+
+SOURCE=.\Tools\Tcuxhapi.cpp
+DEP_CPP_TCUXH=\
+	".\Tools\tcuwarn.h"\
+	".\Tools\tcuxhapi.h"\
+	
+# End Source File
+# Begin Source File
+
+SOURCE=.\Tools\Variant.cpp
+# End Source File
+# End Group
+# Begin Group "Platform"
+
+# PROP Default_Filter ""
+# Begin Source File
+
+SOURCE=.\Platform\BinFile.cpp
+DEP_CPP_BINFI=\
+	".\Platform\BinFile.h"\
+	
+# End Source File
+# Begin Source File
+
+SOURCE=.\Platform\Device_CE.cpp
+DEP_CPP_DEVIC=\
+	".\Graph2D\Image.h"\
+	".\Graph2D\Palette.h"\
+	".\Platform\BinFile.h"\
+	".\Platform\Device.h"\
+	".\Platform\Device_CE.h"\
+	".\Platform\Gx.h"\
+	".\Tools\Base.h"\
+	".\Tools\Common.h"\
+	".\Tools\Fixed.h"\
+	".\Tools\FString.h"\
+	".\Tools\Streams.h"\
+	{$(INCLUDE)}"aygshell.h"\
+	{$(INCLUDE)}"sipapi.h"\
+	
+# End Source File
+# Begin Source File
+
+SOURCE=.\Platform\Files.cpp
+DEP_CPP_FILES=\
+	".\Platform\BinFile.h"\
+	".\Platform\Files.h"\
+	".\Tools\apstring.h"\
+	".\Tools\Base.h"\
+	".\Tools\FString.h"\
+	".\Tools\Streams.h"\
+	
+# End Source File
+# Begin Source File
+
+SOURCE=.\Platform\Viewer.cpp
+DEP_CPP_VIEWE=\
+	".\Graph2D\Clut.h"\
+	".\Graph2D\Drawer.h"\
+	".\Graph2D\Image.h"\
+	".\Graph2D\Palette.h"\
+	".\Graph2D\PlugDrawer.h"\
+	".\Graph3D\Camera.h"\
+	".\Graph3D\FaceDrawer.h"\
+	".\Graph3D\Pixeler.h"\
+	".\Graph3D\Plot.h"\
+	".\Platform\BinFile.h"\
+	".\Platform\Device.h"\
+	".\Platform\Viewer.h"\
+	".\Tools\Base.h"\
+	".\Tools\Common.h"\
+	".\Tools\Fixed.h"\
+	".\Tools\FString.h"\
+	".\Tools\Geom.h"\
+	".\Tools\Streams.h"\
+	
+# End Source File
+# End Group
+# Begin Group "GUI"
+
+# PROP Default_Filter ""
+# Begin Source File
+
+SOURCE=.\Gui\Editable3D.cpp
+DEP_CPP_EDITA=\
+	".\Graph2D\Clut.h"\
+	".\Graph2D\Image.h"\
+	".\Graph2D\Palette.h"\
+	".\Graph2D\PlugDrawer.h"\
+	".\Graph3D\Camera.h"\
+	".\Graph3D\FaceDrawer.h"\
+	".\Graph3D\Plot.h"\
+	".\Gui\Editable3D.h"\
+	".\Gui\Editor.h"\
+	".\Platform\BinFile.h"\
+	".\Tools\Base.h"\
+	".\Tools\Common.h"\
+	".\Tools\Fixed.h"\
+	".\Tools\FString.h"\
+	".\Tools\Geom.h"\
+	".\Tools\RTTI.h"\
+	".\Tools\Streams.h"\
+	
+# End Source File
+# Begin Source File
+
+SOURCE=.\Gui\EditablePhysic.cpp
+DEP_CPP_EDITAB=\
+	".\Graph2D\Clut.h"\
+	".\Graph2D\Image.h"\
+	".\Graph2D\Palette.h"\
+	".\Graph2D\PlugDrawer.h"\
+	".\Graph3D\Camera.h"\
+	".\Graph3D\FaceDrawer.h"\
+	".\Graph3D\Plot.h"\
+	".\Gui\Editable3D.h"\
+	".\Gui\EditablePhysic.h"\
+	".\Gui\Editor.h"\
+	".\Physic\Actions.h"\
+	".\Physic\Particle.h"\
+	".\Platform\BinFile.h"\
+	".\Tools\Base.h"\
+	".\Tools\Common.h"\
+	".\Tools\Fixed.h"\
+	".\Tools\FString.h"\
+	".\Tools\Geom.h"\
+	".\Tools\RTTI.h"\
+	".\Tools\Streams.h"\
+	
+# End Source File
+# Begin Source File
+
+SOURCE=.\Gui\Editor.cpp
+DEP_CPP_EDITO=\
+	".\Gui\Editor.h"\
+	".\Platform\BinFile.h"\
+	".\Tools\Base.h"\
+	".\Tools\Common.h"\
+	".\Tools\Fixed.h"\
+	".\Tools\FString.h"\
+	".\Tools\RTTI.h"\
+	".\Tools\Streams.h"\
+	
+# End Source File
+# Begin Source File
+
+SOURCE=.\Gui\GUI.cpp
+DEP_CPP_GUI_C=\
+	".\Graph2D\Drawer.h"\
+	".\Graph2D\Drawer2D.h"\
+	".\Graph2D\Font.h"\
+	".\Graph2D\Image.h"\
+	".\Graph2D\Palette.h"\
+	".\Graph2D\PlugDrawer.h"\
+	".\Graph2D\WriteDrawer.h"\
+	".\Gui\GUI.h"\
+	".\Platform\BinFile.h"\
+	".\Tools\apstring.h"\
+	".\Tools\Base.h"\
+	".\Tools\Common.h"\
+	".\Tools\Fixed.h"\
+	".\Tools\FString.h"\
+	".\Tools\Streams.h"\
+	
+# End Source File
+# Begin Source File
+
+SOURCE=.\Gui\GUIInput.cpp
+DEP_CPP_GUIIN=\
+	".\Graph2D\Drawer.h"\
+	".\Graph2D\Drawer2D.h"\
+	".\Graph2D\Font.h"\
+	".\Graph2D\Image.h"\
+	".\Graph2D\Palette.h"\
+	".\Graph2D\PlugDrawer.h"\
+	".\Graph2D\WriteDrawer.h"\
+	".\Gui\GUI.h"\
+	".\Gui\GUIInput.h"\
+	".\Platform\BinFile.h"\
+	".\Tools\apstring.h"\
+	".\Tools\Base.h"\
+	".\Tools\Common.h"\
+	".\Tools\Fixed.h"\
+	".\Tools\FString.h"\
+	".\Tools\Streams.h"\
+	
+# End Source File
+# Begin Source File
+
+SOURCE=.\Gui\GUILoader.cpp
+DEP_CPP_GUILO=\
+	".\Graph2D\Drawer.h"\
+	".\Graph2D\Drawer2D.h"\
+	".\Graph2D\Font.h"\
+	".\Graph2D\Image.h"\
+	".\Graph2D\Palette.h"\
+	".\Graph2D\PlugDrawer.h"\
+	".\Graph2D\WriteDrawer.h"\
+	".\Gui\Editor.h"\
+	".\Gui\GUI.h"\
+	".\Gui\GUIInput.h"\
+	".\Gui\GUILoader.h"\
+	".\Gui\GUIOutput.h"\
+	".\Platform\BinFile.h"\
+	".\Platform\Files.h"\
+	".\Tools\apstring.h"\
+	".\Tools\Base.h"\
+	".\Tools\Common.h"\
+	".\Tools\Fixed.h"\
+	".\Tools\FString.h"\
+	".\Tools\RTTI.h"\
+	".\Tools\Streams.h"\
+	".\Xml\XMLParser.h"\
+	
+# End Source File
+# Begin Source File
+
+SOURCE=.\Gui\GUIOutput.cpp
+DEP_CPP_GUIOU=\
+	".\Graph2D\Drawer.h"\
+	".\Graph2D\Drawer2D.h"\
+	".\Graph2D\Font.h"\
+	".\Graph2D\Image.h"\
+	".\Graph2D\Palette.h"\
+	".\Graph2D\PlugDrawer.h"\
+	".\Graph2D\WriteDrawer.h"\
+	".\Gui\GUI.h"\
+	".\Gui\GUIOutput.h"\
+	".\Platform\BinFile.h"\
+	".\Tools\apstring.h"\
+	".\Tools\Base.h"\
+	".\Tools\Common.h"\
+	".\Tools\Fixed.h"\
+	".\Tools\FString.h"\
+	".\Tools\Streams.h"\
+	
+# End Source File
+# End Group
+# Begin Group "Physic"
+
+# PROP Default_Filter ""
+# Begin Source File
+
+SOURCE=.\Physic\Actions.cpp
+DEP_CPP_ACTIO=\
+	".\Graph2D\Clut.h"\
+	".\Graph2D\Image.h"\
+	".\Graph2D\Palette.h"\
+	".\Graph2D\PlugDrawer.h"\
+	".\Graph3D\FaceDrawer.h"\
+	".\Graph3D\Plot.h"\
+	".\Physic\Actions.h"\
+	".\Physic\Particle.h"\
+	".\Platform\BinFile.h"\
+	".\Tools\Base.h"\
+	".\Tools\Common.h"\
+	".\Tools\Fixed.h"\
+	".\Tools\FString.h"\
+	".\Tools\Geom.h"\
+	".\Tools\RTTI.h"\
+	".\Tools\Streams.h"\
+	
+# End Source File
+# Begin Source File
+
+SOURCE=.\Physic\Particle.cpp
+DEP_CPP_PARTI=\
+	".\Graph2D\Clut.h"\
+	".\Graph2D\Image.h"\
+	".\Graph2D\Palette.h"\
+	".\Graph2D\PlugDrawer.h"\
+	".\Graph3D\FaceDrawer.h"\
+	".\Graph3D\Plot.h"\
+	".\Physic\Particle.h"\
+	".\Platform\BinFile.h"\
+	".\Tools\Base.h"\
+	".\Tools\Common.h"\
+	".\Tools\Fixed.h"\
+	".\Tools\FString.h"\
+	".\Tools\Geom.h"\
+	".\Tools\RTTI.h"\
+	".\Tools\Streams.h"\
+	
+# End Source File
+# End Group
+# Begin Group "Collision"
+
+# PROP Default_Filter ""
+# End Group
+# Begin Group "XML"
+
+# PROP Default_Filter ""
+# Begin Source File
+
+SOURCE=.\Xml\xmlparse.c
+DEP_CPP_XMLPA=\
+	".\Xml\expat.h"\
+	".\Xml\winconfig.h"\
+	".\Xml\xmlrole.h"\
+	".\Xml\xmltok.h"\
+	
+# End Source File
+# Begin Source File
+
+SOURCE=.\Xml\XMLParser.cpp
+DEP_CPP_XMLPAR=\
+	".\Platform\BinFile.h"\
+	".\Tools\apstring.h"\
+	".\Tools\Base.h"\
+	".\Tools\FString.h"\
+	".\Tools\Streams.h"\
+	".\Xml\expat.h"\
+	".\Xml\XMLParser.h"\
+	
+# End Source File
+# Begin Source File
+
+SOURCE=.\Xml\xmlrole.c
+DEP_CPP_XMLRO=\
+	".\Xml\ascii.h"\
+	".\Xml\winconfig.h"\
+	".\Xml\xmlrole.h"\
+	".\Xml\xmltok.h"\
+	
+# End Source File
+# Begin Source File
+
+SOURCE=.\Xml\xmltok.c
+DEP_CPP_XMLTO=\
+	".\Xml\ascii.h"\
+	".\Xml\asciitab.h"\
+	".\Xml\iasciitab.h"\
+	".\Xml\latin1tab.h"\
+	".\Xml\nametab.h"\
+	".\Xml\utf8tab.h"\
+	".\Xml\winconfig.h"\
+	".\Xml\xmltok.h"\
+	".\Xml\xmltok_impl.c"\
+	".\Xml\xmltok_impl.h"\
+	".\Xml\xmltok_ns.c"\
+	
+# End Source File
+# End Group
+# End Group
+# Begin Group "Header Files"
+
+# PROP Default_Filter "h;hpp;hxx;hm;inl"
+# Begin Source File
+
+SOURCE=.\Physic\Actions.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\Tools\apstring.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\Xml\ascii.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\Xml\asciitab.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\Tools\Base.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\Platform\BinFile.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\Graph3D\Bump.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\Graph3D\Camera.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\Graph2D\Clut.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\Tools\Common.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\Graph2D\Convert.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\Graph3D\Cube.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\Platform\Device.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\Platform\Device_CE.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\Graph2D\Drawer.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\Graph2D\Drawer2D.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\Gui\Editable3D.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\Gui\EditablePhysic.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\Gui\Editor.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\Tools\em_ios.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\Tools\emistrm.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\Tools\emostrm.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\Xml\expat.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\Graph3D\Face.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\Graph3D\FaceDrawer.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\Graph2D\FileImage.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\Platform\Files.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\Graph3D\Filler.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\Graph2D\Filter.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\Tools\Fixed.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\Graph2D\Font.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\Tools\FString.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\Tools\Geom.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\Gui\GUI.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\Gui\GUIInput.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\Gui\GUILoader.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\Gui\GUIOutput.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\Platform\Gx.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\Xml\iasciitab.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\Graph2D\Image.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\Graph2D\ImageFormat.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\Xml\latin1tab.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\Graph3D\Light.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\Tools\List.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\Graph3D\Mapper.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\Xml\mbstring.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\Xml\nametab.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\Graph3D\Object.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\Graph2D\Palette.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\Physic\Particle.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\Graph3D\Pixeler.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\Graph3D\Plot.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\Graph3D\Plotter.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\Graph2D\PlugDrawer.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\Tools\Random.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\Tools\RTTI.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\Graph3D\Scene.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\Graph3D\Shader.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\Tools\Streams.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\Graph3D\TemplateFaceDrawer.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\Xml\utf8tab.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\Tools\Variant.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\Platform\Viewer.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\Xml\winconfig.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\Graph2D\WriteDrawer.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\Xml\XMLParser.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\Xml\xmlrole.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\Xml\xmltok.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\Xml\xmltok_impl.h
+# End Source File
+# End Group
+# End Target
+# End Project

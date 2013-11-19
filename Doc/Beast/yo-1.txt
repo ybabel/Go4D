@@ -1,0 +1,249 @@
+
+version:  19990525-#3
+etat:     a corriger/completer
+jeton:    TNT
+cycle:    BAB->TNT->JYB
+
+<LIST>
+    <BAB> dtr2@canal-plus.fr
+    <TNT> sebastienlecomte@hotmail.com,
+    <JYB> Jean-Yves.Bitterlich@bigfoot.com
+</LIST>
+
+<=RESUME==============================================================>
+
+But: 
+===
+Le but est de faire confronter deux races de bestioles (représentées
+par des triangles). Ces deux races se différent seulement par la
+couleure qui les représentes sur un plan.  Chaque bestiole nommée
+"beast" est régie par un certain nombre de règles très simple et a
+pour but de survivre (le plus longtemps possible).
+
+La scène comporte "N" beast bleu et "N" beast rouge sur un plan
+délimité. De plus un certain nombre d'unité de nourriture apparaissent
+continuellement sur le plateau et permettent ainsi aux beasts de
+survivre.
+
+Les régles sont les suivantes:
+
+  R1 : pour survivre il se nourrir.
+
+  R2 : pour manger il faut se deplacer vers la nourriture.
+
+  R3 : chaque deplacement consomme une unite de nourriture.
+
+  R4 : une unité de nourriture apporte a son consommateur "M" unité de
+       nourriture.
+
+  R5 : lors de la rencontre de "i" beasts bleu et de "j" beasts rouge
+       sortent vainqueurs le groupe de beasts qui a le plus d'unite de
+       nourriture. Cependant le groupe vainqueur se voit amputé du
+       nombre d'unité de nourriture du groupe vaincu (voire perdre un
+       certain nombre de ces propres beasts).
+
+  R6 : chaque bestiole a une faim qui est quantifiée: lorsqu'elle n'a
+       pas "faim", elle erre sur le plateau.
+
+  R7 : la nourriture apparait RANDOMly sur le plateau et
+       continuellement.
+
+  R8 : les beast connaissent les positions de toutes les portions de
+       nouriturres
+
+  R9 : les beast connaissent les positions de tous les beasts bleus ou
+       rouges
+
+  R10: (dans un premier temps) les beasts sont crées avec un position
+       aleatoire des qu'un beast meurt, dans la meme couleur (dans un
+       deuxieme temps) les beasts se reproduisent.
+
+  R11: (dans un troisième temps) les beast doivent eviter des
+       obstacles pour se deplacer (du genre le trou, si on tombe
+       dedans on meur, et le mur qui empeche d'avancer)
+
+
+<=TASKS==============================================================>
+
+TODO:
+=====
+<___>- l'affichage du monde beastial
+<___>- les beasts et leurs regles
+<___>- le mondes des beast en lui meme qui prends les regles et les
+       positions des beast et calcule leurs choix
+<___>- un moyen de modifier les parametres (interactivement)
+<___>- un moyen de sauver les beasts et leur monde sur fichier
+<___>- l'algo génétique
+
+
+DONE:
+=====
+<BAB>- la partie graphique (Windows, X-Windows)
+<BAB>- une bibilotheque pour les maths : Vecteurs et operations dessus,
+       somme, produit scalaire, vectoriel, norme...
+<BAB>- un template pour les liste chainés et les tableaux
+
+
+<=CODE==============================================================>
+Plateforme: C++ ANSI / C++Builder / GCC Linux
+
+
+public :
+  virtual Vector3 * GetPosition()=0;
+  virtual int GetShape()=0;
+  virtual byte GetColor()=0;
+};
+
+
+IBeast = class {
+public :
+  virtual Vector3 * GetPosition()=0;
+  virtual real GetHanger()=0;
+  virtual int GetRace()=0;
+  virtual void ConsumeEnergyForMove()=0;
+  // ETC..
+};
+
+
+IDNACreature = class {
+public :
+  virtual Array<real> * GetDNA()=0;
+};
+
+
+
+
+
+
+<==EOM==>
+
+<=MSG#2===============================================================>
+
+Je complete aussi les regles de JYB : 
+ R8-R11
+
+Pour l'instant on fait ca en 2D, mais on peut gerer des Vector3 en
+mettant toujours Z a 0, comme ca on pourra passer en 3D quand on
+voudra. On peut aussi imager que l'étape suivante c'est de les mettres
+dans un HeightField (c'est a dire un monde avec des montagnes et des
+lacs rendu par voxel) :-))
+
+Il va falloir coder les parties suivantes :
+<TODO>
+
+Il y a peut-être d'autres découpages...
+
+Pour ce premier beastland, pas besoin de créer des classes trop
+compliquées, le but est juste de nourir notre reflexion avec des
+choses conretes. On verra plus tard comment on peut généraliser les
+notions des 'sens' (ici on a que l'odorat) de 'but' (ici on a que la
+nourriture), etc...
+
+Maintenant, je pense que l'étape suivante c'est de proposer des
+".H". Il n'y a pas veritablement besoin de partie commune, mais il vas
+falloir un minimun nous organiser pour pouvoir recoller les
+morceaux. Pour ce faire, il faut a mon avis utiliser a fond le
+polymorphisme. A savoir, dans le cas présent des classes ne contenant
+que des methodes virtuelles abstraites. En fait ce genre de classes
+s'appelle une interface.
+
+Par exemple, le moteur d'affichage utilise une interface 
+IDrawable = class {
+public :
+  virtual Vector3 * GetPosition()=0;
+  virtual int GetShape()=0;
+  virtual byte GetColor()=0;
+};
+
+Pour le moteur des beast on aura un truc du genre
+IBeast = class {
+public :
+  virtual Vector3 * GetPosition()=0;
+  virtual real GetHanger()=0;
+  virtual int GetRace()=0;
+  virtual void ConsumeEnergyForMove()=0;
+  // ETC..
+};
+
+Pour l'algo génétique on peut avoir
+IDNACreature = class {
+public :
+  virtual Array<real> * GetDNA()=0;
+};
+
+A chacun dans sa partie de définir ses interfaces. Ensuite on
+recollera les morceaux en faisant de l'heritage multiple.  Notez que
+IBeast.GetRace() et IDrawable.GetColor() renvoient la même valeur,
+mais ont une sémantique differente.
+
+J'ai deja codé ces parties qui peuvent être réutilisé
+- la partie graphique (Windows, X-Windows)
+- une bibilotheque pour les maths : Vecteurs et operations dessus, 
+  somme, produit scalaire, vectoriel, norme...
+- un template pour les liste chainés et les tableaux
+
+De mon coté je vais commencer a coder la partie graphique, de sorte
+qu'on puisse voir ce qui se passes le plus rapidement possible. Ce
+sera des créatures qui se deplacent aléatroirement.
+
+
+<=MSG#1===============================================================>
+-----Message d'origine-----
+De:	jyb@directprovider.net [SMTP:jyb@directprovider.net]
+Date:	mardi 25 mai 1999 16:25
+À:	dtr2@canal-plus.fr
+Cc:	Jean-Yves.Bitterlich@bigfoot.com; sebastienlecomte@hotmail.com
+Objet:	Re: La page sur la vie artificielle...
+
+
+LIST/
+dtr2@canal-plus.fr
+sebastienlecomte@hotmail.com
+Jean-Yves.Bitterlich@bigfoot.com
+/LIST
+
+version 19990525-#2
+cycle: JYB->YO->TNT
+jeton: YO
+      ^^^^ a modifier!!!
+
+etat: a corriger
+
+But: 
+===
+Le but est de faire confronter deux races de bestioles (représentées
+par des triangles). Ces deux races se différent seulement par la
+couleure qui les représentes sur un plan.  Chaque bestiole nommée
+"beast" est régie par un certain nombre de règles très simple et a
+pour but de survivre (le plus longtemps possible).
+
+La scène comporte "N" beast bleu et "N" beast rouge sur un plan
+délimité. De plus un certain nombre d'unité de nourriture apparaissent
+continuellement sur le plateau et permettent ainsi aux beasts de
+survivre.
+
+Les régles sont les suivantes:
+
+  R1: pour survivre il se nourrir.
+
+  R2: pour manger il faut se deplacer vers la nourriture.
+
+  R3: chaque deplacement consomme une unite de nourriture.
+
+  R4: une unité de nourriture apporte a son consommateur "M" unité de
+      nourriture.
+
+  R5: lors de la rencontre de "i" beasts bleu et de "j" beasts rouge
+      sortent vainqueurs le groupe de beasts qui a le plus d'unite de
+      nourriture. Cependant le groupe vainqueur se voit amputé du
+      nombre d'unité de nourriture du groupe vaincu (voire perdre un
+      certain nombre de ces propres beasts).
+
+  R6: chaque bestiole a une faim qui est quantifiée: lorsqu'elle n'a
+      pas "faim", elle erre sur le plateau.
+
+  R7: la nourriture apparait RANDOMly sur le plateau et
+      continuellement.
+
+
+--EOM

@@ -1,0 +1,102 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type"
+content="text/html; charset=iso-8859-1">
+<meta name="GENERATOR" content="Microsoft FrontPage Express 2.0">
+<title></title>
+</head>
+
+<body>
+
+<h1>ALOM3D : 3D rendering engine</h1>
+
+<p>What can be done with it :</p>
+
+<ul>
+    <li>6 degree of freedom</li>
+    <li>Gouraud : a normal (average of the normal of the faces
+        that use a plot) must be processed for each plot</li>
+    <li>Bump : a dynamic light map must be processed</li>
+    <li>Draw faces, points, lines. A single face can be drawed by
+        various maner, depending on the speed required (linear
+        mapping for fast rendering, hypperbolic+mipmap+alphablending+ZBuffer+phong
+        lightmap+transluency+fog for accurate rendering)</li>
+    <li>[take advantage of hardware] : not planed for the moment</li>
+    <li>easily inculde of Physic rule, collision detection, AI</li>
+    <li>Hierarchical objects definition</li>
+    <li>Hierarchical bounding box or sphere of fast collision
+        detection</li>
+    <li>Polygon accuray collision detection</li>
+    <li>Render the cube demo</li>
+    <li>Render the IIE demo</li>
+    <li>Render the physic demo</li>
+    <li>Be integrated in the interactive 3D editor/modeler</li>
+    <li>Used to render outdoor/indoor scenes</li>
+    <li>Render the beast demo (without much time consuming in
+        rendering)</li>
+    <li>Read vrml, asc or other objects definition files</li>
+    <li>Include voxel engine !!! to draw the environment</li>
+    <li>Possibility to include CSG later</li>
+    <li>Possibility to include constraints later (for constrained
+        editor)</li>
+    <li>BSP ?!?</li>
+    <li>Dynamic moving lights, ambient lights, spot lights,
+        colored lights (like the java3D sphere lighted with green
+        and red)</li>
+    <li>Support 8bit palette colors / true color (16bit, 32bit),
+        possibly dynamicly (use templates maybe in images)</li>
+    <li>Add NURBS (or quake III like patch) to the rendering
+        engine</li>
+    <li>Engine customization (fog/not fog, lights/not lights,
+        ...) possibly done with templates ?+fields</li>
+</ul>
+
+<p>Rendering paradigm :</p>
+
+<ul>
+    <li>The Space system</li>
+    <li>The View system</li>
+    <li>The Camera (make link from space to view, transform space
+        into view)</li>
+    <li>The projector (that project the space objets into a view
+        object : X,Y,Z+RGB -&gt; X,Y+Color) = camera</li>
+    <li>The rasterizer (previously known as the
+        TemplateFaceDrawer)</li>
+</ul>
+
+<p>The rendering pipeline :</p>
+
+<ol dir="ltr">
+    <li>The objects high level definitions, the only objects
+        manipulated by the game/demo : include objects (cube+sphere+face
+        defined objects+composite objects) + lights + physics +
+        constraints + dynamic. The objects must be said Static/dynamic
+        in order that the engine knows if it can optimze their
+        use or not. Objects can be defined by hand, by a program
+        (beasts), or in a file</li>
+    <li>Objects position computing into camera base</li>
+    <li>High level visibility determination (use bounding sphere
+        and frustrum clipping), high level clipping</li>
+    <li>Tesselation (convert cube in face, sphere in faces, ...)</li>
+    <li>Environement processing : lights computation (for each
+        visible point, depend on the average normal of the point)</li>
+    <li>Low level clipping (frustrum face clipping)</li>
+    <li>Faces, plots, lines sorting</li>
+    <li>Projecting (points and colors)</li>
+    <li>Rasterinzation (effective drawing) in the image (use a
+        clut for lights)</li>
+</ol>
+
+<p>Questions :</p>
+
+<ul>
+    <li>Where can I include fog in this engine ? the fog can be
+        computed for the entire face, the same procress than
+        shading is used (the rasterizer is given a CLUT index
+        which can represent the fog+shade color)</li>
+</ul>
+
+<p>&nbsp;</p>
+</body>
+</html>

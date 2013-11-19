@@ -1,0 +1,662 @@
+############################################################################
+PROGRAM = LBeasts
+OPTIONS = -D_UNIX_ -D_LINUX_KBFR_ -Dusefixed -Dshare -Dcreatecolor
+
+#Options are:
+#    _UNIX_    xor   _WIN32_    : architecture type
+#    usefixed  xor   usefloat   : computation type
+#    share                      : speedup graphical drawing
+#    createcolor                : use private color map
+#    DEBUG                      : show some usefull dbg information
+#    _LINUX_KBFR_               : used for keyboard under Linux
+
+############################################################################
+GCC   = g++
+OPTS  = -g -Wall $(OPTIONS) $(INCS)
+DEL   = /bin/rm -f
+DOCXX = /usr/local/bin/doc++
+
+LIBP  = -L/usr/lib -L/usr/X11R6/lib 
+LIBS  = -lXt -lX11 -lXext -lXpm 
+
+INCS  = -I../AI -I../Beast -I../Graph2D -I../Graph3D -I../Main \
+	-I../Math -I../Platform -I../Platform/XWin -I../Tools
+
+SRCS  = ../AI/*.cpp ../Beast/*.cpp ../Graph2D/*.cpp         \
+        ../Graph3D/*.cpp ../Math/*.cpp ../Platform/*.cpp    \
+        ../Tools/*.cpp BeastMain.cpp ../Platform/XWin/*.cpp
+
+OBJS  = Common.o FString.o Fixed.o List.o Variant.o Geom.o BeastLand.o  \
+	Drawable.o DNA.o RandomBeast.o Clut.o Drawer.o Font.o Palette.o \
+	Pixeler.o PlugDrawer.o Image.o Camera.o Face.o FaceDrawer.o     \
+	Light.o Mapper.o Plot.o Plotter.o Shader.o TemplateFaceDrawer.o \
+	Viewer.o Device.o BeastMain.o WriteDrawer.o Convert.o Random.o  \
+	NN.o
+
+VPATH = ../AI:../Beast:../Graph2D:../Graph3D:../Main:../Math:../Platform:../Platform/XWin:../Tools
+
+############################################################################
+all: $(PROGRAM)
+
+main.o: $(PROGRAM).cpp Makefile
+	$(GCC) -c -o main.o $(PROGRAM).cpp $(OPTS) $(INCS)  
+
+%.o: %.cpp Makefile
+	$(GCC) -c -o $(notdir $*.o) $(OPTS) $<
+
+$(PROGRAM): Mmsg $(OBJS) main.o Makefile
+	$(GCC) -o $(PROGRAM) $(OPTS) $(LIBS) $(LIBP) $(OBJS) main.o
+
+Mmsg:
+	@clear
+	@echo "Compiling on ${HOST} (${HOSTTYPE}) :"
+	@echo ""
+
+############################################################################
+depend:
+	@echo "Making dependencies ..."
+	@makedepend $(INCS) $(PROGRAM).cpp $(SRCS)
+
+clean:
+	@echo "Cleaning directory ..."
+	@$(DEL) $(wildcard *~ *.bak *.o) $(PROGRAM)
+
+doc:
+	@echo "Generating Documentation using doc++ ..."
+	@$(DOCXX) 
+
+###########################################################################
+# DO NOT DELETE
+
+LBeasts.o: BeastMain.h ../Platform/Viewer.h ../Platform/XWin/Device.h
+LBeasts.o: /usr/include/sys/time.h /usr/include/features.h
+LBeasts.o: /usr/include/sys/cdefs.h /usr/include/gnu/stubs.h
+LBeasts.o: /usr/include/time.h
+LBeasts.o: /usr/lib/gcc-lib/i486-linux/2.7.2.3/include/stddef.h
+LBeasts.o: /usr/include/bits/time.h /usr/include/bits/types.h
+LBeasts.o: /usr/include/sys/select.h /usr/include/bits/select.h
+LBeasts.o: /usr/include/bits/sigset.h /usr/include/unistd.h
+LBeasts.o: /usr/include/bits/posix_opt.h /usr/include/bits/confname.h
+LBeasts.o: /usr/include/getopt.h /usr/include/sys/ipc.h
+LBeasts.o: /usr/include/bits/ipc.h /usr/include/sys/types.h
+LBeasts.o: /usr/include/endian.h /usr/include/bits/endian.h
+LBeasts.o: /usr/include/sys/sysmacros.h /usr/include/sys/shm.h
+LBeasts.o: /usr/include/bits/shm.h ../Tools/Common.h /usr/include/stdlib.h
+LBeasts.o: /usr/include/alloca.h ../Tools/Fixed.h /usr/include/math.h
+LBeasts.o: /usr/include/bits/huge_val.h /usr/include/bits/mathdef.h
+LBeasts.o: /usr/include/bits/mathcalls.h
+LBeasts.o: /usr/lib/gcc-lib/i486-linux/2.7.2.3/include/float.h
+LBeasts.o: ../Tools/List.h /usr/include/assert.h ../Tools/FString.h
+LBeasts.o: ../Tools/Variant.h ../Graph2D/Image.h ../Graph2D/Palette.h
+LBeasts.o: ../Graph3D/Camera.h ../Math/Geom.h ../Graph3D/Plot.h
+LBeasts.o: ../Graph2D/Drawer.h ../Graph2D/Pixeler.h ../Graph2D/WriteDrawer.h
+LBeasts.o: ../Graph2D/Font.h ../Beast/BeastLand.h ../Beast/DNA.h
+LBeasts.o: ../Beast/Drawable.h ../Graph3D/TemplateFaceDrawer.h
+LBeasts.o: ../Graph3D/FaceDrawer.h ../Graph2D/PlugDrawer.h ../Graph2D/Clut.h
+LBeasts.o: ../Graph3D/Plotter.h ../Graph3D/Shader.h ../Graph3D/Mapper.h
+LBeasts.o: ../Graph2D/Convert.h ../Math/Random.h
+../AI/NN.o: /usr/include/math.h /usr/include/features.h
+../AI/NN.o: /usr/include/sys/cdefs.h /usr/include/gnu/stubs.h
+../AI/NN.o: /usr/include/bits/huge_val.h /usr/include/bits/mathdef.h
+../AI/NN.o: /usr/include/bits/mathcalls.h
+../AI/NN.o: /usr/lib/gcc-lib/i486-linux/2.7.2.3/include/float.h
+../AI/NN.o: /usr/include/stdlib.h
+../AI/NN.o: /usr/lib/gcc-lib/i486-linux/2.7.2.3/include/stddef.h
+../AI/NN.o: /usr/include/sys/types.h /usr/include/bits/types.h
+../AI/NN.o: /usr/include/time.h /usr/include/bits/time.h
+../AI/NN.o: /usr/include/endian.h /usr/include/bits/endian.h
+../AI/NN.o: /usr/include/sys/select.h /usr/include/bits/select.h
+../AI/NN.o: /usr/include/bits/sigset.h /usr/include/sys/sysmacros.h
+../AI/NN.o: /usr/include/alloca.h /usr/include/assert.h ../AI/NN.h
+../AI/NN.o: ../Tools/Common.h ../Tools/Fixed.h ../Tools/List.h
+../AI/NN.o: ../Tools/FString.h ../Tools/Variant.h
+../Beast/BeastLand.o: ../Beast/BeastLand.h ../Math/Geom.h /usr/include/math.h
+../Beast/BeastLand.o: /usr/include/features.h /usr/include/sys/cdefs.h
+../Beast/BeastLand.o: /usr/include/gnu/stubs.h /usr/include/bits/huge_val.h
+../Beast/BeastLand.o: /usr/include/bits/mathdef.h
+../Beast/BeastLand.o: /usr/include/bits/mathcalls.h
+../Beast/BeastLand.o: /usr/lib/gcc-lib/i486-linux/2.7.2.3/include/float.h
+../Beast/BeastLand.o: ../Tools/Common.h /usr/include/stdlib.h
+../Beast/BeastLand.o: /usr/lib/gcc-lib/i486-linux/2.7.2.3/include/stddef.h
+../Beast/BeastLand.o: /usr/include/sys/types.h /usr/include/bits/types.h
+../Beast/BeastLand.o: /usr/include/time.h /usr/include/bits/time.h
+../Beast/BeastLand.o: /usr/include/endian.h /usr/include/bits/endian.h
+../Beast/BeastLand.o: /usr/include/sys/select.h /usr/include/bits/select.h
+../Beast/BeastLand.o: /usr/include/bits/sigset.h /usr/include/sys/sysmacros.h
+../Beast/BeastLand.o: /usr/include/alloca.h ../Tools/Fixed.h ../Tools/List.h
+../Beast/BeastLand.o: /usr/include/assert.h ../Tools/FString.h
+../Beast/BeastLand.o: ../Tools/Variant.h ../Beast/DNA.h
+../Beast/DNA.o: ../Tools/Common.h /usr/include/stdlib.h
+../Beast/DNA.o: /usr/include/features.h /usr/include/sys/cdefs.h
+../Beast/DNA.o: /usr/include/gnu/stubs.h
+../Beast/DNA.o: /usr/lib/gcc-lib/i486-linux/2.7.2.3/include/stddef.h
+../Beast/DNA.o: /usr/include/sys/types.h /usr/include/bits/types.h
+../Beast/DNA.o: /usr/include/time.h /usr/include/bits/time.h
+../Beast/DNA.o: /usr/include/endian.h /usr/include/bits/endian.h
+../Beast/DNA.o: /usr/include/sys/select.h /usr/include/bits/select.h
+../Beast/DNA.o: /usr/include/bits/sigset.h /usr/include/sys/sysmacros.h
+../Beast/DNA.o: /usr/include/alloca.h ../Tools/Fixed.h /usr/include/math.h
+../Beast/DNA.o: /usr/include/bits/huge_val.h /usr/include/bits/mathdef.h
+../Beast/DNA.o: /usr/include/bits/mathcalls.h
+../Beast/DNA.o: /usr/lib/gcc-lib/i486-linux/2.7.2.3/include/float.h
+../Beast/DNA.o: ../Tools/List.h /usr/include/assert.h ../Tools/FString.h
+../Beast/DNA.o: ../Tools/Variant.h ../Beast/DNA.h
+../Beast/Drawable.o: ../Beast/Drawable.h ../Math/Geom.h /usr/include/math.h
+../Beast/Drawable.o: /usr/include/features.h /usr/include/sys/cdefs.h
+../Beast/Drawable.o: /usr/include/gnu/stubs.h /usr/include/bits/huge_val.h
+../Beast/Drawable.o: /usr/include/bits/mathdef.h
+../Beast/Drawable.o: /usr/include/bits/mathcalls.h
+../Beast/Drawable.o: /usr/lib/gcc-lib/i486-linux/2.7.2.3/include/float.h
+../Beast/Drawable.o: ../Tools/Common.h /usr/include/stdlib.h
+../Beast/Drawable.o: /usr/lib/gcc-lib/i486-linux/2.7.2.3/include/stddef.h
+../Beast/Drawable.o: /usr/include/sys/types.h /usr/include/bits/types.h
+../Beast/Drawable.o: /usr/include/time.h /usr/include/bits/time.h
+../Beast/Drawable.o: /usr/include/endian.h /usr/include/bits/endian.h
+../Beast/Drawable.o: /usr/include/sys/select.h /usr/include/bits/select.h
+../Beast/Drawable.o: /usr/include/bits/sigset.h /usr/include/sys/sysmacros.h
+../Beast/Drawable.o: /usr/include/alloca.h ../Tools/Fixed.h ../Tools/List.h
+../Beast/Drawable.o: /usr/include/assert.h ../Tools/FString.h
+../Beast/Drawable.o: ../Tools/Variant.h ../Graph2D/Image.h
+../Beast/Drawable.o: ../Graph3D/Camera.h ../Graph3D/Plot.h
+../Beast/Drawable.o: ../Graph3D/TemplateFaceDrawer.h ../Graph3D/FaceDrawer.h
+../Beast/Drawable.o: ../Graph2D/PlugDrawer.h ../Graph2D/Clut.h
+../Beast/Drawable.o: ../Graph2D/Palette.h ../Graph3D/Plotter.h
+../Beast/Drawable.o: ../Graph3D/Shader.h ../Graph3D/Mapper.h
+../Beast/Drawable.o: ../Graph3D/Face.h ../Graph3D/Light.h
+../Beast/RandomBeast.o: ../Beast/RandomBeast.h ../Beast/BeastLand.h
+../Beast/RandomBeast.o: ../Math/Geom.h /usr/include/math.h
+../Beast/RandomBeast.o: /usr/include/features.h /usr/include/sys/cdefs.h
+../Beast/RandomBeast.o: /usr/include/gnu/stubs.h /usr/include/bits/huge_val.h
+../Beast/RandomBeast.o: /usr/include/bits/mathdef.h
+../Beast/RandomBeast.o: /usr/include/bits/mathcalls.h
+../Beast/RandomBeast.o: /usr/lib/gcc-lib/i486-linux/2.7.2.3/include/float.h
+../Beast/RandomBeast.o: ../Tools/Common.h /usr/include/stdlib.h
+../Beast/RandomBeast.o: /usr/lib/gcc-lib/i486-linux/2.7.2.3/include/stddef.h
+../Beast/RandomBeast.o: /usr/include/sys/types.h /usr/include/bits/types.h
+../Beast/RandomBeast.o: /usr/include/time.h /usr/include/bits/time.h
+../Beast/RandomBeast.o: /usr/include/endian.h /usr/include/bits/endian.h
+../Beast/RandomBeast.o: /usr/include/sys/select.h /usr/include/bits/select.h
+../Beast/RandomBeast.o: /usr/include/bits/sigset.h
+../Beast/RandomBeast.o: /usr/include/sys/sysmacros.h /usr/include/alloca.h
+../Beast/RandomBeast.o: ../Tools/Fixed.h ../Tools/List.h
+../Beast/RandomBeast.o: /usr/include/assert.h ../Tools/FString.h
+../Beast/RandomBeast.o: ../Tools/Variant.h ../Beast/DNA.h ../Beast/Drawable.h
+../Beast/RandomBeast.o: ../Graph2D/Image.h ../Graph3D/Camera.h
+../Beast/RandomBeast.o: ../Graph3D/Plot.h ../Graph3D/TemplateFaceDrawer.h
+../Beast/RandomBeast.o: ../Graph3D/FaceDrawer.h ../Graph2D/PlugDrawer.h
+../Beast/RandomBeast.o: ../Graph2D/Clut.h ../Graph2D/Palette.h
+../Beast/RandomBeast.o: ../Graph3D/Plotter.h ../Graph3D/Shader.h
+../Beast/RandomBeast.o: ../Graph3D/Mapper.h ../Math/Random.h
+../Graph2D/Clut.o: ../Graph2D/Clut.h ../Graph2D/Palette.h ../Tools/Common.h
+../Graph2D/Clut.o: /usr/include/stdlib.h /usr/include/features.h
+../Graph2D/Clut.o: /usr/include/sys/cdefs.h /usr/include/gnu/stubs.h
+../Graph2D/Clut.o: /usr/lib/gcc-lib/i486-linux/2.7.2.3/include/stddef.h
+../Graph2D/Clut.o: /usr/include/sys/types.h /usr/include/bits/types.h
+../Graph2D/Clut.o: /usr/include/time.h /usr/include/bits/time.h
+../Graph2D/Clut.o: /usr/include/endian.h /usr/include/bits/endian.h
+../Graph2D/Clut.o: /usr/include/sys/select.h /usr/include/bits/select.h
+../Graph2D/Clut.o: /usr/include/bits/sigset.h /usr/include/sys/sysmacros.h
+../Graph2D/Clut.o: /usr/include/alloca.h ../Tools/Fixed.h /usr/include/math.h
+../Graph2D/Clut.o: /usr/include/bits/huge_val.h /usr/include/bits/mathdef.h
+../Graph2D/Clut.o: /usr/include/bits/mathcalls.h
+../Graph2D/Clut.o: /usr/lib/gcc-lib/i486-linux/2.7.2.3/include/float.h
+../Graph2D/Clut.o: ../Tools/List.h /usr/include/assert.h ../Tools/FString.h
+../Graph2D/Clut.o: ../Tools/Variant.h ../Graph2D/Image.h
+../Graph2D/Convert.o: ../Graph2D/Convert.h ../Graph2D/PlugDrawer.h
+../Graph2D/Convert.o: ../Graph2D/Image.h ../Tools/Common.h
+../Graph2D/Convert.o: /usr/include/stdlib.h /usr/include/features.h
+../Graph2D/Convert.o: /usr/include/sys/cdefs.h /usr/include/gnu/stubs.h
+../Graph2D/Convert.o: /usr/lib/gcc-lib/i486-linux/2.7.2.3/include/stddef.h
+../Graph2D/Convert.o: /usr/include/sys/types.h /usr/include/bits/types.h
+../Graph2D/Convert.o: /usr/include/time.h /usr/include/bits/time.h
+../Graph2D/Convert.o: /usr/include/endian.h /usr/include/bits/endian.h
+../Graph2D/Convert.o: /usr/include/sys/select.h /usr/include/bits/select.h
+../Graph2D/Convert.o: /usr/include/bits/sigset.h /usr/include/sys/sysmacros.h
+../Graph2D/Convert.o: /usr/include/alloca.h ../Tools/Fixed.h
+../Graph2D/Convert.o: /usr/include/math.h /usr/include/bits/huge_val.h
+../Graph2D/Convert.o: /usr/include/bits/mathdef.h
+../Graph2D/Convert.o: /usr/include/bits/mathcalls.h
+../Graph2D/Convert.o: /usr/lib/gcc-lib/i486-linux/2.7.2.3/include/float.h
+../Graph2D/Convert.o: ../Tools/List.h /usr/include/assert.h
+../Graph2D/Convert.o: ../Tools/FString.h ../Tools/Variant.h ../Math/Random.h
+../Graph2D/Convert.o: ../Math/Geom.h
+../Graph2D/Drawer.o: ../Graph2D/Drawer.h ../Graph2D/Image.h ../Tools/Common.h
+../Graph2D/Drawer.o: /usr/include/stdlib.h /usr/include/features.h
+../Graph2D/Drawer.o: /usr/include/sys/cdefs.h /usr/include/gnu/stubs.h
+../Graph2D/Drawer.o: /usr/lib/gcc-lib/i486-linux/2.7.2.3/include/stddef.h
+../Graph2D/Drawer.o: /usr/include/sys/types.h /usr/include/bits/types.h
+../Graph2D/Drawer.o: /usr/include/time.h /usr/include/bits/time.h
+../Graph2D/Drawer.o: /usr/include/endian.h /usr/include/bits/endian.h
+../Graph2D/Drawer.o: /usr/include/sys/select.h /usr/include/bits/select.h
+../Graph2D/Drawer.o: /usr/include/bits/sigset.h /usr/include/sys/sysmacros.h
+../Graph2D/Drawer.o: /usr/include/alloca.h ../Tools/Fixed.h
+../Graph2D/Drawer.o: /usr/include/math.h /usr/include/bits/huge_val.h
+../Graph2D/Drawer.o: /usr/include/bits/mathdef.h
+../Graph2D/Drawer.o: /usr/include/bits/mathcalls.h
+../Graph2D/Drawer.o: /usr/lib/gcc-lib/i486-linux/2.7.2.3/include/float.h
+../Graph2D/Drawer.o: ../Tools/List.h /usr/include/assert.h ../Tools/FString.h
+../Graph2D/Drawer.o: ../Tools/Variant.h
+../Graph2D/Font.o: ../Graph2D/Font.h ../Tools/Common.h /usr/include/stdlib.h
+../Graph2D/Font.o: /usr/include/features.h /usr/include/sys/cdefs.h
+../Graph2D/Font.o: /usr/include/gnu/stubs.h
+../Graph2D/Font.o: /usr/lib/gcc-lib/i486-linux/2.7.2.3/include/stddef.h
+../Graph2D/Font.o: /usr/include/sys/types.h /usr/include/bits/types.h
+../Graph2D/Font.o: /usr/include/time.h /usr/include/bits/time.h
+../Graph2D/Font.o: /usr/include/endian.h /usr/include/bits/endian.h
+../Graph2D/Font.o: /usr/include/sys/select.h /usr/include/bits/select.h
+../Graph2D/Font.o: /usr/include/bits/sigset.h /usr/include/sys/sysmacros.h
+../Graph2D/Font.o: /usr/include/alloca.h ../Tools/Fixed.h /usr/include/math.h
+../Graph2D/Font.o: /usr/include/bits/huge_val.h /usr/include/bits/mathdef.h
+../Graph2D/Font.o: /usr/include/bits/mathcalls.h
+../Graph2D/Font.o: /usr/lib/gcc-lib/i486-linux/2.7.2.3/include/float.h
+../Graph2D/Font.o: ../Tools/List.h /usr/include/assert.h ../Tools/FString.h
+../Graph2D/Font.o: ../Tools/Variant.h
+../Graph2D/Image.o: /usr/include/string.h /usr/include/features.h
+../Graph2D/Image.o: /usr/include/sys/cdefs.h /usr/include/gnu/stubs.h
+../Graph2D/Image.o: /usr/lib/gcc-lib/i486-linux/2.7.2.3/include/stddef.h
+../Graph2D/Image.o: ../Graph2D/Image.h ../Tools/Common.h
+../Graph2D/Image.o: /usr/include/stdlib.h /usr/include/sys/types.h
+../Graph2D/Image.o: /usr/include/bits/types.h /usr/include/time.h
+../Graph2D/Image.o: /usr/include/bits/time.h /usr/include/endian.h
+../Graph2D/Image.o: /usr/include/bits/endian.h /usr/include/sys/select.h
+../Graph2D/Image.o: /usr/include/bits/select.h /usr/include/bits/sigset.h
+../Graph2D/Image.o: /usr/include/sys/sysmacros.h /usr/include/alloca.h
+../Graph2D/Image.o: ../Tools/Fixed.h /usr/include/math.h
+../Graph2D/Image.o: /usr/include/bits/huge_val.h /usr/include/bits/mathdef.h
+../Graph2D/Image.o: /usr/include/bits/mathcalls.h
+../Graph2D/Image.o: /usr/lib/gcc-lib/i486-linux/2.7.2.3/include/float.h
+../Graph2D/Image.o: ../Tools/List.h /usr/include/assert.h ../Tools/FString.h
+../Graph2D/Image.o: ../Tools/Variant.h
+../Graph2D/Palette.o: /usr/include/math.h /usr/include/features.h
+../Graph2D/Palette.o: /usr/include/sys/cdefs.h /usr/include/gnu/stubs.h
+../Graph2D/Palette.o: /usr/include/bits/huge_val.h
+../Graph2D/Palette.o: /usr/include/bits/mathdef.h
+../Graph2D/Palette.o: /usr/include/bits/mathcalls.h
+../Graph2D/Palette.o: /usr/lib/gcc-lib/i486-linux/2.7.2.3/include/float.h
+../Graph2D/Palette.o: /usr/include/assert.h ../Graph2D/Palette.h
+../Graph2D/Palette.o: ../Tools/Common.h /usr/include/stdlib.h
+../Graph2D/Palette.o: /usr/lib/gcc-lib/i486-linux/2.7.2.3/include/stddef.h
+../Graph2D/Palette.o: /usr/include/sys/types.h /usr/include/bits/types.h
+../Graph2D/Palette.o: /usr/include/time.h /usr/include/bits/time.h
+../Graph2D/Palette.o: /usr/include/endian.h /usr/include/bits/endian.h
+../Graph2D/Palette.o: /usr/include/sys/select.h /usr/include/bits/select.h
+../Graph2D/Palette.o: /usr/include/bits/sigset.h /usr/include/sys/sysmacros.h
+../Graph2D/Palette.o: /usr/include/alloca.h ../Tools/Fixed.h ../Tools/List.h
+../Graph2D/Palette.o: ../Tools/FString.h ../Tools/Variant.h
+../Graph2D/Palette.o: ../Graph2D/Image.h
+../Graph2D/Pixeler.o: ../Graph2D/Pixeler.h ../Graph2D/Drawer.h
+../Graph2D/Pixeler.o: ../Graph2D/Image.h ../Tools/Common.h
+../Graph2D/Pixeler.o: /usr/include/stdlib.h /usr/include/features.h
+../Graph2D/Pixeler.o: /usr/include/sys/cdefs.h /usr/include/gnu/stubs.h
+../Graph2D/Pixeler.o: /usr/lib/gcc-lib/i486-linux/2.7.2.3/include/stddef.h
+../Graph2D/Pixeler.o: /usr/include/sys/types.h /usr/include/bits/types.h
+../Graph2D/Pixeler.o: /usr/include/time.h /usr/include/bits/time.h
+../Graph2D/Pixeler.o: /usr/include/endian.h /usr/include/bits/endian.h
+../Graph2D/Pixeler.o: /usr/include/sys/select.h /usr/include/bits/select.h
+../Graph2D/Pixeler.o: /usr/include/bits/sigset.h /usr/include/sys/sysmacros.h
+../Graph2D/Pixeler.o: /usr/include/alloca.h ../Tools/Fixed.h
+../Graph2D/Pixeler.o: /usr/include/math.h /usr/include/bits/huge_val.h
+../Graph2D/Pixeler.o: /usr/include/bits/mathdef.h
+../Graph2D/Pixeler.o: /usr/include/bits/mathcalls.h
+../Graph2D/Pixeler.o: /usr/lib/gcc-lib/i486-linux/2.7.2.3/include/float.h
+../Graph2D/Pixeler.o: ../Tools/List.h /usr/include/assert.h
+../Graph2D/Pixeler.o: ../Tools/FString.h ../Tools/Variant.h
+../Graph2D/PlugDrawer.o: ../Graph2D/PlugDrawer.h ../Graph2D/Image.h
+../Graph2D/PlugDrawer.o: ../Tools/Common.h /usr/include/stdlib.h
+../Graph2D/PlugDrawer.o: /usr/include/features.h /usr/include/sys/cdefs.h
+../Graph2D/PlugDrawer.o: /usr/include/gnu/stubs.h
+../Graph2D/PlugDrawer.o: /usr/lib/gcc-lib/i486-linux/2.7.2.3/include/stddef.h
+../Graph2D/PlugDrawer.o: /usr/include/sys/types.h /usr/include/bits/types.h
+../Graph2D/PlugDrawer.o: /usr/include/time.h /usr/include/bits/time.h
+../Graph2D/PlugDrawer.o: /usr/include/endian.h /usr/include/bits/endian.h
+../Graph2D/PlugDrawer.o: /usr/include/sys/select.h /usr/include/bits/select.h
+../Graph2D/PlugDrawer.o: /usr/include/bits/sigset.h
+../Graph2D/PlugDrawer.o: /usr/include/sys/sysmacros.h /usr/include/alloca.h
+../Graph2D/PlugDrawer.o: ../Tools/Fixed.h /usr/include/math.h
+../Graph2D/PlugDrawer.o: /usr/include/bits/huge_val.h
+../Graph2D/PlugDrawer.o: /usr/include/bits/mathdef.h
+../Graph2D/PlugDrawer.o: /usr/include/bits/mathcalls.h
+../Graph2D/PlugDrawer.o: /usr/lib/gcc-lib/i486-linux/2.7.2.3/include/float.h
+../Graph2D/PlugDrawer.o: ../Tools/List.h /usr/include/assert.h
+../Graph2D/PlugDrawer.o: ../Tools/FString.h ../Tools/Variant.h
+../Graph2D/WriteDrawer.o: ../Graph2D/WriteDrawer.h ../Graph2D/Drawer.h
+../Graph2D/WriteDrawer.o: ../Graph2D/Image.h ../Tools/Common.h
+../Graph2D/WriteDrawer.o: /usr/include/stdlib.h /usr/include/features.h
+../Graph2D/WriteDrawer.o: /usr/include/sys/cdefs.h /usr/include/gnu/stubs.h
+../Graph2D/WriteDrawer.o: /usr/lib/gcc-lib/i486-linux/2.7.2.3/include/stddef.h
+../Graph2D/WriteDrawer.o: /usr/include/sys/types.h /usr/include/bits/types.h
+../Graph2D/WriteDrawer.o: /usr/include/time.h /usr/include/bits/time.h
+../Graph2D/WriteDrawer.o: /usr/include/endian.h /usr/include/bits/endian.h
+../Graph2D/WriteDrawer.o: /usr/include/sys/select.h
+../Graph2D/WriteDrawer.o: /usr/include/bits/select.h
+../Graph2D/WriteDrawer.o: /usr/include/bits/sigset.h
+../Graph2D/WriteDrawer.o: /usr/include/sys/sysmacros.h /usr/include/alloca.h
+../Graph2D/WriteDrawer.o: ../Tools/Fixed.h /usr/include/math.h
+../Graph2D/WriteDrawer.o: /usr/include/bits/huge_val.h
+../Graph2D/WriteDrawer.o: /usr/include/bits/mathdef.h
+../Graph2D/WriteDrawer.o: /usr/include/bits/mathcalls.h
+../Graph2D/WriteDrawer.o: /usr/lib/gcc-lib/i486-linux/2.7.2.3/include/float.h
+../Graph2D/WriteDrawer.o: ../Tools/List.h /usr/include/assert.h
+../Graph2D/WriteDrawer.o: ../Tools/FString.h ../Tools/Variant.h
+../Graph2D/WriteDrawer.o: ../Graph2D/Font.h
+../Graph3D/Camera.o: ../Graph3D/Camera.h ../Math/Geom.h /usr/include/math.h
+../Graph3D/Camera.o: /usr/include/features.h /usr/include/sys/cdefs.h
+../Graph3D/Camera.o: /usr/include/gnu/stubs.h /usr/include/bits/huge_val.h
+../Graph3D/Camera.o: /usr/include/bits/mathdef.h
+../Graph3D/Camera.o: /usr/include/bits/mathcalls.h
+../Graph3D/Camera.o: /usr/lib/gcc-lib/i486-linux/2.7.2.3/include/float.h
+../Graph3D/Camera.o: ../Tools/Common.h /usr/include/stdlib.h
+../Graph3D/Camera.o: /usr/lib/gcc-lib/i486-linux/2.7.2.3/include/stddef.h
+../Graph3D/Camera.o: /usr/include/sys/types.h /usr/include/bits/types.h
+../Graph3D/Camera.o: /usr/include/time.h /usr/include/bits/time.h
+../Graph3D/Camera.o: /usr/include/endian.h /usr/include/bits/endian.h
+../Graph3D/Camera.o: /usr/include/sys/select.h /usr/include/bits/select.h
+../Graph3D/Camera.o: /usr/include/bits/sigset.h /usr/include/sys/sysmacros.h
+../Graph3D/Camera.o: /usr/include/alloca.h ../Tools/Fixed.h ../Tools/List.h
+../Graph3D/Camera.o: /usr/include/assert.h ../Tools/FString.h
+../Graph3D/Camera.o: ../Tools/Variant.h ../Graph3D/Plot.h ../Graph2D/Image.h
+../Graph3D/Face.o: ../Graph3D/Face.h ../Math/Geom.h /usr/include/math.h
+../Graph3D/Face.o: /usr/include/features.h /usr/include/sys/cdefs.h
+../Graph3D/Face.o: /usr/include/gnu/stubs.h /usr/include/bits/huge_val.h
+../Graph3D/Face.o: /usr/include/bits/mathdef.h /usr/include/bits/mathcalls.h
+../Graph3D/Face.o: /usr/lib/gcc-lib/i486-linux/2.7.2.3/include/float.h
+../Graph3D/Face.o: ../Tools/Common.h /usr/include/stdlib.h
+../Graph3D/Face.o: /usr/lib/gcc-lib/i486-linux/2.7.2.3/include/stddef.h
+../Graph3D/Face.o: /usr/include/sys/types.h /usr/include/bits/types.h
+../Graph3D/Face.o: /usr/include/time.h /usr/include/bits/time.h
+../Graph3D/Face.o: /usr/include/endian.h /usr/include/bits/endian.h
+../Graph3D/Face.o: /usr/include/sys/select.h /usr/include/bits/select.h
+../Graph3D/Face.o: /usr/include/bits/sigset.h /usr/include/sys/sysmacros.h
+../Graph3D/Face.o: /usr/include/alloca.h ../Tools/Fixed.h ../Tools/List.h
+../Graph3D/Face.o: /usr/include/assert.h ../Tools/FString.h
+../Graph3D/Face.o: ../Tools/Variant.h ../Graph3D/FaceDrawer.h
+../Graph3D/Face.o: ../Graph2D/PlugDrawer.h ../Graph2D/Image.h
+../Graph3D/Face.o: ../Graph2D/Clut.h ../Graph2D/Palette.h ../Graph3D/Plot.h
+../Graph3D/Face.o: ../Graph3D/Light.h ../Graph3D/Camera.h
+../Graph3D/FaceDrawer.o: ../Graph3D/FaceDrawer.h ../Graph2D/PlugDrawer.h
+../Graph3D/FaceDrawer.o: ../Graph2D/Image.h ../Tools/Common.h
+../Graph3D/FaceDrawer.o: /usr/include/stdlib.h /usr/include/features.h
+../Graph3D/FaceDrawer.o: /usr/include/sys/cdefs.h /usr/include/gnu/stubs.h
+../Graph3D/FaceDrawer.o: /usr/lib/gcc-lib/i486-linux/2.7.2.3/include/stddef.h
+../Graph3D/FaceDrawer.o: /usr/include/sys/types.h /usr/include/bits/types.h
+../Graph3D/FaceDrawer.o: /usr/include/time.h /usr/include/bits/time.h
+../Graph3D/FaceDrawer.o: /usr/include/endian.h /usr/include/bits/endian.h
+../Graph3D/FaceDrawer.o: /usr/include/sys/select.h /usr/include/bits/select.h
+../Graph3D/FaceDrawer.o: /usr/include/bits/sigset.h
+../Graph3D/FaceDrawer.o: /usr/include/sys/sysmacros.h /usr/include/alloca.h
+../Graph3D/FaceDrawer.o: ../Tools/Fixed.h /usr/include/math.h
+../Graph3D/FaceDrawer.o: /usr/include/bits/huge_val.h
+../Graph3D/FaceDrawer.o: /usr/include/bits/mathdef.h
+../Graph3D/FaceDrawer.o: /usr/include/bits/mathcalls.h
+../Graph3D/FaceDrawer.o: /usr/lib/gcc-lib/i486-linux/2.7.2.3/include/float.h
+../Graph3D/FaceDrawer.o: ../Tools/List.h /usr/include/assert.h
+../Graph3D/FaceDrawer.o: ../Tools/FString.h ../Tools/Variant.h
+../Graph3D/FaceDrawer.o: ../Graph2D/Clut.h ../Graph2D/Palette.h
+../Graph3D/Light.o: ../Graph3D/Light.h ../Graph3D/Plot.h ../Math/Geom.h
+../Graph3D/Light.o: /usr/include/math.h /usr/include/features.h
+../Graph3D/Light.o: /usr/include/sys/cdefs.h /usr/include/gnu/stubs.h
+../Graph3D/Light.o: /usr/include/bits/huge_val.h /usr/include/bits/mathdef.h
+../Graph3D/Light.o: /usr/include/bits/mathcalls.h
+../Graph3D/Light.o: /usr/lib/gcc-lib/i486-linux/2.7.2.3/include/float.h
+../Graph3D/Light.o: ../Tools/Common.h /usr/include/stdlib.h
+../Graph3D/Light.o: /usr/lib/gcc-lib/i486-linux/2.7.2.3/include/stddef.h
+../Graph3D/Light.o: /usr/include/sys/types.h /usr/include/bits/types.h
+../Graph3D/Light.o: /usr/include/time.h /usr/include/bits/time.h
+../Graph3D/Light.o: /usr/include/endian.h /usr/include/bits/endian.h
+../Graph3D/Light.o: /usr/include/sys/select.h /usr/include/bits/select.h
+../Graph3D/Light.o: /usr/include/bits/sigset.h /usr/include/sys/sysmacros.h
+../Graph3D/Light.o: /usr/include/alloca.h ../Tools/Fixed.h ../Tools/List.h
+../Graph3D/Light.o: /usr/include/assert.h ../Tools/FString.h
+../Graph3D/Light.o: ../Tools/Variant.h ../Graph2D/Image.h
+../Graph3D/Mapper.o: ../Graph3D/Mapper.h ../Graph3D/TemplateFaceDrawer.h
+../Graph3D/Mapper.o: ../Graph3D/FaceDrawer.h ../Graph2D/PlugDrawer.h
+../Graph3D/Mapper.o: ../Graph2D/Image.h ../Tools/Common.h
+../Graph3D/Mapper.o: /usr/include/stdlib.h /usr/include/features.h
+../Graph3D/Mapper.o: /usr/include/sys/cdefs.h /usr/include/gnu/stubs.h
+../Graph3D/Mapper.o: /usr/lib/gcc-lib/i486-linux/2.7.2.3/include/stddef.h
+../Graph3D/Mapper.o: /usr/include/sys/types.h /usr/include/bits/types.h
+../Graph3D/Mapper.o: /usr/include/time.h /usr/include/bits/time.h
+../Graph3D/Mapper.o: /usr/include/endian.h /usr/include/bits/endian.h
+../Graph3D/Mapper.o: /usr/include/sys/select.h /usr/include/bits/select.h
+../Graph3D/Mapper.o: /usr/include/bits/sigset.h /usr/include/sys/sysmacros.h
+../Graph3D/Mapper.o: /usr/include/alloca.h ../Tools/Fixed.h
+../Graph3D/Mapper.o: /usr/include/math.h /usr/include/bits/huge_val.h
+../Graph3D/Mapper.o: /usr/include/bits/mathdef.h
+../Graph3D/Mapper.o: /usr/include/bits/mathcalls.h
+../Graph3D/Mapper.o: /usr/lib/gcc-lib/i486-linux/2.7.2.3/include/float.h
+../Graph3D/Mapper.o: ../Tools/List.h /usr/include/assert.h ../Tools/FString.h
+../Graph3D/Mapper.o: ../Tools/Variant.h ../Graph2D/Clut.h
+../Graph3D/Mapper.o: ../Graph2D/Palette.h
+../Graph3D/Plot.o: ../Graph3D/Plot.h ../Math/Geom.h /usr/include/math.h
+../Graph3D/Plot.o: /usr/include/features.h /usr/include/sys/cdefs.h
+../Graph3D/Plot.o: /usr/include/gnu/stubs.h /usr/include/bits/huge_val.h
+../Graph3D/Plot.o: /usr/include/bits/mathdef.h /usr/include/bits/mathcalls.h
+../Graph3D/Plot.o: /usr/lib/gcc-lib/i486-linux/2.7.2.3/include/float.h
+../Graph3D/Plot.o: ../Tools/Common.h /usr/include/stdlib.h
+../Graph3D/Plot.o: /usr/lib/gcc-lib/i486-linux/2.7.2.3/include/stddef.h
+../Graph3D/Plot.o: /usr/include/sys/types.h /usr/include/bits/types.h
+../Graph3D/Plot.o: /usr/include/time.h /usr/include/bits/time.h
+../Graph3D/Plot.o: /usr/include/endian.h /usr/include/bits/endian.h
+../Graph3D/Plot.o: /usr/include/sys/select.h /usr/include/bits/select.h
+../Graph3D/Plot.o: /usr/include/bits/sigset.h /usr/include/sys/sysmacros.h
+../Graph3D/Plot.o: /usr/include/alloca.h ../Tools/Fixed.h ../Tools/List.h
+../Graph3D/Plot.o: /usr/include/assert.h ../Tools/FString.h
+../Graph3D/Plot.o: ../Tools/Variant.h ../Graph2D/Image.h
+../Graph3D/Plotter.o: ../Graph3D/Plotter.h ../Graph3D/TemplateFaceDrawer.h
+../Graph3D/Plotter.o: ../Graph3D/FaceDrawer.h ../Graph2D/PlugDrawer.h
+../Graph3D/Plotter.o: ../Graph2D/Image.h ../Tools/Common.h
+../Graph3D/Plotter.o: /usr/include/stdlib.h /usr/include/features.h
+../Graph3D/Plotter.o: /usr/include/sys/cdefs.h /usr/include/gnu/stubs.h
+../Graph3D/Plotter.o: /usr/lib/gcc-lib/i486-linux/2.7.2.3/include/stddef.h
+../Graph3D/Plotter.o: /usr/include/sys/types.h /usr/include/bits/types.h
+../Graph3D/Plotter.o: /usr/include/time.h /usr/include/bits/time.h
+../Graph3D/Plotter.o: /usr/include/endian.h /usr/include/bits/endian.h
+../Graph3D/Plotter.o: /usr/include/sys/select.h /usr/include/bits/select.h
+../Graph3D/Plotter.o: /usr/include/bits/sigset.h /usr/include/sys/sysmacros.h
+../Graph3D/Plotter.o: /usr/include/alloca.h ../Tools/Fixed.h
+../Graph3D/Plotter.o: /usr/include/math.h /usr/include/bits/huge_val.h
+../Graph3D/Plotter.o: /usr/include/bits/mathdef.h
+../Graph3D/Plotter.o: /usr/include/bits/mathcalls.h
+../Graph3D/Plotter.o: /usr/lib/gcc-lib/i486-linux/2.7.2.3/include/float.h
+../Graph3D/Plotter.o: ../Tools/List.h /usr/include/assert.h
+../Graph3D/Plotter.o: ../Tools/FString.h ../Tools/Variant.h ../Graph2D/Clut.h
+../Graph3D/Plotter.o: ../Graph2D/Palette.h
+../Graph3D/Shader.o: ../Graph3D/Shader.h ../Graph3D/TemplateFaceDrawer.h
+../Graph3D/Shader.o: ../Graph3D/FaceDrawer.h ../Graph2D/PlugDrawer.h
+../Graph3D/Shader.o: ../Graph2D/Image.h ../Tools/Common.h
+../Graph3D/Shader.o: /usr/include/stdlib.h /usr/include/features.h
+../Graph3D/Shader.o: /usr/include/sys/cdefs.h /usr/include/gnu/stubs.h
+../Graph3D/Shader.o: /usr/lib/gcc-lib/i486-linux/2.7.2.3/include/stddef.h
+../Graph3D/Shader.o: /usr/include/sys/types.h /usr/include/bits/types.h
+../Graph3D/Shader.o: /usr/include/time.h /usr/include/bits/time.h
+../Graph3D/Shader.o: /usr/include/endian.h /usr/include/bits/endian.h
+../Graph3D/Shader.o: /usr/include/sys/select.h /usr/include/bits/select.h
+../Graph3D/Shader.o: /usr/include/bits/sigset.h /usr/include/sys/sysmacros.h
+../Graph3D/Shader.o: /usr/include/alloca.h ../Tools/Fixed.h
+../Graph3D/Shader.o: /usr/include/math.h /usr/include/bits/huge_val.h
+../Graph3D/Shader.o: /usr/include/bits/mathdef.h
+../Graph3D/Shader.o: /usr/include/bits/mathcalls.h
+../Graph3D/Shader.o: /usr/lib/gcc-lib/i486-linux/2.7.2.3/include/float.h
+../Graph3D/Shader.o: ../Tools/List.h /usr/include/assert.h ../Tools/FString.h
+../Graph3D/Shader.o: ../Tools/Variant.h ../Graph2D/Clut.h
+../Graph3D/Shader.o: ../Graph2D/Palette.h
+../Graph3D/TemplateFaceDrawer.o: ../Graph3D/TemplateFaceDrawer.h
+../Graph3D/TemplateFaceDrawer.o: ../Graph3D/FaceDrawer.h
+../Graph3D/TemplateFaceDrawer.o: ../Graph2D/PlugDrawer.h ../Graph2D/Image.h
+../Graph3D/TemplateFaceDrawer.o: ../Tools/Common.h /usr/include/stdlib.h
+../Graph3D/TemplateFaceDrawer.o: /usr/include/features.h
+../Graph3D/TemplateFaceDrawer.o: /usr/include/sys/cdefs.h
+../Graph3D/TemplateFaceDrawer.o: /usr/include/gnu/stubs.h
+../Graph3D/TemplateFaceDrawer.o: /usr/lib/gcc-lib/i486-linux/2.7.2.3/include/stddef.h
+../Graph3D/TemplateFaceDrawer.o: /usr/include/sys/types.h
+../Graph3D/TemplateFaceDrawer.o: /usr/include/bits/types.h
+../Graph3D/TemplateFaceDrawer.o: /usr/include/time.h /usr/include/bits/time.h
+../Graph3D/TemplateFaceDrawer.o: /usr/include/endian.h
+../Graph3D/TemplateFaceDrawer.o: /usr/include/bits/endian.h
+../Graph3D/TemplateFaceDrawer.o: /usr/include/sys/select.h
+../Graph3D/TemplateFaceDrawer.o: /usr/include/bits/select.h
+../Graph3D/TemplateFaceDrawer.o: /usr/include/bits/sigset.h
+../Graph3D/TemplateFaceDrawer.o: /usr/include/sys/sysmacros.h
+../Graph3D/TemplateFaceDrawer.o: /usr/include/alloca.h ../Tools/Fixed.h
+../Graph3D/TemplateFaceDrawer.o: /usr/include/math.h
+../Graph3D/TemplateFaceDrawer.o: /usr/include/bits/huge_val.h
+../Graph3D/TemplateFaceDrawer.o: /usr/include/bits/mathdef.h
+../Graph3D/TemplateFaceDrawer.o: /usr/include/bits/mathcalls.h
+../Graph3D/TemplateFaceDrawer.o: /usr/lib/gcc-lib/i486-linux/2.7.2.3/include/float.h
+../Graph3D/TemplateFaceDrawer.o: ../Tools/List.h /usr/include/assert.h
+../Graph3D/TemplateFaceDrawer.o: ../Tools/FString.h ../Tools/Variant.h
+../Graph3D/TemplateFaceDrawer.o: ../Graph2D/Clut.h ../Graph2D/Palette.h
+../Math/Geom.o: /usr/include/assert.h /usr/include/features.h
+../Math/Geom.o: /usr/include/sys/cdefs.h /usr/include/gnu/stubs.h
+../Math/Geom.o: /usr/include/stdlib.h
+../Math/Geom.o: /usr/lib/gcc-lib/i486-linux/2.7.2.3/include/stddef.h
+../Math/Geom.o: /usr/include/sys/types.h /usr/include/bits/types.h
+../Math/Geom.o: /usr/include/time.h /usr/include/bits/time.h
+../Math/Geom.o: /usr/include/endian.h /usr/include/bits/endian.h
+../Math/Geom.o: /usr/include/sys/select.h /usr/include/bits/select.h
+../Math/Geom.o: /usr/include/bits/sigset.h /usr/include/sys/sysmacros.h
+../Math/Geom.o: /usr/include/alloca.h ../Math/Geom.h /usr/include/math.h
+../Math/Geom.o: /usr/include/bits/huge_val.h /usr/include/bits/mathdef.h
+../Math/Geom.o: /usr/include/bits/mathcalls.h
+../Math/Geom.o: /usr/lib/gcc-lib/i486-linux/2.7.2.3/include/float.h
+../Math/Geom.o: ../Tools/Common.h ../Tools/Fixed.h ../Tools/List.h
+../Math/Geom.o: ../Tools/FString.h ../Tools/Variant.h
+../Math/Random.o: ../Math/Random.h ../Math/Geom.h /usr/include/math.h
+../Math/Random.o: /usr/include/features.h /usr/include/sys/cdefs.h
+../Math/Random.o: /usr/include/gnu/stubs.h /usr/include/bits/huge_val.h
+../Math/Random.o: /usr/include/bits/mathdef.h /usr/include/bits/mathcalls.h
+../Math/Random.o: /usr/lib/gcc-lib/i486-linux/2.7.2.3/include/float.h
+../Math/Random.o: ../Tools/Common.h /usr/include/stdlib.h
+../Math/Random.o: /usr/lib/gcc-lib/i486-linux/2.7.2.3/include/stddef.h
+../Math/Random.o: /usr/include/sys/types.h /usr/include/bits/types.h
+../Math/Random.o: /usr/include/time.h /usr/include/bits/time.h
+../Math/Random.o: /usr/include/endian.h /usr/include/bits/endian.h
+../Math/Random.o: /usr/include/sys/select.h /usr/include/bits/select.h
+../Math/Random.o: /usr/include/bits/sigset.h /usr/include/sys/sysmacros.h
+../Math/Random.o: /usr/include/alloca.h ../Tools/Fixed.h ../Tools/List.h
+../Math/Random.o: /usr/include/assert.h ../Tools/FString.h ../Tools/Variant.h
+../Platform/Viewer.o: ../Platform/Viewer.h ../Platform/XWin/Device.h
+../Platform/Viewer.o: /usr/include/sys/time.h /usr/include/features.h
+../Platform/Viewer.o: /usr/include/sys/cdefs.h /usr/include/gnu/stubs.h
+../Platform/Viewer.o: /usr/include/time.h
+../Platform/Viewer.o: /usr/lib/gcc-lib/i486-linux/2.7.2.3/include/stddef.h
+../Platform/Viewer.o: /usr/include/bits/time.h /usr/include/bits/types.h
+../Platform/Viewer.o: /usr/include/sys/select.h /usr/include/bits/select.h
+../Platform/Viewer.o: /usr/include/bits/sigset.h /usr/include/unistd.h
+../Platform/Viewer.o: /usr/include/bits/posix_opt.h
+../Platform/Viewer.o: /usr/include/bits/confname.h /usr/include/getopt.h
+../Platform/Viewer.o: /usr/include/sys/ipc.h /usr/include/bits/ipc.h
+../Platform/Viewer.o: /usr/include/sys/types.h /usr/include/endian.h
+../Platform/Viewer.o: /usr/include/bits/endian.h /usr/include/sys/sysmacros.h
+../Platform/Viewer.o: /usr/include/sys/shm.h /usr/include/bits/shm.h
+../Platform/Viewer.o: ../Tools/Common.h /usr/include/stdlib.h
+../Platform/Viewer.o: /usr/include/alloca.h ../Tools/Fixed.h
+../Platform/Viewer.o: /usr/include/math.h /usr/include/bits/huge_val.h
+../Platform/Viewer.o: /usr/include/bits/mathdef.h
+../Platform/Viewer.o: /usr/include/bits/mathcalls.h
+../Platform/Viewer.o: /usr/lib/gcc-lib/i486-linux/2.7.2.3/include/float.h
+../Platform/Viewer.o: ../Tools/List.h /usr/include/assert.h
+../Platform/Viewer.o: ../Tools/FString.h ../Tools/Variant.h
+../Platform/Viewer.o: ../Graph2D/Image.h ../Graph2D/Palette.h
+../Platform/Viewer.o: ../Graph3D/Camera.h ../Math/Geom.h ../Graph3D/Plot.h
+../Platform/Viewer.o: ../Graph2D/Drawer.h ../Graph2D/Pixeler.h
+../Platform/Viewer.o: ../Graph2D/WriteDrawer.h ../Graph2D/Font.h
+../Tools/Common.o: ../Tools/Common.h /usr/include/stdlib.h
+../Tools/Common.o: /usr/include/features.h /usr/include/sys/cdefs.h
+../Tools/Common.o: /usr/include/gnu/stubs.h
+../Tools/Common.o: /usr/lib/gcc-lib/i486-linux/2.7.2.3/include/stddef.h
+../Tools/Common.o: /usr/include/sys/types.h /usr/include/bits/types.h
+../Tools/Common.o: /usr/include/time.h /usr/include/bits/time.h
+../Tools/Common.o: /usr/include/endian.h /usr/include/bits/endian.h
+../Tools/Common.o: /usr/include/sys/select.h /usr/include/bits/select.h
+../Tools/Common.o: /usr/include/bits/sigset.h /usr/include/sys/sysmacros.h
+../Tools/Common.o: /usr/include/alloca.h ../Tools/Fixed.h /usr/include/math.h
+../Tools/Common.o: /usr/include/bits/huge_val.h /usr/include/bits/mathdef.h
+../Tools/Common.o: /usr/include/bits/mathcalls.h
+../Tools/Common.o: /usr/lib/gcc-lib/i486-linux/2.7.2.3/include/float.h
+../Tools/Common.o: ../Tools/List.h /usr/include/assert.h ../Tools/FString.h
+../Tools/Common.o: ../Tools/Variant.h
+../Tools/FString.o: ../Tools/FString.h /usr/include/stdlib.h
+../Tools/FString.o: /usr/include/features.h /usr/include/sys/cdefs.h
+../Tools/FString.o: /usr/include/gnu/stubs.h
+../Tools/FString.o: /usr/lib/gcc-lib/i486-linux/2.7.2.3/include/stddef.h
+../Tools/FString.o: /usr/include/sys/types.h /usr/include/bits/types.h
+../Tools/FString.o: /usr/include/time.h /usr/include/bits/time.h
+../Tools/FString.o: /usr/include/endian.h /usr/include/bits/endian.h
+../Tools/FString.o: /usr/include/sys/select.h /usr/include/bits/select.h
+../Tools/FString.o: /usr/include/bits/sigset.h /usr/include/sys/sysmacros.h
+../Tools/FString.o: /usr/include/alloca.h ../Tools/Common.h ../Tools/Fixed.h
+../Tools/FString.o: /usr/include/math.h /usr/include/bits/huge_val.h
+../Tools/FString.o: /usr/include/bits/mathdef.h /usr/include/bits/mathcalls.h
+../Tools/FString.o: /usr/lib/gcc-lib/i486-linux/2.7.2.3/include/float.h
+../Tools/FString.o: ../Tools/List.h /usr/include/assert.h ../Tools/Variant.h
+../Tools/Fixed.o: ../Tools/Fixed.h /usr/include/math.h
+../Tools/Fixed.o: /usr/include/features.h /usr/include/sys/cdefs.h
+../Tools/Fixed.o: /usr/include/gnu/stubs.h /usr/include/bits/huge_val.h
+../Tools/Fixed.o: /usr/include/bits/mathdef.h /usr/include/bits/mathcalls.h
+../Tools/Fixed.o: /usr/lib/gcc-lib/i486-linux/2.7.2.3/include/float.h
+../Tools/List.o: ../Tools/List.h /usr/include/assert.h
+../Tools/List.o: /usr/include/features.h /usr/include/sys/cdefs.h
+../Tools/List.o: /usr/include/gnu/stubs.h
+../Tools/Variant.o: ../Tools/Variant.h ../Tools/FString.h
+../Tools/Variant.o: /usr/include/assert.h /usr/include/features.h
+../Tools/Variant.o: /usr/include/sys/cdefs.h /usr/include/gnu/stubs.h
+BeastMain.o: BeastMain.h ../Platform/Viewer.h ../Platform/XWin/Device.h
+BeastMain.o: /usr/include/sys/time.h /usr/include/features.h
+BeastMain.o: /usr/include/sys/cdefs.h /usr/include/gnu/stubs.h
+BeastMain.o: /usr/include/time.h
+BeastMain.o: /usr/lib/gcc-lib/i486-linux/2.7.2.3/include/stddef.h
+BeastMain.o: /usr/include/bits/time.h /usr/include/bits/types.h
+BeastMain.o: /usr/include/sys/select.h /usr/include/bits/select.h
+BeastMain.o: /usr/include/bits/sigset.h /usr/include/unistd.h
+BeastMain.o: /usr/include/bits/posix_opt.h /usr/include/bits/confname.h
+BeastMain.o: /usr/include/getopt.h /usr/include/sys/ipc.h
+BeastMain.o: /usr/include/bits/ipc.h /usr/include/sys/types.h
+BeastMain.o: /usr/include/endian.h /usr/include/bits/endian.h
+BeastMain.o: /usr/include/sys/sysmacros.h /usr/include/sys/shm.h
+BeastMain.o: /usr/include/bits/shm.h ../Tools/Common.h /usr/include/stdlib.h
+BeastMain.o: /usr/include/alloca.h ../Tools/Fixed.h /usr/include/math.h
+BeastMain.o: /usr/include/bits/huge_val.h /usr/include/bits/mathdef.h
+BeastMain.o: /usr/include/bits/mathcalls.h
+BeastMain.o: /usr/lib/gcc-lib/i486-linux/2.7.2.3/include/float.h
+BeastMain.o: ../Tools/List.h /usr/include/assert.h ../Tools/FString.h
+BeastMain.o: ../Tools/Variant.h ../Graph2D/Image.h ../Graph2D/Palette.h
+BeastMain.o: ../Graph3D/Camera.h ../Math/Geom.h ../Graph3D/Plot.h
+BeastMain.o: ../Graph2D/Drawer.h ../Graph2D/Pixeler.h
+BeastMain.o: ../Graph2D/WriteDrawer.h ../Graph2D/Font.h ../Beast/BeastLand.h
+BeastMain.o: ../Beast/DNA.h ../Beast/Drawable.h
+BeastMain.o: ../Graph3D/TemplateFaceDrawer.h ../Graph3D/FaceDrawer.h
+BeastMain.o: ../Graph2D/PlugDrawer.h ../Graph2D/Clut.h ../Graph3D/Plotter.h
+BeastMain.o: ../Graph3D/Shader.h ../Graph3D/Mapper.h ../Graph2D/Convert.h
+BeastMain.o: ../Math/Random.h ../Beast/RandomBeast.h
+../Platform/XWin/Device.o: /usr/include/errno.h /usr/include/features.h
+../Platform/XWin/Device.o: /usr/include/sys/cdefs.h /usr/include/gnu/stubs.h
+../Platform/XWin/Device.o: /usr/include/bits/errno.h
+../Platform/XWin/Device.o: /usr/include/linux/errno.h
+../Platform/XWin/Device.o: /usr/include/asm/errno.h /usr/include/stdio.h
+../Platform/XWin/Device.o: /usr/lib/gcc-lib/i486-linux/2.7.2.3/include/stddef.h
+../Platform/XWin/Device.o: /usr/lib/gcc-lib/i486-linux/2.7.2.3/include/stdarg.h
+../Platform/XWin/Device.o: /usr/include/bits/types.h /usr/include/libio.h
+../Platform/XWin/Device.o: /usr/include/_G_config.h
+../Platform/XWin/Device.o: /usr/include/bits/stdio_lim.h
+../Platform/XWin/Device.o: /usr/include/stdlib.h /usr/include/sys/types.h
+../Platform/XWin/Device.o: /usr/include/time.h /usr/include/bits/time.h
+../Platform/XWin/Device.o: /usr/include/endian.h /usr/include/bits/endian.h
+../Platform/XWin/Device.o: /usr/include/sys/select.h
+../Platform/XWin/Device.o: /usr/include/bits/select.h
+../Platform/XWin/Device.o: /usr/include/bits/sigset.h
+../Platform/XWin/Device.o: /usr/include/sys/sysmacros.h /usr/include/alloca.h
+../Platform/XWin/Device.o: /usr/include/assert.h ../Platform/XWin/Device.h
+../Platform/XWin/Device.o: /usr/include/sys/time.h /usr/include/unistd.h
+../Platform/XWin/Device.o: /usr/include/bits/posix_opt.h
+../Platform/XWin/Device.o: /usr/include/bits/confname.h /usr/include/getopt.h
+../Platform/XWin/Device.o: /usr/include/sys/ipc.h /usr/include/bits/ipc.h
+../Platform/XWin/Device.o: /usr/include/sys/shm.h /usr/include/bits/shm.h
+../Platform/XWin/Device.o: ../Tools/Common.h ../Tools/Fixed.h
+../Platform/XWin/Device.o: /usr/include/math.h /usr/include/bits/huge_val.h
+../Platform/XWin/Device.o: /usr/include/bits/mathdef.h
+../Platform/XWin/Device.o: /usr/include/bits/mathcalls.h
+../Platform/XWin/Device.o: /usr/lib/gcc-lib/i486-linux/2.7.2.3/include/float.h
+../Platform/XWin/Device.o: ../Tools/List.h ../Tools/FString.h
+../Platform/XWin/Device.o: ../Tools/Variant.h ../Graph2D/Image.h
+../Platform/XWin/Device.o: ../Graph2D/Palette.h

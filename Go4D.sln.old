@@ -1,0 +1,189 @@
+Microsoft Visual Studio Solution File, Format Version 7.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Go4D", "Go4D\Go4D.vcproj", "{19848FE3-EC4E-11D4-B9E8-0000B472A8D1}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+	ProjectSection(SolutionConfiguration) = postProject
+		Release.ActiveCfg = Release|Win32
+		Release.Build.0 = Release|Win32
+		Debug.ActiveCfg = Debug|Win32
+		Debug.Build.0 = Debug|Win32
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GIFViewer", "GIFViewer\GIFViewer.vcproj", "{19849015-EC4E-11D4-B9E8-0000B472A8D1}"
+	ProjectSection(ProjectDependencies) = postProject
+		0 = {19848FE3-EC4E-11D4-B9E8-0000B472A8D1}
+	EndProjectSection
+	ProjectSection(SolutionConfiguration) = postProject
+		Release.ActiveCfg = Release|Win32
+		Release.Build.0 = Release|Win32
+		Debug.ActiveCfg = Debug|Win32
+		Debug.Build.0 = Debug|Win32
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GUI", "GUI\GUI.vcproj", "{1984903F-EC4E-11D4-B9E8-0000B472A8D1}"
+	ProjectSection(ProjectDependencies) = postProject
+		0 = {19848FE3-EC4E-11D4-B9E8-0000B472A8D1}
+	EndProjectSection
+	ProjectSection(SolutionConfiguration) = postProject
+		Release.ActiveCfg = Release|Win32
+		Release.Build.0 = Release|Win32
+		Debug.ActiveCfg = Debug|Win32
+		Debug.Build.0 = Debug|Win32
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Cube", "Cube\Cube.vcproj", "{19849077-EC4E-11D4-B9E8-0000B472A8D1}"
+	ProjectSection(ProjectDependencies) = postProject
+		0 = {19848FE3-EC4E-11D4-B9E8-0000B472A8D1}
+	EndProjectSection
+	ProjectSection(SolutionConfiguration) = postProject
+		Release.ActiveCfg = Release|Win32
+		Release.Build.0 = Release|Win32
+		Debug.ActiveCfg = Debug|Win32
+		Debug.Build.0 = Debug|Win32
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "OFFViewer", "OFFViewer\OFFViewer.vcproj", "{198492B3-EC4E-11D4-B9E8-0000B472A8D1}"
+	ProjectSection(ProjectDependencies) = postProject
+		0 = {19848FE3-EC4E-11D4-B9E8-0000B472A8D1}
+	EndProjectSection
+	ProjectSection(SolutionConfiguration) = postProject
+		Release.ActiveCfg = Release|Win32
+		Release.Build.0 = Release|Win32
+		Debug.ActiveCfg = Debug|Win32
+		Debug.Build.0 = Debug|Win32
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Voxel", "Voxel\Voxel.vcproj", "{198492DB-EC4E-11D4-B9E8-0000B472A8D1}"
+	ProjectSection(ProjectDependencies) = postProject
+		0 = {19848FE3-EC4E-11D4-B9E8-0000B472A8D1}
+	EndProjectSection
+	ProjectSection(SolutionConfiguration) = postProject
+		Release.ActiveCfg = Release|Win32
+		Release.Build.0 = Release|Win32
+		Debug.ActiveCfg = Debug|Win32
+		Debug.Build.0 = Debug|Win32
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Beast", "Beast\Beast.vcproj", "{1B82DEFF-ED58-11D4-B9E8-0000B472A8D1}"
+	ProjectSection(ProjectDependencies) = postProject
+		0 = {19848FE3-EC4E-11D4-B9E8-0000B472A8D1}
+	EndProjectSection
+	ProjectSection(SolutionConfiguration) = postProject
+		Release.ActiveCfg = Release|Win32
+		Release.Build.0 = Release|Win32
+		Debug.ActiveCfg = Debug|Win32
+		Debug.Build.0 = Debug|Win32
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Modeler", "Modeler\Modeler.vcproj", "{C73D1710-F469-11D4-BB38-D0E651C135CB}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+	ProjectSection(SolutionConfiguration) = postProject
+		Release.ActiveCfg = Release|Win32
+		Release.Build.0 = Release|Win32
+		Debug.ActiveCfg = Debug|Win32
+		Debug.Build.0 = Debug|Win32
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Physic", "Physic\Physic.vcproj", "{E1ED6511-F7C0-11D4-BB39-E06450C19A15}"
+	ProjectSection(ProjectDependencies) = postProject
+		0 = {19848FE3-EC4E-11D4-B9E8-0000B472A8D1}
+	EndProjectSection
+	ProjectSection(SolutionConfiguration) = postProject
+		Release.ActiveCfg = Release|Win32
+		Release.Build.0 = Release|Win32
+		Debug.ActiveCfg = Debug|Win32
+		Debug.Build.0 = Debug|Win32
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Fire", "Fire\Fire.vcproj", "{630D5EB2-F9E3-11D4-BB39-006750C19A15}"
+	ProjectSection(ProjectDependencies) = postProject
+		0 = {19848FE3-EC4E-11D4-B9E8-0000B472A8D1}
+	EndProjectSection
+	ProjectSection(SolutionConfiguration) = postProject
+		Release.ActiveCfg = Release|Win32
+		Release.Build.0 = Release|Win32
+		Debug.ActiveCfg = Debug|Win32
+		Debug.Build.0 = Debug|Win32
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Fractal", "Fractal\Fractal.vcproj", "{630D5EB5-F9E3-11D4-BB39-006750C19A15}"
+	ProjectSection(ProjectDependencies) = postProject
+		0 = {19848FE3-EC4E-11D4-B9E8-0000B472A8D1}
+	EndProjectSection
+	ProjectSection(SolutionConfiguration) = postProject
+		Release.ActiveCfg = Release|Win32
+		Release.Build.0 = Release|Win32
+		Debug.ActiveCfg = Debug|Win32
+		Debug.Build.0 = Debug|Win32
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Block", "Block\Block.vcproj", "{630D5EB8-F9E3-11D4-BB39-006750C19A15}"
+	ProjectSection(ProjectDependencies) = postProject
+		0 = {19848FE3-EC4E-11D4-B9E8-0000B472A8D1}
+	EndProjectSection
+	ProjectSection(SolutionConfiguration) = postProject
+		Release.ActiveCfg = Release|Win32
+		Release.Build.0 = Release|Win32
+		Debug.ActiveCfg = Debug|Win32
+		Debug.Build.0 = Debug|Win32
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Neural", "Neural\Neural.vcproj", "{630D5EBA-F9E3-11D4-BB39-006750C19A15}"
+	ProjectSection(ProjectDependencies) = postProject
+		0 = {19848FE3-EC4E-11D4-B9E8-0000B472A8D1}
+	EndProjectSection
+	ProjectSection(SolutionConfiguration) = postProject
+		Release.ActiveCfg = Release|Win32
+		Release.Build.0 = Release|Win32
+		Debug.ActiveCfg = Debug|Win32
+		Debug.Build.0 = Debug|Win32
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Particle", "Particle\Particle.vcproj", "{630D5EBC-F9E3-11D4-BB39-006750C19A15}"
+	ProjectSection(ProjectDependencies) = postProject
+		0 = {19848FE3-EC4E-11D4-B9E8-0000B472A8D1}
+	EndProjectSection
+	ProjectSection(SolutionConfiguration) = postProject
+		Release.ActiveCfg = Release|Win32
+		Release.Build.0 = Release|Win32
+		Debug.ActiveCfg = Debug|Win32
+		Debug.Build.0 = Debug|Win32
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Stereo", "Stereo\Stereo.vcproj", "{630D5EC1-F9E3-11D4-BB39-006750C19A15}"
+	ProjectSection(ProjectDependencies) = postProject
+		0 = {19848FE3-EC4E-11D4-B9E8-0000B472A8D1}
+	EndProjectSection
+	ProjectSection(SolutionConfiguration) = postProject
+		Release.ActiveCfg = Release|Win32
+		Release.Build.0 = Release|Win32
+		Debug.ActiveCfg = Debug|Win32
+		Debug.Build.0 = Debug|Win32
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Water", "Water\Water.vcproj", "{630D5EC3-F9E3-11D4-BB39-006750C19A15}"
+	ProjectSection(ProjectDependencies) = postProject
+		0 = {19848FE3-EC4E-11D4-B9E8-0000B472A8D1}
+	EndProjectSection
+	ProjectSection(SolutionConfiguration) = postProject
+		Release.ActiveCfg = Release|Win32
+		Release.Build.0 = Release|Win32
+		Debug.ActiveCfg = Debug|Win32
+		Debug.Build.0 = Debug|Win32
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		ConfigName.0 = Debug
+		ConfigName.1 = Release
+		DoSign = FALSE
+	EndGlobalSection
+	GlobalSection(SolutionItems) = postSolution
+		Item:1 = State.txt
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

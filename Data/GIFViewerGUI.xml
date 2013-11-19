@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+
+<GUI>
+  <Splitter Name="TB" Width="200" Height="320" Vertical="False" Separation="310" Factor="0" >
+    <Splitter Name="SP" Width="200" Height="320" Vertical="False" Separation="160" Factor="40" >
+      <Image Name="Image" Width="200" Height="200"/>
+      <Splitter Name="Dir" Width="200" Height="200" Vertical="True" Separation="100" Factor="30">
+        <Tree Name="DirTree" Width="50" Height="200" ShowRoot="True" ChildFactor="0.2" RelativeFactor="0.0"/>
+        <StringList Name="FileList" Width="50" Height="200" Flat="False" />
+      </Splitter>
+    </Splitter>
+    <String Name="Quit" Value="Quit" />
+  </Splitter>
+</GUI>

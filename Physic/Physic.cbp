@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Physic" />
+		<Option pch_mode="0" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="Debug/Physic.exe" prefix_auto="0" extension_auto="0" />
+				<Option object_output="Debug" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Option projectResourceIncludeDirsRelation="0" />
+				<Compiler>
+					<Add option="-O0" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="Release/Physic.exe" prefix_auto="0" extension_auto="0" />
+				<Option object_output="Release" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Option projectResourceIncludeDirsRelation="0" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+			</Target>
+		</Build>
+		<VirtualTargets>
+			<Add alias="All" targets="Debug;Release;" />
+		</VirtualTargets>
+		<Compiler>
+			<Add option="-Dusefixed" />
+			<Add option="-DSDL" />
+			<Add directory="/home/yba/go4d/Neural/" />
+			<Add directory="../Go4D" />
+			<Add directory="../Go4D/Tools" />
+			<Add directory="../Go4D/Special" />
+			<Add directory="../Go4D/Platform" />
+			<Add directory="../Go4D/Graph2D" />
+		</Compiler>
+		<Linker>
+			<Add library="../Go4D/libGo4D.a" />
+			<Add library="SDL" />
+		</Linker>
+		<Unit filename="PhysicDemo.cpp" />
+		<Unit filename="PhysicDemo.h" />
+		<Unit filename="PhysicTest.cpp" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

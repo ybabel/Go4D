@@ -1,0 +1,320 @@
+#v001>Go4D
+#pchd>stdafx.h
+#ssys>go4d=
+#ssys>collision=
+#ssys>graph2d=
+#ssys>graph3d=
+#ssys>gui=
+#ssys>physic=
+#ssys>platform=
+#ssys>special=
+#ssys>tools=
+#ssys>xml=
++Cgo4d==
++Ccollision==
++Cgraph2d==
++Cgraph3d==
++Cgui==
++Cphysic==
++Cplatform==
++Cspecial==
++Ctools==
++Cxml==
+-Id:\yob\perso\3d\all platform projects\3ds=$ROSECPP_SOURCE\yob\perso\3d\all platform projects\3ds
+-Id:\yob\perso\3d\all platform projects\beast=$ROSECPP_SOURCE\yob\perso\3d\all platform projects\beast
+-Id:\yob\perso\3d\all platform projects\cube=$ROSECPP_SOURCE\yob\perso\3d\all platform projects\cube
+-Id:\yob\perso\3d\all platform projects\data=$ROSECPP_SOURCE\yob\perso\3d\all platform projects\data
+-Id:\yob\perso\3d\all platform projects\doc=$ROSECPP_SOURCE\yob\perso\3d\all platform projects\doc
+-Id:\yob\perso\3d\all platform projects\fire=$ROSECPP_SOURCE\yob\perso\3d\all platform projects\fire
+-Id:\yob\perso\3d\all platform projects\fractal=$ROSECPP_SOURCE\yob\perso\3d\all platform projects\fractal
+-Id:\yob\perso\3d\all platform projects\gifviewer=$ROSECPP_SOURCE\yob\perso\3d\all platform projects\gifviewer
+-Id:\yob\perso\3d\all platform projects\go4d=$ROSECPP_SOURCE\yob\perso\3d\all platform projects\go4d
+-Id:\yob\perso\3d\all platform projects\gui=$ROSECPP_SOURCE\yob\perso\3d\all platform projects\gui
+-Id:\yob\perso\3d\all platform projects\modeler=$ROSECPP_SOURCE\yob\perso\3d\all platform projects\modeler
+-Id:\yob\perso\3d\all platform projects\muscle=$ROSECPP_SOURCE\yob\perso\3d\all platform projects\muscle
+-Id:\yob\perso\3d\all platform projects\offviewer=$ROSECPP_SOURCE\yob\perso\3d\all platform projects\offviewer
+-Id:\yob\perso\3d\all platform projects\physic=$ROSECPP_SOURCE\yob\perso\3d\all platform projects\physic
+-Id:\yob\perso\3d\all platform projects\voxel=$ROSECPP_SOURCE\yob\perso\3d\all platform projects\voxel
+-Id:\yob\perso\3d\all platform projects\beast\debug=$ROSECPP_SOURCE\yob\perso\3d\all platform projects\beast\debug
+-Id:\yob\perso\3d\all platform projects\cube\debug=$ROSECPP_SOURCE\yob\perso\3d\all platform projects\cube\debug
+-Id:\yob\perso\3d\all platform projects\cube\mipsdbg=$ROSECPP_SOURCE\yob\perso\3d\all platform projects\cube\mipsdbg
+-Id:\yob\perso\3d\all platform projects\cube\release=$ROSECPP_SOURCE\yob\perso\3d\all platform projects\cube\release
+-Id:\yob\perso\3d\all platform projects\cube\sh3rel=$ROSECPP_SOURCE\yob\perso\3d\all platform projects\cube\sh3rel
+-Id:\yob\perso\3d\all platform projects\doc\beast=$ROSECPP_SOURCE\yob\perso\3d\all platform projects\doc\beast
+-Id:\yob\perso\3d\all platform projects\doc\go4d=$ROSECPP_SOURCE\yob\perso\3d\all platform projects\doc\go4d
+-Id:\yob\perso\3d\all platform projects\doc\gui=$ROSECPP_SOURCE\yob\perso\3d\all platform projects\doc\gui
+-Id:\yob\perso\3d\all platform projects\fire\sh3dbg=$ROSECPP_SOURCE\yob\perso\3d\all platform projects\fire\sh3dbg
+-Id:\yob\perso\3d\all platform projects\fire\sh3rel=$ROSECPP_SOURCE\yob\perso\3d\all platform projects\fire\sh3rel
+-Id:\yob\perso\3d\all platform projects\fractal\debug=$ROSECPP_SOURCE\yob\perso\3d\all platform projects\fractal\debug
+-Id:\yob\perso\3d\all platform projects\gifviewer\debug=$ROSECPP_SOURCE\yob\perso\3d\all platform projects\gifviewer\debug
+-Id:\yob\perso\3d\all platform projects\go4d\collision=$ROSECPP_SOURCE\yob\perso\3d\all platform projects\go4d\collision
+-Id:\yob\perso\3d\all platform projects\go4d\debug=$ROSECPP_SOURCE\yob\perso\3d\all platform projects\go4d\debug
+-Id:\yob\perso\3d\all platform projects\go4d\graph2d=$ROSECPP_SOURCE\yob\perso\3d\all platform projects\go4d\graph2d
+-Id:\yob\perso\3d\all platform projects\go4d\graph3d=$ROSECPP_SOURCE\yob\perso\3d\all platform projects\go4d\graph3d
+-Id:\yob\perso\3d\all platform projects\go4d\gui=$ROSECPP_SOURCE\yob\perso\3d\all platform projects\go4d\gui
+-Id:\yob\perso\3d\all platform projects\go4d\physic=$ROSECPP_SOURCE\yob\perso\3d\all platform projects\go4d\physic
+-Id:\yob\perso\3d\all platform projects\go4d\platform=$ROSECPP_SOURCE\yob\perso\3d\all platform projects\go4d\platform
+-Id:\yob\perso\3d\all platform projects\go4d\special=$ROSECPP_SOURCE\yob\perso\3d\all platform projects\go4d\special
+-Id:\yob\perso\3d\all platform projects\go4d\stl=$ROSECPP_SOURCE\yob\perso\3d\all platform projects\go4d\stl
+-Id:\yob\perso\3d\all platform projects\go4d\tools=$ROSECPP_SOURCE\yob\perso\3d\all platform projects\go4d\tools
+-Id:\yob\perso\3d\all platform projects\go4d\xml=$ROSECPP_SOURCE\yob\perso\3d\all platform projects\go4d\xml
+-Id:\yob\perso\3d\all platform projects\gui\debug=$ROSECPP_SOURCE\yob\perso\3d\all platform projects\gui\debug
+-Id:\yob\perso\3d\all platform projects\gui\mipsdbg=$ROSECPP_SOURCE\yob\perso\3d\all platform projects\gui\mipsdbg
+-Id:\yob\perso\3d\all platform projects\gui\release=$ROSECPP_SOURCE\yob\perso\3d\all platform projects\gui\release
+-Id:\yob\perso\3d\all platform projects\gui\sh3dbg=$ROSECPP_SOURCE\yob\perso\3d\all platform projects\gui\sh3dbg
+-Id:\yob\perso\3d\all platform projects\gui\sh3rel=$ROSECPP_SOURCE\yob\perso\3d\all platform projects\gui\sh3rel
+-Id:\yob\perso\3d\all platform projects\muscle\debug=$ROSECPP_SOURCE\yob\perso\3d\all platform projects\muscle\debug
+-Id:\yob\perso\3d\all platform projects\muscle\mipsdbg=$ROSECPP_SOURCE\yob\perso\3d\all platform projects\muscle\mipsdbg
+-Id:\yob\perso\3d\all platform projects\muscle\sh3dbg=$ROSECPP_SOURCE\yob\perso\3d\all platform projects\muscle\sh3dbg
+-Id:\yob\perso\3d\all platform projects\offviewer\debug=$ROSECPP_SOURCE\yob\perso\3d\all platform projects\offviewer\debug
+-Id:\yob\perso\3d\all platform projects\offviewer\mipsdbg=$ROSECPP_SOURCE\yob\perso\3d\all platform projects\offviewer\mipsdbg
+-Id:\yob\perso\3d\all platform projects\offviewer\optimized=$ROSECPP_SOURCE\yob\perso\3d\all platform projects\offviewer\optimized
+-Id:\yob\perso\3d\all platform projects\offviewer\release=$ROSECPP_SOURCE\yob\perso\3d\all platform projects\offviewer\release
+-Id:\yob\perso\3d\all platform projects\offviewer\sh3rel=$ROSECPP_SOURCE\yob\perso\3d\all platform projects\offviewer\sh3rel
+-Id:\yob\perso\3d\all platform projects\physic\mipsdbg=$ROSECPP_SOURCE\yob\perso\3d\all platform projects\physic\mipsdbg
+-Id:\yob\perso\3d\all platform projects\physic\sh3dbg=$ROSECPP_SOURCE\yob\perso\3d\all platform projects\physic\sh3dbg
+-Id:\yob\perso\3d\all platform projects\voxel\armrel=$ROSECPP_SOURCE\yob\perso\3d\all platform projects\voxel\armrel
+-Id:\yob\perso\3d\all platform projects\voxel\debug=$ROSECPP_SOURCE\yob\perso\3d\all platform projects\voxel\debug
+-Id:\yob\perso\3d\all platform projects\voxel\mipsdbg=$ROSECPP_SOURCE\yob\perso\3d\all platform projects\voxel\mipsdbg
+-Id:\yob\perso\3d\all platform projects\voxel\sh3dbg=$ROSECPP_SOURCE\yob\perso\3d\all platform projects\voxel\sh3dbg
+-Id:\yob\perso\3d\all platform projects\voxel\sh3rel=$ROSECPP_SOURCE\yob\perso\3d\all platform projects\voxel\sh3rel
++X*cpp=.cnq
++X!h=.cnh
+-Dusefixed
+#dlft>Simple
+#dpfx>$DATA\
+#dsfx>
+#xnam>FirstLook
+#xopt> `+Kf1` `+Kt0..1` `+PcC++` `+cdReverse Engineered` `+tt%c` `+vv4.0` -ClMBd -CtNdM -Cu? -EnMAd -JhMd -JsMd -MbB -Mcy -MtMA -Nn@ -ScS -Ses -TdMAd -TiMd -TpMBd -cBbefghjz -cCegjklmrtvw -cDe -dNMA -dSA -dUMA -dnMA -dsA -duMA -hSMLdq -hsMLdq -mtMA
+#xddd>$DESIGN/%f.mdl
+#dt2p>t2_
+#[flf>Pathname
+#|sky>~O~Q~R~]
+#|hky>~Q~X
+#|dky>~O\~Q~R~I~Z~I~S~U~ICt=~[~ISs=~\~Y~V    ~X
+#]flf>
+#[flf>Directory
+#|sky>~O~Q~R~]
+#|hky>~O~Q~X
+#|dky>~O (#)~Y ~I~Q~R~I~Z~I~S~U~ICt=~[~ISs=~\~Y~V~I    ~X   
+#]flf>
+#[flf>Simple Name
+#|sky>~Q~R~O~]
+#|hky>~Q~X
+#|dky>~Q~R~I~Z~I~S~U~ICt=~[~ISs=~\~I~O~Y~V    ~X
+#]flf>
+#[flf>Status
+#|sky>~S~Q~R~O~]
+#|hky>~S~Q~X
+#|dky>~S (#)~Y~U~I~Q~R~I~Z~ICt=~[~ISs=~\~I~O~Y ~I~V    ~X
+#]flf>
+#[flf>Errors
+#|sky>~U~S~Q~R~O~]
+#|hky>~S~Q~X
+#|dky>~U~S (#)~Y ~I~U~I~Q~R~I~Z~ICt=~[~ISs=~\~I~O~Y ~I ~I~V    ~X
+#]flf>
+#[flf>Type
+#|sky>~Z~O~Q~R~U~S~]
+#|hky>~Z~O~Q~X
+#|dky>~Z (#)~Y ~I~O (#)~Y ~I ~I~Q~R~I~S~U~ICt=~[~ISs=~\~Y ~I ~I~V    ~X
+#]flf>
+#[flf>Category
+#|sky>~[~Q~R~O~]
+#|hky>~[~Q~X
+#|dky>~[ (#)~Y ~I~U~I~Q~R~I~Z~I~S~ISs=~\~I~O~Y ~I ~I~V    ~X
+#]flf>
+#[flf>Extension
+#|sky>~R~O~Q~]
+#|hky>~R~O~Q~X
+#|dky>~R (#)~Y ~I~O (#)~Y ~I ~I~Q~R~I~S~U~I~Z~ICt=~[~Y ~I ~I~V    ~X
+#]flf>
+#[flf>Subsystem
+#|sky>~\~Q~R~O~]
+#|hky>~\~Q~X
+#|dky>~\ (#)~Y ~I~U~I~Q~R~I~Z~I~S~ICt=~[~I~O~Y ~I ~I~V    ~X
+#]flf>
+#[lyt>Export
+#|ste>1 472 439
+#|brs> 24 83 267 367 270 337 0 0 0 0 0hThvLvCShvRDF
+#|flf>Directory
+#]lyt>
+#[lyt>Files Only
+#|ste>1 445 419
+#|brs> 20 0 0 0 0 0 0 0 0 0 0hTF
+#|flf>Pathname
+#]lyt>
+#[lyt>Full
+#|ste>1 472 483
+#|brs> 24 145 84 268 369 357 205 287 169 328 0hThhvBvCSvLEhvvDUIhRF
+#|flf>Pathname
+#]lyt>
+#[lyt>Simple
+#|ste>1 499 453
+#|brs> 24 83 377 106 0 0 0 0 0 0 0hThvLEhBF
+#|flf>Directory
+#]lyt>
++Cgo4d
+#ssys>go4d
+d:\yob\perso\3d\all platform projects\go4d\go4d.h
++Ccollision
+#ssys>collision
+d:\yob\perso\3d\all platform projects\go4d\collision\fileio.cpp
+d:\yob\perso\3d\all platform projects\go4d\collision\lut.cpp
+d:\yob\perso\3d\all platform projects\go4d\collision\mesh.cpp
+d:\yob\perso\3d\all platform projects\go4d\collision\mesh_hier.cpp
+d:\yob\perso\3d\all platform projects\go4d\collision\mesh_utils.cpp
+d:\yob\perso\3d\all platform projects\go4d\collision\object.cpp
+d:\yob\perso\3d\all platform projects\go4d\collision\pair.cpp
+d:\yob\perso\3d\all platform projects\go4d\collision\scene.cpp
+d:\yob\perso\3d\all platform projects\go4d\collision\swift.h
+d:\yob\perso\3d\all platform projects\go4d\collision\swift_array.h
+d:\yob\perso\3d\all platform projects\go4d\collision\swift_boxnode.h
+d:\yob\perso\3d\all platform projects\go4d\collision\swift_common.h
+d:\yob\perso\3d\all platform projects\go4d\collision\swift_config.h
+d:\yob\perso\3d\all platform projects\go4d\collision\swift_fileio.h
+d:\yob\perso\3d\all platform projects\go4d\collision\swift_linalg.h
+d:\yob\perso\3d\all platform projects\go4d\collision\swift_lut.h
+d:\yob\perso\3d\all platform projects\go4d\collision\swift_mesh.h
+d:\yob\perso\3d\all platform projects\go4d\collision\swift_mesh_utils.h
+d:\yob\perso\3d\all platform projects\go4d\collision\swift_object.h
+d:\yob\perso\3d\all platform projects\go4d\collision\swift_pair.h
++Cgraph2d
+#ssys>graph2d
+d:\yob\perso\3d\all platform projects\go4d\graph2d\clut.cpp
+d:\yob\perso\3d\all platform projects\go4d\graph2d\clut.h=S
+d:\yob\perso\3d\all platform projects\go4d\graph2d\convert.cpp
+d:\yob\perso\3d\all platform projects\go4d\graph2d\convert.h=S
+d:\yob\perso\3d\all platform projects\go4d\graph2d\drawer.cpp
+d:\yob\perso\3d\all platform projects\go4d\graph2d\drawer.h=S
+d:\yob\perso\3d\all platform projects\go4d\graph2d\drawer2d.cpp
+d:\yob\perso\3d\all platform projects\go4d\graph2d\drawer2d.h=S
+d:\yob\perso\3d\all platform projects\go4d\graph2d\fileimage.cpp
+d:\yob\perso\3d\all platform projects\go4d\graph2d\fileimage.h=S
+d:\yob\perso\3d\all platform projects\go4d\graph2d\filter.cpp
+d:\yob\perso\3d\all platform projects\go4d\graph2d\filter.h=S
+d:\yob\perso\3d\all platform projects\go4d\graph2d\font.cpp
+d:\yob\perso\3d\all platform projects\go4d\graph2d\font.h=S
+d:\yob\perso\3d\all platform projects\go4d\graph2d\image.cpp
+d:\yob\perso\3d\all platform projects\go4d\graph2d\image.h=S
+d:\yob\perso\3d\all platform projects\go4d\graph2d\imageformat.cpp
+d:\yob\perso\3d\all platform projects\go4d\graph2d\imageformat.h=S
+d:\yob\perso\3d\all platform projects\go4d\graph2d\palette.cpp
+d:\yob\perso\3d\all platform projects\go4d\graph2d\palette.h=S
+d:\yob\perso\3d\all platform projects\go4d\graph2d\plugdrawer.cpp
+d:\yob\perso\3d\all platform projects\go4d\graph2d\plugdrawer.h=S
+d:\yob\perso\3d\all platform projects\go4d\graph2d\writedrawer.cpp
+d:\yob\perso\3d\all platform projects\go4d\graph2d\writedrawer.h=S
++Cgraph3d
+#ssys>graph3d
+d:\yob\perso\3d\all platform projects\go4d\graph3d\bump.cpp
+d:\yob\perso\3d\all platform projects\go4d\graph3d\bump.h=S
+d:\yob\perso\3d\all platform projects\go4d\graph3d\camera.cpp
+d:\yob\perso\3d\all platform projects\go4d\graph3d\camera.h=S
+d:\yob\perso\3d\all platform projects\go4d\graph3d\cube.cpp
+d:\yob\perso\3d\all platform projects\go4d\graph3d\cube.h=S
+d:\yob\perso\3d\all platform projects\go4d\graph3d\face.cpp
+d:\yob\perso\3d\all platform projects\go4d\graph3d\face.h=S
+d:\yob\perso\3d\all platform projects\go4d\graph3d\facedrawer.cpp
+d:\yob\perso\3d\all platform projects\go4d\graph3d\facedrawer.h=S
+d:\yob\perso\3d\all platform projects\go4d\graph3d\fill.cpp
+d:\yob\perso\3d\all platform projects\go4d\graph3d\filler.cpp
+d:\yob\perso\3d\all platform projects\go4d\graph3d\filler.h=S
+d:\yob\perso\3d\all platform projects\go4d\graph3d\horiz.cpp
+d:\yob\perso\3d\all platform projects\go4d\graph3d\light.cpp
+d:\yob\perso\3d\all platform projects\go4d\graph3d\light.h=S
+d:\yob\perso\3d\all platform projects\go4d\graph3d\mapper.cpp
+d:\yob\perso\3d\all platform projects\go4d\graph3d\mapper.h=S
+d:\yob\perso\3d\all platform projects\go4d\graph3d\object.cpp
+d:\yob\perso\3d\all platform projects\go4d\graph3d\object.h=S
+d:\yob\perso\3d\all platform projects\go4d\graph3d\pixeler.cpp
+d:\yob\perso\3d\all platform projects\go4d\graph3d\pixeler.h=S
+d:\yob\perso\3d\all platform projects\go4d\graph3d\plot.cpp
+d:\yob\perso\3d\all platform projects\go4d\graph3d\plot.h=S
+d:\yob\perso\3d\all platform projects\go4d\graph3d\plotter.cpp
+d:\yob\perso\3d\all platform projects\go4d\graph3d\plotter.h=S
+d:\yob\perso\3d\all platform projects\go4d\graph3d\scene.cpp
+d:\yob\perso\3d\all platform projects\go4d\graph3d\scene.h=S
+d:\yob\perso\3d\all platform projects\go4d\graph3d\shader.cpp
+d:\yob\perso\3d\all platform projects\go4d\graph3d\shader.h=S
+d:\yob\perso\3d\all platform projects\go4d\graph3d\templatefacedrawer.cpp
+d:\yob\perso\3d\all platform projects\go4d\graph3d\templatefacedrawer.h=S
++Cgui
+#ssys>gui
+d:\yob\perso\3d\all platform projects\go4d\gui\editable3d.cpp
+d:\yob\perso\3d\all platform projects\go4d\gui\editable3d.h=S
+d:\yob\perso\3d\all platform projects\go4d\gui\editablephysic.cpp
+d:\yob\perso\3d\all platform projects\go4d\gui\editablephysic.h=S
+d:\yob\perso\3d\all platform projects\go4d\gui\editor.cpp
+d:\yob\perso\3d\all platform projects\go4d\gui\editor.h=S
+d:\yob\perso\3d\all platform projects\go4d\gui\gui.cpp
+d:\yob\perso\3d\all platform projects\go4d\gui\gui.h=S
+d:\yob\perso\3d\all platform projects\go4d\gui\guiloader.cpp
+d:\yob\perso\3d\all platform projects\go4d\gui\guiloader.h=S
++Cphysic
+#ssys>physic
+d:\yob\perso\3d\all platform projects\go4d\physic\actions.cpp
+d:\yob\perso\3d\all platform projects\go4d\physic\actions.h=S
+d:\yob\perso\3d\all platform projects\go4d\physic\particle.cpp
+d:\yob\perso\3d\all platform projects\go4d\physic\particle.h=S
++Cplatform
+#ssys>platform
+d:\yob\perso\3d\all platform projects\go4d\platform\device.cpp
+d:\yob\perso\3d\all platform projects\go4d\platform\device.h=S
+d:\yob\perso\3d\all platform projects\go4d\platform\device_ce.cpp
+d:\yob\perso\3d\all platform projects\go4d\platform\device_ce.h
+d:\yob\perso\3d\all platform projects\go4d\platform\device_wing.cpp
+d:\yob\perso\3d\all platform projects\go4d\platform\device_wing.h
+d:\yob\perso\3d\all platform projects\go4d\platform\devicex.cpp
+d:\yob\perso\3d\all platform projects\go4d\platform\devicex.h
+d:\yob\perso\3d\all platform projects\go4d\platform\files.cpp
+d:\yob\perso\3d\all platform projects\go4d\platform\files.h=S
+d:\yob\perso\3d\all platform projects\go4d\platform\gx.h
+d:\yob\perso\3d\all platform projects\go4d\platform\viewer.cpp
+d:\yob\perso\3d\all platform projects\go4d\platform\viewer.h=S
+d:\yob\perso\3d\all platform projects\go4d\platform\wing.h
+d:\yob\perso\3d\all platform projects\go4d\platform\wingdll.cpp
+d:\yob\perso\3d\all platform projects\go4d\platform\wingdll.h
++Cspecial
+#ssys>special
+d:\yob\perso\3d\all platform projects\go4d\special\nn.cpp
+d:\yob\perso\3d\all platform projects\go4d\special\nn.h=S
+d:\yob\perso\3d\all platform projects\go4d\special\special.cpp
+d:\yob\perso\3d\all platform projects\go4d\special\special.h=S
++Ctools
+#ssys>tools
+d:\yob\perso\3d\all platform projects\go4d\tools\apstring.cpp
+d:\yob\perso\3d\all platform projects\go4d\tools\apstring.h=S
+d:\yob\perso\3d\all platform projects\go4d\tools\base.cpp
+d:\yob\perso\3d\all platform projects\go4d\tools\base.h=S
+d:\yob\perso\3d\all platform projects\go4d\tools\common.cpp
+d:\yob\perso\3d\all platform projects\go4d\tools\common.h=S
+d:\yob\perso\3d\all platform projects\go4d\tools\fixed.cpp
+d:\yob\perso\3d\all platform projects\go4d\tools\fixed.h=S
+d:\yob\perso\3d\all platform projects\go4d\tools\fstring.cpp
+d:\yob\perso\3d\all platform projects\go4d\tools\fstring.h=S
+d:\yob\perso\3d\all platform projects\go4d\tools\geom.cpp
+d:\yob\perso\3d\all platform projects\go4d\tools\geom.h=S
+d:\yob\perso\3d\all platform projects\go4d\tools\list.cpp
+d:\yob\perso\3d\all platform projects\go4d\tools\list.h=S
+d:\yob\perso\3d\all platform projects\go4d\tools\random.cpp
+d:\yob\perso\3d\all platform projects\go4d\tools\random.h=S
+d:\yob\perso\3d\all platform projects\go4d\tools\streams.cpp
+d:\yob\perso\3d\all platform projects\go4d\tools\streams.h=S
+d:\yob\perso\3d\all platform projects\go4d\tools\variant.cpp
+d:\yob\perso\3d\all platform projects\go4d\tools\variant.h
++Cxml
+#ssys>xml
+d:\yob\perso\3d\all platform projects\go4d\xml\ascii.h
+d:\yob\perso\3d\all platform projects\go4d\xml\asciitab.h
+d:\yob\perso\3d\all platform projects\go4d\xml\expat.h
+d:\yob\perso\3d\all platform projects\go4d\xml\iasciitab.h
+d:\yob\perso\3d\all platform projects\go4d\xml\latin1tab.h
+d:\yob\perso\3d\all platform projects\go4d\xml\mbstring.h
+d:\yob\perso\3d\all platform projects\go4d\xml\nametab.h
+d:\yob\perso\3d\all platform projects\go4d\xml\utf8tab.h
+d:\yob\perso\3d\all platform projects\go4d\xml\winconfig.h
+d:\yob\perso\3d\all platform projects\go4d\xml\xmlparser.cpp
+d:\yob\perso\3d\all platform projects\go4d\xml\xmlparser.h=S
+d:\yob\perso\3d\all platform projects\go4d\xml\xmlrole.h
+d:\yob\perso\3d\all platform projects\go4d\xml\xmltok.h
+d:\yob\perso\3d\all platform projects\go4d\xml\xmltok_impl.h

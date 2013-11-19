@@ -1,0 +1,186 @@
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.24
+    hunger=4.6
+    acceleration=0.08
+    threshold=70
+    
+  [RULE:3]
+    weight=0.29
+    hunger=3.7
+    fear=0.6
+    
+  [RULE:5]
+    weight=0.43
+    collision=0.136
+    
+  [RULE:8]
+    weight=0.53
+    frienddistance=0.36
+    
+  [RULE:10]
+    weight=0.072
+    visiondist=0.12
+    
+  [RULE:11]
+    weight=0.108
+    visiondist=1.04
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.62
+    hunger=6.2
+    acceleration=0.73
+    threshold=22
+    
+  [RULE:3]
+    weight=0.09
+    hunger=0.9
+    fear=0.11
+    
+  [RULE:5]
+    weight=0.35
+    collision=0.084
+    
+  [RULE:8]
+    weight=0.62
+    frienddistance=0.12
+    
+  [RULE:10]
+    weight=0.102
+    visiondist=0.52
+    
+  [RULE:11]
+    weight=0.144
+    visiondist=1.84
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.59
+    hunger=0.6
+    acceleration=0.69
+    threshold=61
+    
+  [RULE:3]
+    weight=0.57
+    hunger=5.5
+    fear=0.44
+    
+  [RULE:5]
+    weight=0.04
+    collision=0.058
+    
+  [RULE:8]
+    weight=0.44
+    frienddistance=0.96
+    
+  [RULE:10]
+    weight=0.052
+    visiondist=0
+    
+  [RULE:11]
+    weight=0.11
+    visiondist=0.4
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.55
+    hunger=7.1
+    acceleration=0.67
+    threshold=29
+    
+  [RULE:3]
+    weight=0.13
+    hunger=6.1
+    fear=0.29
+    
+  [RULE:5]
+    weight=0.51
+    collision=0.018
+    
+  [RULE:8]
+    weight=0.19
+    frienddistance=1.04
+    
+  [RULE:10]
+    weight=0.104
+    visiondist=2.24
+    
+  [RULE:11]
+    weight=0.118
+    visiondist=1.84
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.54
+    hunger=2.9
+    acceleration=0.49
+    threshold=39
+    
+  [RULE:3]
+    weight=0.35
+    hunger=0.4
+    fear=0.68
+    
+  [RULE:5]
+    weight=0.1
+    collision=0.054
+    
+  [RULE:8]
+    weight=0.25
+    frienddistance=0.26
+    
+  [RULE:10]
+    weight=0.142
+    visiondist=2.96
+    
+  [RULE:11]
+    weight=0.078
+    visiondist=0.68
+    
+  }
+percentage = 0.25
+
+DNA: {
+  [RULE:1]
+    weight=0.69
+    hunger=5.4
+    acceleration=0.4
+    threshold=57
+    
+  [RULE:3]
+    weight=0.65
+    hunger=6.6
+    fear=0.69
+    
+  [RULE:5]
+    weight=0.26
+    collision=0.064
+    
+  [RULE:8]
+    weight=0.11
+    frienddistance=0.84
+    
+  [RULE:10]
+    weight=0.12
+    visiondist=1.68
+    
+  [RULE:11]
+    weight=0.096
+    visiondist=0.44
+    
+  }

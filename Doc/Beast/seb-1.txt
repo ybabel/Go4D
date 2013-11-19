@@ -1,0 +1,198 @@
+From - Thu May 27 15:19:53 1999
+Received: by mailhub4.isdnet.net (mbox jyb_dp)
+ (with Cubic Circle's cucipop (v1.31 1998/05/13) Thu May 27 10:04:47 1999)
+X-From_: slecomte@cybercable.fr Thu May 27 01:05:53 1999
+Received: from bftoemail12.bigfoot.com (bftoemail12.bigfoot.com [208.156.39.212])
+	by mailhub2.isdnet.net (8.9.3/8.9.3) with SMTP id BAA95911
+	for <jyb@directprovider.net>; Thu, 27 May 1999 01:05:51 +0200 (CEST)
+Received: from bouvreuil.cybercable.fr ([212.198.3.12])
+          by bftoemail2.bigfoot.com (Bigfoot Toe Mail v1.0
+          with message handle 990526_190754_1_bftoemail2_smtp;
+          Wed, 26 May 1999 19:07:54 -0500
+          for jean-yves.bitterlich@bigfoot.com
+Received: (qmail 24784 invoked from network); 27 May 1999 01:05:34 +0200
+Received: from d111.paris-21.cybercable.fr (HELO cybercable.fr) (212.198.21.111)
+  by bouvreuil.cybercable.fr with SMTP; 26 May 1999 23:05:34 -0000
+Message-ID: <374C7DFA.9648F840@cybercable.fr>
+Date: Thu, 27 May 1999 01:04:26 +0200
+From: Sebastien Lecomte <slecomte@cybercable.fr>
+X-Mailer: Mozilla 4.6 [en] (Win98; I)
+X-Accept-Language: fr,en
+MIME-Version: 1.0
+To: dtr2@canal-plus.fr,
+        Jean-Yves Bitterlich <Jean-Yves.Bitterlich@bigfoot.com>
+CC: sebastienlecomte@cybercable.fr
+Subject: Time, is on my side... Yes it is !
+References: <01BEA79D.44B3F120.ybabel@canal-plus.fr>
+Content-Type: text/plain; charset=iso-8859-1
+Content-Transfer-Encoding: 8bit
+X-Mozilla-Status: 8001
+X-Mozilla-Status2: 00000000
+X-UIDL: 28e4e0968f1a0000
+
+Seb. --> JYB(Token) --> YO.
+
+Hello !
+
+Quelques remarques...
+
+           R1 : pour survivre il se nourrir.
+
+Pour modeliser les bêeeeetes, il faut effectivement plus qu'un 
+parametre, l'energie semble bienvenue (=endurance)
+
+Une philosophie qui me plait : Developper un maximum de regles par la
+genetique, c'est a dire indirectement. Pour la R1, cela consiste a
+modifier R1 comme suit :
+
+R1 : NRJ = 0 ==> death.
+
+Qu'est-ce qui va pousser les creatures vers la nourriture ? Rien de
+direct mais au contraire
+quelque chose d'induit : 
+
+Considerons 2 groupes de creatures :
+
+1 groupe qui aime bien la bonne bouffe et qui a de grandes mains : Les
+JYBees !
+1 groupe qui a la flemme tout le temps, meme la flemme d'avoir la flemme
+: Les SEBees !
+
+On laisse les 2 groupes dans la natures : Les JYB ont tout le temps
+faim, il mangent tout
+ce qui passent et se reproduisent en masse. Les SEB ont la flemme et
+meurent de paresse.
+
+La selection naturelle impose que les JYB survivent car la nature
+favorise l'attirance vers
+la nourriture.
+
+...
+
+On pourrait peut-etre introduire egalement la 'force' d'une creature.
+
+Force et Endurance pourraient etre fonction du capital genetique de la
+bete.
+Je pense a d'autres parametres, comme la vitesse, la vitesse de
+recuperation, etc...
+
+       R2: pour manger il faut se deplacer vers la nourriture.
+
+La regle R2 doit etre induite genetiquement de la meme facon.
+(Voir la section sur l'evolution a la fin)
+
+       R3: chaque deplacement consomme une unite de nourriture.
+
+Cela correspond a la mecanique du lieu.
+
+      R4: une unité de nourriture apporte a son consommateur "M" unité
+de nourriture.
+
+Il y aurait une valeur energetique variable suivant l'espece mangée et
+aussi suivant 
+l'endurance de ce qui est mangé.
+
+  R5: lors de la rencontre de "i" beasts bleu et de "j" beasts rouges
+        sortent vainqueurs le groupe de beasts qui a le plus d'unite
+        de nourriture. Cependant le groupe vainqueur se voit amputé
+        du nombre d'unité de nourriture du groupe vaincu (voire
+        perdre un certain nombre de ces propres beasts).
+
+Avec les wargames, j'avais pondu des regles pour
+simuler des combats a plusieurs, j'essaierai de les repondre... a moins
+que
+... (voir R12)
+
+R6: chaque bestiole a une faim qui est quantifiée: lorsqu'elle n'a
+     pas "faim", elle erre sur le plateau.
+
+    R7: la nourriture apparait RANDOMly sur le plateau et
+        continuellement.
+
+On peut introduire des vegetaux pour modeliser ca (deuxieme temps)
+
+    R8 : les beast connaissent les positions de toutes les portions de
+nouriturres
+
+Si c'est le cas, quel est l'interet ? Ce ne serait pas mieux qu'elles
+soient reellement
+en 'quete' de nourriture ?
+
+    R9 : les beast connaissent les positions de tous les beasts bleus ou
+rouges
+
+Encore une fois, il serait mieux que les beast connaissent juste leur
+environnement (proche ou moyen, a voir)
+
+    R10 : (dans un premier temps) les beasts sont crées avec un position
+aleatoire des qu'un beast meurt, dans la meme couleur
+
+Je le vois plutot comme ca. Si une creature a suffisamment d'energie, et
+si elle parcourt suffisamment
+de temps sans rencontrer d'autres beasts de sa couleur, elle se clone
+sur place avec eventuellement
+une mutation (chouette, je sens venir le constructeur de copie chaotique
+!).
+
+          (dans un deuxieme temps) les beasts se reproduisent.
+
+--> Reproduction sexuée, assexuée, tout un programme.
+
+    R11 : (dans un troisième temps) les beast doivent eviter des
+obstacles pour se deplacer (du genre le trou, si on tombe dedans on
+meur, et le mur qui empeche d'avancer)
+
+Je rajoute mes regles :
+
+R12 : Si une beast amie est attaquee dans le perimetre d'une autre
+beast,
+      celle-ci peut decider (genetique+neural) de la defendre.
+      
+Ce procede pourrait remplacer la R5 (bataille rangée) et introduirait la
+notion de cohesion.
+Oui/Non ?
+
+R13 : Une generalisation de R12 : Ce que j'appelle les sequences
+comportementales.
+
+Si ami en danger dans le champ de vision ==> aide.
+
+Si predateur dans champ de vision ==> demi-tour + fuite en avant.
+
+Cette deuxieme assertion suppose que chaque beast a un mini-contexte :
+Lorsqu'elle a
+fait demi-tour, elle ne voit plus d'ennemi mais a toujours 'peur' donc
+elle court pour fuir.
+
+Genetique : Evolution et comportement
+-------------------------------------
+
+On pourrait aporter une distinction entre les herbivores, les carnivores
+et des omnivores. L'interet est d'apporter ici un mecanisme de fuite
+de la proie quand elle voit son predateur. Le comportement pourrait etre
+apporte par un algo genetique.
+
+Exemple : Une creature (grenouille) voit un moucheron et une mouette
+
+Result = A(grenouille)*nb_grenouilles_vues +
+A(moucheron)*nb_moucherons_sentis.
+
+Ou bien une autre formule plus complique --> Cela revient a un reseau de
+neurones.
+
+Si result > seuil d'attaque , alors action predatrice
+Si result < -seuil de retraire, alors fuite !
+sinon, errance.
+
+Le comportement peut egalement etre determine par la faim.
+Si la faim est trop forte, la creature peut devenir aggressive, meme
+envers
+son predateur (dans certains cas seulement, si le predateur n'est pas de
+force
+trop importante)
+
+So, What do you think ?
+
+Seb. --> JYB(Token) --> YO.
+
+

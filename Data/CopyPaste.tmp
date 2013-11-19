@@ -1,0 +1,18 @@
+obj Group 0
+  prop X 0
+  prop Y 0
+  prop Z 0
+  prop Color 0
+  obj Plot 2
+    prop X 0.
+    prop Y 0.
+    prop Z 0.
+    prop Color 0
+    end
+  obj Plot 3
+    prop X 2.4
+    prop Y 0.4
+    prop Z 0.
+    prop Color 0
+    end
+  end

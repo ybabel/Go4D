@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_workspace_file>
+	<Workspace title="Go4D workspace">
+		<Project filename="Go4D/Go4D.cbp" />
+		<Project filename="GIFViewer/GIFViewer.cbp" />
+		<Project filename="Cube/Cube.cbp">
+			<Depends filename="Go4D/Go4D.cbp" />
+		</Project>
+		<Project filename="OFFViewer/OFFViewer.cbp" />
+		<Project filename="Voxel/Voxel.cbp" />
+		<Project filename="Beast/Beast.cbp">
+			<Depends filename="Go4D/Go4D.cbp" />
+		</Project>
+		<Project filename="Modeler/Modeler.cbp">
+			<Depends filename="Go4D/Go4D.cbp" />
+		</Project>
+		<Project filename="Physic/Physic.cbp">
+			<Depends filename="Go4D/Go4D.cbp" />
+		</Project>
+		<Project filename="Fire/Fire.cbp" />
+		<Project filename="Fractal/Fractal.cbp" />
+		<Project filename="Block/Block.cbp">
+			<Depends filename="Go4D/Go4D.cbp" />
+		</Project>
+		<Project filename="Neural/Neural.cbp" />
+		<Project filename="Particle/Particle.cbp" />
+		<Project filename="Stereo/Stereo.cbp" />
+		<Project filename="Water/Water.cbp">
+			<Depends filename="Go4D/Go4D.cbp" />
+		</Project>
+		<Project filename="../Téléchargements/cbp2make-stl-rev147-all/cbp2make.cbp" />
+	</Workspace>
+</CodeBlocks_workspace_file>

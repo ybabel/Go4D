@@ -1,0 +1,1 @@
+error : Font load error  font6x10.fon

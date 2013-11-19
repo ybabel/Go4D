@@ -1,0 +1,1157 @@
+<?xml version="1.0"?>
+<xsd:schema  xmlns:xsd="http://www.w3.org/2000/10/XMLSchema"
+  xmlns="http://www.w3.org/2000/12/xforms" 
+  targetNamespace="http://www.w3.org/2000/12/xforms" 
+  xmlns:xfm="http://www.w3.org/2000/12/xforms" 
+  elementFormDefault="qualified">
+<!--
+
+  We actually need to import the schema for XMLSchema, to use the 
+  <xsd:schema> element. Commented out temporarily to avoid problems 
+  with some schema validators.
+
+  <xsd:import namespace="http://www.w3.org/2000/10/XMLSchema"/>
+
+  -->
+
+<!--
+
+  Defines the schema for the XForm <model> element, and everything 
+  contained in it. This includes the XForms defined data types, and XForms
+  specific properties whose values are dynamic, and may may change at 
+  runtime. It also contains a definition of the XForms Simple Syntax
+  elements, which can be used as an alternative to XML syntax, for 
+  defining the XForms model's elements.
+
+  -->
+<!--
+
+      XForms structure element definitions.
+
+  -->
+
+<!--
+
+  Definition of the xform container element.
+
+  -->
+  <xsd:element name="xform">
+    <xsd:complexType>
+      <xsd:choice maxOccurs="unbounded">
+        <xsd:element ref="model"/>
+        <xsd:element ref="instance"/>
+        <xsd:element ref="submit"/>
+        <xsd:element ref="bind"/>
+      </xsd:choice>
+      <xsd:attribute name="id" type="xsd:ID" use="optional"/>
+    </xsd:complexType>
+  </xsd:element>
+
+<!--
+
+  Definition of top-level model element.
+
+  -->
+  <xsd:element name="model">
+    <xsd:complexType>
+       <xsd:choice>
+        <xsd:element ref="xsd:schema"/>
+        <xsd:element ref="simple"/>
+        <xsd:sequence>
+          <xsd:element ref="xsd:schema"/>
+          <xsd:element ref="simple"/>
+        </xsd:sequence>
+      </xsd:choice>
+      <xsd:attribute name="id" type="xsd:ID" use="optional"/>
+      <xsd:attribute name="name" type="xsd:NCName" use="optional"/>
+      <xsd:attribute name="href" type="xsd:uriReference" use="optional"/>
+    </xsd:complexType>
+  </xsd:element>
+
+<!--
+
+  Definition of top-level instance element.
+
+  -->
+  <xsd:element name="instance">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:any namespace="##any" processContents="skip"
+          maxOccurs="unbounded"/>
+      </xsd:sequence>
+      <xsd:attribute name="id" type="xsd:ID" use="optional"/>
+      <xsd:attribute name="model" type="xsd:IDREF" use="optional"/>
+      <xsd:attribute name="href" type="xsd:uriReference" use="optional"/>
+    </xsd:complexType>
+  </xsd:element>
+
+<!--
+
+  Definition of top-level submit element.
+
+  -->
+  <xsd:element name="submit">
+    <xsd:complexType>
+      <xsd:attribute name="id" type="xsd:ID" use="optional"/>
+      <xsd:attribute name="target" type="xsd:uriReference" use="required"/>
+      <xsd:attribute name="method" type="xsd:string" use="optional"/>
+    </xsd:complexType>
+  </xsd:element>
+
+<!--
+
+  Definition of top-level bind element.
+
+  -->
+  <xsd:element name="bind">
+    <xsd:complexType>
+      <xsd:attribute name="id" type="xsd:ID" use="optional"/>
+      <xsd:attribute name="ref" type="xsd:string" use="optional"/>
+    </xsd:complexType>
+  </xsd:element>
+
+<!--
+
+  Definition of XForms expression type. 
+  Note: we need to replace this with a real XForm expression type, 
+  if we can manage to define one that fits our expression language, 
+  if there is a way to do that using XML Schema (may be possible 
+  with the correct combination of string & patterns).
+
+  -->
+  <xsd:simpleType name="xfmExpr">
+    <xsd:restriction base="xsd:string"/>
+  </xsd:simpleType>
+
+<!--
+
+  XForms types used in attribute group definitions.
+  Note: all of these are simple derivations from xfmExpr. we need to 
+  change them to enforce the desired typed result, if there is a way 
+  to do that using XML schema.
+
+  -->
+
+<!--
+  
+  Definition of stringExpr type, used for expressions that must 
+  return a String value. 
+
+  -->
+  <xsd:simpleType name="stringExpr">
+    <xsd:union memberTypes="xsd:string xfmExpr" />
+  </xsd:simpleType>
+
+<!--
+
+  Definition of boolExpr type, used for expressions that must 
+  return a Boolean value. 
+
+  -->
+  <xsd:simpleType name="boolExpr">
+    <xsd:union memberTypes="xsd:boolean xfmExpr" />
+  </xsd:simpleType>
+
+<!--
+
+  Definition of numberExpr type, used for expressions that must 
+  return a Number value. 
+
+  -->
+  <xsd:simpleType name="numberExpr">
+    <xsd:union memberTypes="xsd:decimal xfmExpr" />
+  </xsd:simpleType>
+
+<!--
+
+  Definition of positiveIntExpr type, used for expressions that must 
+  return a positive integer value. 
+  
+  -->
+  <xsd:simpleType name="positiveIntExpr">
+    <xsd:union memberTypes="xsd:positiveInteger xfmExpr" />
+  </xsd:simpleType>
+
+<!--
+
+  Definition of dateExpr type, used for expressions that must 
+  return a Date value. 
+
+-->
+  <xsd:simpleType name="dateExpr">
+    <xsd:union memberTypes="xsd:date xfmExpr" />
+  </xsd:simpleType>
+
+<!--
+
+  Definition of timeExpr type, used for expressions that must 
+  return a Time value. 
+
+-->
+  <xsd:simpleType name="timeExpr">
+    <xsd:union memberTypes="xsd:time xfmExpr" />
+  </xsd:simpleType>
+
+<!--
+
+  Definition of durationExpr type, used for expressions that must 
+  return a Duration value. 
+
+-->
+  <xsd:simpleType name="durationExpr">
+    <xsd:union memberTypes="xsd:timeDuration xfmExpr" />
+  </xsd:simpleType>
+
+<!--
+
+  Definition of schemeExpr type, used for expressions that must 
+  return a list of zero or more scheme values. 
+  Scheme is used to restrict the value space of
+  URIs to specific URI schemes.
+
+-->
+
+  <xsd:simpleType name="schemeType">
+    <xsd:restriction base="xsd:string">
+      <xsd:pattern value="[a-z]+"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+  <xsd:simpleType name="schemeExpr">
+    <xsd:union memberTypes="schemeType xfmExpr" />
+  </xsd:simpleType>
+
+<!--
+
+  Definition of uriExpr type, used for expressions that must 
+  return a URI value. 
+
+-->
+  <xsd:simpleType name="uriExpr">
+    <xsd:union memberTypes="xsd:uriReference xfmExpr" />
+  </xsd:simpleType>
+
+<!--
+
+  Definition of mediaTypeExpr type, used for expressions that must 
+  return a list of zero or more MediaType values.  MediaType is 
+  used to restrict the value space of Binary elements to one or 
+  more MIME media Types.
+  
+-->
+
+  <xsd:simpleType name="mediaTypeType">
+    <xsd:restriction base="xsd:string">
+      <xsd:pattern value="[a-z]+/[a-z]+"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+  <xsd:simpleType name="mediaTypeExpr">
+    <xsd:union memberTypes="mediaTypeType xfmExpr" />
+    <xsd:restriction base="xfmExpr"/>
+  </xsd:simpleType>
+
+<!--
+
+  Definition of binaryExpr type, used for expressions that must 
+  return a Binary value. 
+
+-->
+  <xsd:simpleType name="binaryExpr">
+    <xsd:union memberTypes="xsd:binary xfmExpr" />
+  </xsd:simpleType>
+
+
+<!--
+
+  Definition of currencyType type, a type used for a single, 
+  3-character currency code. 
+
+-->
+  <xsd:simpleType name="currencyType">
+      <xsd:restriction base="xsd:string">
+        <xsd:pattern value="[A-Z]{3}"/>
+      </xsd:restriction>
+  </xsd:simpleType>
+
+<!--
+
+  Definition of currencyExpr type, used for expressions that must 
+  return a list of zero or more 3-character currency codes. 
+
+-->
+
+  <xsd:simpleType name="currencyExpr">
+    <xsd:union memberTypes="currencyType xfmExpr" />
+  </xsd:simpleType>
+
+<!--
+    XForms Specific Properties attribute groups
+  -->
+  <xsd:attributeGroup name="XFSPcommonMinusEnum">
+    <xsd:attribute name="id" type="xsd:ID" use="optional"/>
+    <xsd:attribute name="required" type="boolExpr" 
+      use="default" value="false"/>
+    <xsd:attribute name="readOnly" type="boolExpr" 
+      use="default" value="false"/>
+    <xsd:attribute name="relevant" type="boolExpr" 
+      use="default" value="true"/>
+    <xsd:attribute name="validate" type="boolExpr" 
+      use="default" value="true"/>
+  </xsd:attributeGroup>
+
+  <xsd:attributeGroup name="XFSPcommon">
+    <xsd:attributeGroup ref="XFSPcommonMinusEnum"/>
+    <xsd:attribute name="enum" use="optional">
+      <xsd:simpleType>
+        <xsd:restriction base="xsd:NMTOKEN">
+          <xsd:enumeration value="open"/>
+          <xsd:enumeration value="closed"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+    </xsd:attribute>
+  </xsd:attributeGroup>
+
+  <xsd:attributeGroup name="XFSPname">
+    <xsd:attribute name="name" type="xsd:NCName" use="required"/>
+  </xsd:attributeGroup>
+
+  <xsd:attributeGroup name="XFSPcommonMinusEnumSimple">
+    <xsd:attributeGroup ref="XFSPname"/>
+    <xsd:attributeGroup ref="XFSPcommonMinusEnum"/>
+  </xsd:attributeGroup>
+
+  <xsd:attributeGroup name="XFSPcommonSimple">
+    <xsd:attributeGroup ref="XFSPname"/>
+    <xsd:attributeGroup ref="XFSPcommon"/>
+  </xsd:attributeGroup>
+
+<!--
+
+  Attribute group defining @calc and @choices.  choices is an 
+  expression that returns a list of enumerated, properly typed 
+  values at runtime.  calc returns a single value of the 
+  correct type, at runtime.
+
+-->
+  <xsd:attributeGroup name="XFSPcalcAndChoices">
+    <xsd:attribute name="calc" type="xfmExpr" use="optional"/>
+    <xsd:attribute name="choices" type="xfmExpr" use="optional"/>
+  </xsd:attributeGroup>
+
+  <xsd:attributeGroup name="XFSPcalcAndChoicesString">
+    <xsd:attribute name="calc" type="stringExpr" use="optional"/>
+    <xsd:attribute name="choices" type="stringExpr" use="optional"/>
+  </xsd:attributeGroup>
+
+  <xsd:attributeGroup name="XFSPcalcAndChoicesBoolean">
+    <xsd:attribute name="calc" type="boolExpr" use="optional"/>
+    <xsd:attribute name="choices" type="boolExpr" use="optional"/>
+  </xsd:attributeGroup>
+
+  <xsd:attributeGroup name="XFSPcalcAndChoicesNumber">
+    <xsd:attribute name="calc" type="numberExpr" use="optional"/>
+    <xsd:attribute name="choices" type="numberExpr" use="optional"/>
+  </xsd:attributeGroup>
+
+  <xsd:attributeGroup name="XFSPcalcAndChoicesDate">
+    <xsd:attribute name="calc" type="dateExpr" use="optional"/>
+    <xsd:attribute name="choices" type="dateExpr" use="optional"/>
+  </xsd:attributeGroup>
+
+  <xsd:attributeGroup name="XFSPcalcAndChoicesTime">
+    <xsd:attribute name="calc" type="timeExpr" use="optional"/>
+    <xsd:attribute name="choices" type="timeExpr" use="optional"/>
+  </xsd:attributeGroup>
+  
+  <xsd:attributeGroup name="XFSPcalcAndChoicesDuration">
+    <xsd:attribute name="calc" type="durationExpr" use="optional"/>
+    <xsd:attribute name="choices" type="durationExpr" use="optional"/>
+  </xsd:attributeGroup>
+
+  <xsd:attributeGroup name="XFSPcalcAndChoicesURI">
+    <xsd:attribute name="calc" type="uriExpr" use="optional"/>
+    <xsd:attribute name="choices" type="uriExpr" use="optional"/>
+  </xsd:attributeGroup>
+
+  <xsd:attributeGroup name="XFSPcalcAndChoicesBinary">
+    <xsd:attribute name="calc" type="binaryExpr" use="optional"/>
+    <xsd:attribute name="choices" type="binaryExpr" use="optional"/>
+  </xsd:attributeGroup>
+
+  <xsd:attributeGroup name="XFSPcalcAndChoicesCurrency">
+    <xsd:attribute name="calc" type="currencyExpr" use="optional"/>
+    <xsd:attribute name="choices" type="currencyExpr" use="optional"/>
+  </xsd:attributeGroup>
+
+  <!-- applied to Number, and Money -->
+  <xsd:attributeGroup name="XFSPmmNumber">
+    <xsd:attribute name="minInclusive" type="numberExpr" use="optional"/>
+    <xsd:attribute name="minExclusive" type="numberExpr" use="optional"/>
+    <xsd:attribute name="maxInclusive" type="numberExpr" use="optional"/>
+    <xsd:attribute name="maxExclusive" type="numberExpr" use="optional"/>
+  </xsd:attributeGroup>
+
+  <!--
+  -->
+  <xsd:attributeGroup name="XFSPmmNumberSimple">
+    <xsd:attribute name="min" type="numberExpr" use="optional"/>
+    <xsd:attribute name="max" type="numberExpr" use="optional"/>
+  </xsd:attributeGroup>
+
+  <!--
+  -->
+  <!-- applied to Date -->
+  <xsd:attributeGroup name="XFSPmmDate">
+    <xsd:attribute name="minInclusive" type="dateExpr" use="optional"/>
+    <xsd:attribute name="minExclusive" type="dateExpr" use="optional"/>
+    <xsd:attribute name="maxInclusive" type="dateExpr" use="optional"/>
+    <xsd:attribute name="maxExclusive" type="dateExpr" use="optional"/>
+  </xsd:attributeGroup>
+
+<!--
+ -->
+  <xsd:attributeGroup name="XFSPmmDateSimple">
+    <xsd:attribute name="min" type="dateExpr" use="optional"/>
+    <xsd:attribute name="max" type="dateExpr" use="optional"/>
+  </xsd:attributeGroup>
+<!--
+  -->
+<!-- applied to Duration -->
+
+  <xsd:attributeGroup name="XFSPmmDuration">
+    <xsd:attribute name="minInclusive" type="durationExpr" use="optional"/>
+    <xsd:attribute name="minExclusive" type="durationExpr" use="optional"/>
+    <xsd:attribute name="maxInclusive" type="durationExpr" use="optional"/>
+    <xsd:attribute name="maxExclusive" type="durationExpr" use="optional"/>
+  </xsd:attributeGroup>
+
+<!--
+  -->
+  <xsd:attributeGroup name="XFSPmmDurationSimple">
+    <xsd:attribute name="min" type="durationExpr" use="optional"/>
+    <xsd:attribute name="max" type="durationExpr" use="optional"/>
+  </xsd:attributeGroup>
+
+<!--
+  -->
+<!-- applied to Time -->
+  <xsd:attributeGroup name="XFSPmmTime">
+    <xsd:attribute name="minInclusive" type="timeExpr" use="optional"/>
+    <xsd:attribute name="minExclusive" type="timeExpr" use="optional"/>
+    <xsd:attribute name="maxInclusive" type="timeExpr" use="optional"/>
+    <xsd:attribute name="maxExclusive" type="timeExpr" use="optional"/>
+  </xsd:attributeGroup>
+
+<!--
+  -->
+  <xsd:attributeGroup name="XFSPmmTimeSimple">
+    <xsd:attribute name="min" type="timeExpr" use="optional"/>
+    <xsd:attribute name="max" type="timeExpr" use="optional"/>
+  </xsd:attributeGroup>
+
+<!--
+  -->
+<!-- applied to String, Binary, URI -->
+  <xsd:attributeGroup name="XFSPlengthNumber">
+    <xsd:attribute name="length" type="positiveIntExpr" 
+      use="optional"/>
+    <xsd:attribute name="minLength" type="positiveIntExpr" 
+      use="optional"/>
+    <xsd:attribute name="maxLength" type="positiveIntExpr" 
+      use="optional"/>
+</xsd:attributeGroup>
+
+<!--
+  -->
+  <xsd:attributeGroup name="XFSPlengthNumberSimple">
+    <xsd:attribute name="length" type="positiveIntExpr" use="optional"/>
+    <xsd:attribute name="min" type="positiveIntExpr" use="optional"/>
+    <xsd:attribute name="max" type="positiveIntExpr" use="optional"/>
+  </xsd:attributeGroup>
+
+<!--
+  -->
+  <!-- applied to Number, and Money -->
+  <xsd:attributeGroup name="XFSPspNumber">
+    <xsd:attribute name="scale" type="positiveIntExpr" use="optional"/>
+    <xsd:attribute name="precision" type="positiveIntExpr" use="optional"/>
+  </xsd:attributeGroup>
+
+<!--
+
+  XForms basic Data types for Models in Schema syntax 
+
+-->
+
+<!--
+
+  Definition of string type. 
+
+-->
+  <xsd:complexType name="string">
+    <xsd:complexContent>
+      <xsd:extension base="xsd:string">
+        <xsd:attributeGroup ref="XFSPcommon"/>
+        <xsd:attributeGroup ref="XFSPlengthNumber"/>
+        <xsd:attributeGroup ref="XFSPcalcAndChoicesString"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+
+<!--
+
+  Definition of boolean type. 
+
+-->
+  <xsd:complexType name="boolean">
+    <xsd:complexContent>
+      <xsd:extension base="xsd:boolean">
+        <xsd:attributeGroup ref="XFSPcommonMinusEnum"/>
+        <xsd:attribute name="calc" type="boolExpr" use="optional"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+
+<!--
+
+  Definition of number type. 
+
+  -->
+  <xsd:complexType name="number">
+    <xsd:complexContent>
+      <xsd:extension base="xsd:decimal">
+        <xsd:attributeGroup ref="XFSPcommon"/>
+        <xsd:attributeGroup ref="XFSPmmNumber"/>
+        <xsd:attributeGroup ref="XFSPspNumber"/>
+        <xsd:attributeGroup ref="XFSPcalcAndChoicesNumber"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+
+<!--
+
+  Definition of currency type. 
+
+-->
+  <xsd:complexType name="currency">
+    <xsd:complexContent>
+      <xsd:extension base="currencyType">
+        <xsd:attributeGroup ref="XFSPcommon"/>
+        <xsd:attributeGroup ref="XFSPcalcAndChoicesCurrency"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+
+<!--
+
+  Definition of money type. 
+  Alternative B: compound datatype
+
+-->
+  <xsd:complexType name="money">
+    <xsd:sequence>
+      <xsd:element name="value">
+        <xsd:complexType>
+          <xsd:simpleContent>
+            <xsd:extension base="xsd:decimal">
+              <xsd:attribute name="calc" type="numberExpr"/>
+            </xsd:extension>
+          </xsd:simpleContent>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="currency">
+        <xsd:complexType>
+          <xsd:simpleContent>
+            <xsd:extension base="currencyType">
+              <xsd:attribute name="calc" type="currencyExpr"/>
+            </xsd:extension>
+          </xsd:simpleContent>
+        </xsd:complexType>
+      </xsd:element>
+<!--
+      allow zero or more allowCurrency elements to restrict 
+      the value space of money.
+  -->
+      <xsd:element name="allowCurrency" type="currencyExpr" 
+        minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+    <xsd:attributeGroup ref="XFSPcommon"/>
+    <xsd:attributeGroup ref="XFSPmmNumber"/>
+    <xsd:attributeGroup ref="XFSPspNumber"/>
+  </xsd:complexType>
+
+<!--
+
+  Definition of date type. 
+
+  -->
+  <xsd:complexType name="date">
+    <xsd:complexContent>
+      <xsd:extension base="xsd:date">
+        <xsd:attributeGroup ref="XFSPcommon"/>
+        <xsd:attributeGroup ref="XFSPmmDate"/>
+        <xsd:attributeGroup ref="XFSPcalcAndChoicesDate"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+
+<!--
+
+  Definition of time type. 
+
+  -->
+  <xsd:complexType name="time">
+    <xsd:complexContent>
+      <xsd:extension base="xsd:time">
+        <xsd:attributeGroup ref="XFSPcommon"/>
+        <xsd:attributeGroup ref="XFSPmmTime"/>
+        <xsd:attributeGroup ref="XFSPcalcAndChoicesTime"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+
+<!--
+
+  Definition of duration type. 
+
+  -->
+  <xsd:complexType name="duration">
+    <xsd:complexContent>
+      <xsd:extension base="xsd:timeDuration">
+        <xsd:attributeGroup ref="XFSPcommon"/>
+        <xsd:attributeGroup ref="XFSPmmDuration"/>
+        <xsd:attributeGroup ref="XFSPcalcAndChoicesDuration"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+
+<!--
+  -->
+<!--
+
+  Definition of uri type. 
+
+  -->
+  <xsd:complexType name="uri">
+    <xsd:complexContent>
+      <xsd:extension base="xsd:uriReference">
+        <xsd:sequence>
+          <!--
+            allow zero or more scheme elements to restrict 
+            the value space of the uri.
+          -->
+          <xsd:element name="scheme" type="schemeExpr" 
+            minOccurs="0" maxOccurs="unbounded"/>
+        </xsd:sequence>
+        <xsd:attributeGroup ref="XFSPcommon"/>
+        <xsd:attributeGroup ref="XFSPlengthNumber"/>
+        <xsd:attributeGroup ref="XFSPcalcAndChoicesURI"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+
+<!--
+
+  Definition of binary type. 
+
+-->
+  <xsd:complexType name="binary">
+    <xsd:complexContent>
+      <xsd:extension base="xsd:binary">
+        <xsd:sequence>
+      <!--
+          allow zero or more mediaType elements to restrict 
+          the value space of the binary.
+      -->
+          <xsd:element name="mediaType" type="mediaTypeExpr" 
+            minOccurs="0" maxOccurs="unbounded"/>
+        </xsd:sequence>
+        <xsd:attributeGroup ref="XFSPcommon"/>
+        <xsd:attributeGroup ref="XFSPlengthNumber"/>
+        <xsd:attributeGroup ref="XFSPcalcAndChoicesBinary"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+
+<!--
+
+  XForms simple syntax element definitions 
+  Structure elements, followed by datatype elements.
+
+-->
+
+<!--
+
+  Definition of the simple element, used to contain the simple syntax element   
+declarations.
+
+  -->
+  <xsd:element name="simple">
+    <xsd:complexType>
+      <xsd:choice maxOccurs="unbounded">
+        <xsd:element ref="string"/>
+        <xsd:element ref="boolean"/>
+        <xsd:element ref="number"/>
+        <xsd:element ref="currency"/>
+        <xsd:element ref="money"/>
+        <xsd:element ref="date"/>
+        <xsd:element ref="time"/>
+        <xsd:element ref="duration"/>
+        <xsd:element ref="uri"/>
+        <xsd:element ref="binary"/>
+        <xsd:element ref="element"/>
+        <xsd:element ref="array"/>
+        <xsd:element ref="group"/>
+        <xsd:element ref="switch"/>
+        <xsd:element ref="union"/>
+      </xsd:choice>
+      <xsd:attribute name="id" type="xsd:ID" use="optional"/>
+      <xsd:attribute name="name" type="xsd:NCName" use="optional"/>
+    </xsd:complexType>
+  </xsd:element>
+
+<!--
+
+  Definition of simple syntax group element.
+
+  -->
+  <xsd:element name="group">
+    <xsd:complexType>
+      <xsd:choice maxOccurs="unbounded">
+        <xsd:element ref="string"/>
+        <xsd:element ref="boolean"/>
+        <xsd:element ref="number"/>
+        <xsd:element ref="currency"/>
+        <xsd:element ref="money"/>
+        <xsd:element ref="date"/>
+        <xsd:element ref="time"/>
+        <xsd:element ref="duration"/>
+        <xsd:element ref="uri"/>
+        <xsd:element ref="binary"/>
+        <xsd:element ref="element"/>
+        <xsd:element ref="switch"/>
+        <xsd:element ref="union"/>
+      </xsd:choice>
+      <xsd:attributeGroup ref="XFSPname"/>
+    </xsd:complexType>
+  </xsd:element>
+
+
+<!--
+  The occurs attribute group used on array.
+  -->
+  <xsd:attributeGroup name="occurs">
+    <xsd:attribute name="minOccurs" use="default" value="1">
+      <xsd:simpleType>
+        <xsd:union memberTypes="xfmExpr xsd:nonNegativeInteger"/>
+      </xsd:simpleType>
+    </xsd:attribute>
+    <xsd:attribute name="maxOccurs" use="default" value="1">
+      <xsd:simpleType>
+        <xsd:union memberTypes="xfmExpr xsd:nonNegativeInteger">
+          <xsd:simpleType>
+            <xsd:restriction base="xsd:NMTOKEN">
+              <xsd:enumeration value="unbounded"/>
+            </xsd:restriction>
+          </xsd:simpleType>
+        </xsd:union>
+      </xsd:simpleType>
+    </xsd:attribute>
+  </xsd:attributeGroup>
+
+<!--
+
+  Definition of simple syntax array element.
+  Issue: should we allow switches or unions?
+
+-->
+  <xsd:element name="array">
+    <xsd:complexType>
+      <xsd:choice>
+        <xsd:element ref="string"/>
+        <xsd:element ref="boolean"/>
+        <xsd:element ref="number"/>
+        <xsd:element ref="currency"/>
+        <xsd:element ref="money"/>
+        <xsd:element ref="date"/>
+        <xsd:element ref="time"/>
+        <xsd:element ref="duration"/>
+        <xsd:element ref="uri"/>
+        <xsd:element ref="binary"/>
+        <xsd:element ref="element"/>
+      </xsd:choice>
+      <xsd:attribute name="name" type="xsd:NCName" use="optional"/>
+      <xsd:attributeGroup ref="occurs"/>
+    </xsd:complexType>
+  </xsd:element>
+
+<!--
+
+  Definition of simple syntax union element.
+
+  Note: the schema for <union> requires a name attribute on its 
+  child datatypes because it simply reuses their definitions, which do.
+  The spec says name isn't required on child datatypes.  This is a known   
+inconsistency that will be fixed in a future version.
+ 
+-->
+  <xsd:element name="union">
+    <xsd:complexType>
+      <xsd:choice maxOccurs="unbounded">
+        <xsd:element ref="string"/>
+        <xsd:element ref="boolean"/>
+        <xsd:element ref="number"/>
+        <xsd:element ref="currency"/>
+        <xsd:element ref="money"/>
+        <xsd:element ref="date"/>
+        <xsd:element ref="time"/>
+        <xsd:element ref="duration"/>
+        <xsd:element ref="uri"/>
+        <xsd:element ref="binary"/>
+      </xsd:choice>
+      <xsd:attributeGroup ref="XFSPname"/>
+    </xsd:complexType>
+  </xsd:element>
+
+<!--
+
+  Definition of simple syntax switch element.
+
+  -->
+  <xsd:element name="switch">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="case" maxOccurs="unbounded">
+          <xsd:complexType>
+            <xsd:choice maxOccurs="unbounded">
+              <xsd:element ref="string"/>
+              <xsd:element ref="boolean"/>
+              <xsd:element ref="number"/>
+              <xsd:element ref="currency"/>
+              <xsd:element ref="money"/>
+              <xsd:element ref="date"/>
+              <xsd:element ref="time"/>
+              <xsd:element ref="duration"/>
+              <xsd:element ref="uri"/>
+              <xsd:element ref="binary"/>
+              <xsd:element ref="element"/>
+              <xsd:element ref="group"/>
+              <xsd:element ref="array"/>
+            </xsd:choice>
+            <xsd:attributeGroup ref="XFSPname"/>
+            <xsd:attribute name="condition" type="xfmExpr" use="optional"/>
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:sequence>
+      <xsd:attributeGroup ref="XFSPname"/>
+    </xsd:complexType>
+  </xsd:element>
+
+<!--
+
+  Definition of simple syntax element element.
+
+  -->
+  <xsd:element name="element" id="element">
+    <xsd:complexType>
+      <xsd:attribute name="type" type="xsd:QName" use="required"/>
+      <xsd:attributeGroup ref="XFSPcommonMinusEnumSimple"/>
+    </xsd:complexType>
+  </xsd:element>
+
+<!--
+  Definition of the mask facet, used in strings and currency, 
+  in simple syntax only. 
+  Modeled after WAP/WML's format attribute.
+  -->
+  <xsd:simpleType name="maskType">
+    <xsd:restriction base="xsd:string">
+      <xsd:pattern 
+  value="((A|a|X|x|N|n|M|m)|(\\.))*([0-9\*](A|a|X|x|N|n|M|m))?"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  
+  <xsd:simpleType name="maskExpr">
+    <xsd:union memberTypes="maskType xfmExpr"/>
+  </xsd:simpleType>
+
+<!--
+
+  Definition of simple syntax string element.
+
+  -->
+  <xsd:element name="string" id="string">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="xsd:string">
+          <xsd:sequence>
+            <!-- allow zero or more masks or patterns, but not a mixture -->
+            <xsd:choice minOccurs="0" maxOccurs="unbounded">
+              <xsd:element name="mask" type="maskType" 
+                  minOccurs="0" maxOccurs="unbounded"/>
+              <xsd:element name="pattern" type="xsd:string" 
+                  minOccurs="0" maxOccurs="unbounded"/>
+            </xsd:choice>
+            <!-- allow zero or more enumerations -->
+            <xsd:element name="value" type="xsd:string" 
+                minOccurs="0" maxOccurs="unbounded"/>
+          </xsd:sequence>
+          <xsd:attributeGroup ref="XFSPcommonSimple"/>
+          <xsd:attributeGroup ref="XFSPlengthNumber"/>
+          <xsd:attributeGroup ref="XFSPcalcAndChoicesString"/>
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+<!--
+
+  Definition of simple syntax boolean element.
+
+  -->
+  <xsd:element name="boolean">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="xsd:boolean">
+          <xsd:attributeGroup ref="XFSPcommonMinusEnumSimple"/>
+          <xsd:attribute name="calc" type="boolExpr" use="optional"/>
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+<!--
+
+  Definition of simple syntax number element.
+
+  -->
+  <xsd:element name="number">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="xsd:decimal">
+          <xsd:sequence>
+            <!-- allow zero or more enumerations -->
+            <xsd:element name="value" type="xsd:decimal" 
+              minOccurs="0" maxOccurs="unbounded"/>
+          </xsd:sequence>
+          <xsd:attributeGroup ref="XFSPcommonSimple"/>
+          <xsd:attributeGroup ref="XFSPmmNumberSimple"/>
+          <xsd:attributeGroup ref="XFSPspNumber"/>
+          <xsd:attributeGroup ref="XFSPcalcAndChoicesNumber"/>
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+<!--
+
+  Definition of simple syntax currency element.
+
+  -->
+  <xsd:element name="currency">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="currencyType">
+          <xsd:sequence>
+            <!-- allow zero or more masks -->
+            <xsd:element name="mask" type="maskType" 
+              minOccurs="0" maxOccurs="unbounded"/>
+            <!-- allow zero or more enumerations -->
+            <xsd:element name="value" type="currencyType" 
+              minOccurs="0" maxOccurs="unbounded"/>
+          </xsd:sequence>
+          <xsd:attributeGroup ref="XFSPcommonSimple"/>
+          <xsd:attributeGroup ref="XFSPcalcAndChoices"/>
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+<!--
+
+  Definition of simple syntax money element.
+  Alternative B: compound datatype
+
+  -->
+  <xsd:element name="money">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="value">
+          <xsd:complexType>
+            <xsd:simpleContent>
+              <xsd:extension base="xsd:decimal">
+                <xsd:attribute name="calc" type="numberExpr"/>
+              </xsd:extension>
+            </xsd:simpleContent>
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="currency">
+          <xsd:complexType>
+            <xsd:simpleContent>
+              <xsd:extension base="currencyType">
+                <xsd:attribute name="calc" type="currencyExpr"/>
+              </xsd:extension>
+            </xsd:simpleContent>
+          </xsd:complexType>
+        </xsd:element>
+<!--
+        allow zero or more allowCurrency elements to restrict 
+        the value space of money.
+  -->
+        <xsd:element name="allowCurrency" type="currencyExpr" 
+          minOccurs="0" maxOccurs="unbounded"/>
+      </xsd:sequence>
+      <xsd:attributeGroup ref="XFSPcommonSimple"/>
+      <xsd:attributeGroup ref="XFSPmmNumberSimple"/>
+      <xsd:attributeGroup ref="XFSPspNumber"/>
+    </xsd:complexType>
+  </xsd:element>
+
+<!--
+
+  Definition of simple syntax date element.
+
+  -->
+  <xsd:element name="date">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="xsd:date">
+          <xsd:sequence>
+            <!-- allow zero or more enumerations -->
+            <xsd:element name="value" type="xsd:date" 
+              minOccurs="0" maxOccurs="unbounded"/>
+          </xsd:sequence>
+          <xsd:attributeGroup ref="XFSPcommonSimple"/>
+          <xsd:attributeGroup ref="XFSPmmDateSimple"/>
+          <xsd:attribute name="precision" use="optional">
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:NMTOKEN">
+                <xsd:enumeration value="years"/>
+                <xsd:enumeration value="months"/>
+                <xsd:enumeration value="days"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:attribute>
+          <xsd:attributeGroup ref="XFSPcalcAndChoicesDate"/>
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+<!--
+
+  Definition of simple syntax time element.
+
+  -->
+  <xsd:element name="time">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="xsd:time">
+          <xsd:sequence>
+            <!-- allow zero or more enumerations -->
+            <xsd:element name="value" type="xsd:time" 
+              minOccurs="0" maxOccurs="unbounded"/>
+          </xsd:sequence>
+          <xsd:attributeGroup ref="XFSPcommonSimple"/>
+          <xsd:attributeGroup ref="XFSPmmTimeSimple"/>
+          <xsd:attribute name="precision" use="optional">
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:NMTOKEN">
+                <xsd:enumeration value="hours"/>
+                <xsd:enumeration value="minutes"/>
+                <xsd:enumeration value="seconds"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:attribute>
+          <xsd:attributeGroup ref="XFSPcalcAndChoicesTime"/>
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+<!--
+
+  Definition of simple syntax duration element.
+
+  -->
+  <xsd:element name="duration">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="xsd:timeDuration">
+          <xsd:sequence>
+            <!-- allow zero or more enumerations -->
+            <xsd:element name="value" type="xsd:timeDuration" 
+              minOccurs="0" maxOccurs="unbounded"/>
+          </xsd:sequence>
+          <xsd:attributeGroup ref="XFSPcommonSimple"/>
+          <xsd:attributeGroup ref="XFSPmmDurationSimple"/>
+          <xsd:attribute name="precision" use="optional">
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:NMTOKEN">
+                <xsd:enumeration value="years"/>
+                <xsd:enumeration value="months"/>
+                <xsd:enumeration value="days"/>
+                <xsd:enumeration value="hours"/>
+                <xsd:enumeration value="minutes"/>
+                <xsd:enumeration value="seconds"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:attribute>
+          <xsd:attributeGroup ref="XFSPcalcAndChoicesDuration"/>
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+<!--
+
+  Definition of simple syntax uri element.
+
+  -->
+  <xsd:element name="uri">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="xsd:uriReference">
+          <xsd:sequence>
+            <!-- allow zero or more scheme qualifiers -->
+            <xsd:element name="scheme" type="schemeExpr" 
+              minOccurs="0" maxOccurs="unbounded"/>
+            <!-- allow zero or more enumerations -->
+            <xsd:element name="value" type="xsd:uriReference" 
+              minOccurs="0" maxOccurs="unbounded"/>
+          </xsd:sequence>
+          <xsd:attributeGroup ref="XFSPcommonSimple"/>
+          <xsd:attributeGroup ref="XFSPlengthNumberSimple"/>
+          <xsd:attributeGroup ref="XFSPcalcAndChoicesURI"/>
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+<!--
+
+  Definition of simple syntax binary element.
+
+  -->
+  <xsd:element name="binary">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="xsd:binary">
+          <xsd:sequence>
+            <!-- allow zero or more mediaType qualifiers -->
+            <xsd:element name="mediaType" type="mediaTypeExpr" 
+              minOccurs="0" maxOccurs="unbounded"/>
+            <!-- allow zero or more enumerations -->
+            <xsd:element name="value" type="xsd:binary" 
+              minOccurs="0" maxOccurs="unbounded"/>
+          </xsd:sequence>
+          <xsd:attributeGroup ref="XFSPcommonSimple"/>
+          <xsd:attributeGroup ref="XFSPlengthNumberSimple"/>
+          <xsd:attributeGroup ref="XFSPcalcAndChoicesBinary"/>
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>
+
